@@ -1,0 +1,25 @@
+# Color Palette - Bulgarian Flag Inspired (Soft, Feminine)
+
+## Primary Colors
+- Soft Rose: #F4A7A7
+- Blush White: #FFF7F7
+- Sage Mist: #CFE6D7
+- Soft Mint: #E8F6EF
+- Clay Beige: #E8DCCF
+- Warm Taupe: #C1AFA3
+
+## Usage Guidelines
+Use these colors to create a warm, artisanal, natural feel in the design. The palette should evoke handmade ceramic pottery with a soft, feminine aesthetic.
+
+# Typography
+
+## Font Families
+- **Headline**: Montserrat
+- **Sub-headline (serif)**: Playfair Display
+- **Body**: Source Sans 3
+
+## Usage Guidelines
+- Use Montserrat for all main headings (h1, h2, h3, h4)
+- Use Playfair Display (with italic styling) for elegant sub-headlines and decorative text
+- Use Source Sans 3 for all body text, paragraphs, and general content
+- All fonts are loaded via Next.js Google Fonts integration with CSS variables: `--font-montserrat`, `--font-playfair`, `--font-source-sans`
