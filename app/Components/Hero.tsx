@@ -22,7 +22,11 @@ export default function Hero() {
         {/* Placeholder text and button - centered in middle */}
         <div className="mb-auto mt-auto">
           <p className="font-body text-white/90 text-base md:text-lg mb-6 max-w-2xl">
-            Each project I take begins with purposeful strategy, moving through design to deliver simple, engaging experiences.
+          <span
+            className=" text-2xl md:text-3xl text-white block mb-2"
+          >
+            Традиция, уют и ръчно изработена керамика с български дух.
+          </span>
           </p>
           
           {/* View Products button */}
@@ -30,7 +34,7 @@ export default function Hero() {
             href="#products"
             className="inline-flex items-center gap-2 text-white font-body text-sm md:text-base hover:gap-3 transition-all"
           >
-            View Products
+            Разгледайте нашите продукти
             <ArrowRight size={20} />
           </a>
         </div>

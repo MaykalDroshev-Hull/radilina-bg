@@ -23,7 +23,7 @@ const projects = [
 
 export default function SelectedProducts() {
   return (
-    <>
+    <section id="selected-products">
       <div className="flex items-start justify-between w-full gap-6 px-12">
         {/* Left side */}
         <div className="flex items-center gap-2">
@@ -68,7 +68,7 @@ export default function SelectedProducts() {
           </div>
         ))}
       </div>
-    </>
+    </section>
   );
 }
 

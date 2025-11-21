@@ -1,122 +1,144 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-[var(--soft-mint)] to-[var(--sage-mist)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <p className="font-subheadline text-[var(--soft-rose)] text-xl italic mb-4">Get In Touch</p>
-          <h2 className="font-headline text-4xl lg:text-5xl font-bold text-[var(--foreground)] mb-4">
-            Contact Us
-          </h2>
-          <p className="font-body text-lg text-[var(--foreground)] max-w-2xl mx-auto">
-            We'd love to hear from you. Reach out for custom orders, questions, or just to say hello.
-          </p>
+    <>
+      {/* Header Section */}
+      <div className="flex items-start justify-between w-full gap-6 px-12 mt-12 mb-12">
+        {/* Left side */}
+        <div className="flex items-center gap-2">
+          <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+          <span className="text-xl text-gray-700">Свържете се с нас</span>
         </div>
+        {/* Right side */}
+        <p className="max-w-[50%] text-right text-4xl">
+          <span className="font-semibold text-gray-900">
+            Готови сме да отговорим на вашите въпроси
+          </span>
+          <span className="text-gray-400">
+            {" "}и да обсъдим вашия следващ проект
+          </span>
+        </p>
+      </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div className="space-y-8">
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="bg-[var(--soft-rose)]/20 p-3 rounded-full">
-                  <Mail className="text-[var(--soft-rose)]" size={24} />
+      {/* Contact Section */}
+      <section id="contact" className="w-full px-12 mb-12">
+        <div className="grid grid-cols-2 gap-8">
+          {/* Left Column - Contact Info */}
+          <div className="flex flex-col gap-6">
+            {/* Email */}
+            <div className="bg-white rounded-2xl shadow-sm p-6 hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="bg-red-50 p-3 rounded-full">
+                  <Mail className="text-red-500" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-headline text-xl font-semibold text-[var(--foreground)] mb-2">
-                    Email
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Имейл
                   </h3>
-                  <a href="mailto:hello@radilina.bg" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">
+                  <a 
+                    href="mailto:hello@radilina.bg" 
+                    className="text-base text-gray-600 hover:text-red-500 transition-colors"
+                  >
                     hello@radilina.bg
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="bg-[var(--soft-rose)]/20 p-3 rounded-full">
-                  <Phone className="text-[var(--soft-rose)]" size={24} />
+            {/* Phone */}
+            <div className="bg-white rounded-2xl shadow-sm p-6 hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="bg-red-50 p-3 rounded-full">
+                  <Phone className="text-red-500" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-headline text-xl font-semibold text-[var(--foreground)] mb-2">
-                    Phone
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Телефон
                   </h3>
-                  <a href="tel:+359123456789" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">
+                  <a 
+                    href="tel:+359123456789" 
+                    className="text-base text-gray-600 hover:text-red-500 transition-colors"
+                  >
                     +359 123 456 789
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="bg-[var(--soft-rose)]/20 p-3 rounded-full">
-                  <MapPin className="text-[var(--soft-rose)]" size={24} />
+            {/* Location */}
+            <div className="bg-white rounded-2xl shadow-sm p-6 hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="bg-red-50 p-3 rounded-full">
+                  <MapPin className="text-red-500" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-headline text-xl font-semibold text-[var(--foreground)] mb-2">
-                    Location
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Локация
                   </h3>
-                  <p className="font-body text-[var(--foreground)]">
-                    Sofia, Bulgaria<br />
-                    Visit our studio by appointment
+                  <p className="text-base text-gray-600">
+                    Троян, България<br />
+                    Посещения по предварителна уговорка
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
+          {/* Right Column - Contact Form */}
+          <div className="bg-white rounded-2xl shadow-sm p-8">
             <form className="space-y-6">
               <div>
-                <label htmlFor="name" className="block font-body font-medium text-[var(--foreground)] mb-2">
-                  Name
+                <label htmlFor="name" className="block font-medium text-gray-900 mb-2">
+                  Име
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full px-4 py-3 rounded-xl border border-[var(--foreground)]/20 focus:outline-none focus:ring-2 focus:ring-[var(--soft-rose)] focus:border-transparent font-body"
-                  placeholder="Your name"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                  placeholder="Вашето име"
                 />
               </div>
+              
               <div>
-                <label htmlFor="email" className="block font-body font-medium text-[var(--foreground)] mb-2">
-                  Email
+                <label htmlFor="phone" className="block font-medium text-gray-900 mb-2">
+                  Телефон
                 </label>
                 <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full px-4 py-3 rounded-xl border border-[var(--foreground)]/20 focus:outline-none focus:ring-2 focus:ring-[var(--soft-rose)] focus:border-transparent font-body"
-                  placeholder="your.email@example.com"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                  placeholder="+359 ..."
                 />
               </div>
+              
               <div>
-                <label htmlFor="message" className="block font-body font-medium text-[var(--foreground)] mb-2">
-                  Message
+                <label htmlFor="message" className="block font-medium text-gray-900 mb-2">
+                  Съобщение
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   rows={5}
-                  className="w-full px-4 py-3 rounded-xl border border-[var(--foreground)]/20 focus:outline-none focus:ring-2 focus:ring-[var(--soft-rose)] focus:border-transparent font-body resize-none"
-                  placeholder="Tell us about your project or question..."
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent resize-none transition-all"
+                  placeholder="Разкажете ни за вашия проект или задайте въпрос..."
                 ></textarea>
               </div>
+              
               <button
                 type="submit"
-                className="w-full bg-[var(--soft-rose)] text-white px-8 py-4 rounded-full font-body font-medium hover:bg-[var(--soft-rose)]/90 transition-all shadow-lg hover:shadow-xl"
+                className="w-full bg-black text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition-all shadow-sm hover:shadow-md flex items-center justify-center gap-2"
               >
-                Send Message
+                Изпратете съобщение
+                <Send className="w-4 h-4" />
               </button>
             </form>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 

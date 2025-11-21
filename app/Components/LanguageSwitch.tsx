@@ -1,13 +1,12 @@
 // components/LanguageSwitch.js
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 import styles from '../styles/Component Styles/LanguageSwitch.module.css'
 
 const LanguageSwitch = () => {
   const router = useRouter()
   const { locale, pathname, asPath, query } = router
 
-  const switchLanguage = (newLocale) => {
+  const switchLanguage = (newLocale: string) => {
     router.push({ pathname, query }, asPath, { locale: newLocale })
   }
 

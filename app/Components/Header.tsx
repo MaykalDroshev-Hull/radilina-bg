@@ -13,17 +13,21 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <img
-              src="public\images\logo.svg"
+              src="/images/logo.svg"
               alt="Radilina"
-              className="h-8 w-auto"
+              className="h-26 w-auto"
             />
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#products" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Projects</a>
-            <a href="#about" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">About</a>
-            <a href="#how-to" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Services</a>
+            <a href="#home" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Начало</a>
+            <a href="#selected-products" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Избрани продукти</a>
+            <a href="#awards" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Награди</a>
+            <a href="#products" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Продукти</a>
+            <a href="#how-to" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Процес</a>
+            <a href="#faq" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Въпроси</a>
+            <a href="#contact" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Контакти</a>  
           </nav>
 
           {/* Right Side: Contact Us + Language Button */}
@@ -32,7 +36,7 @@ export default function Header() {
               href="#contact"
               className="bg-[var(--foreground)] text-white px-6 py-2.5 rounded-full font-body font-medium hover:bg-[var(--foreground)]/90 transition-colors"
             >
-              Contact Us
+              Контакти
             </a>
             <button className="w-14 h-10 rounded-full bg-[var(--soft-rose)] text-white flex items-center justify-center hover:bg-[var(--soft-rose)]/90 transition-colors">
               <span className="text-xl">🇧🇬</span>
@@ -53,10 +57,12 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-[var(--foreground)]/20" style={{ backgroundColor: '#f6f7f9' }}>
           <div className="px-4 pt-2 pb-4 space-y-2">
-            <a href="#products" className="block py-2 font-body text-[var(--foreground)]">Projects</a>
-            <a href="#about" className="block py-2 font-body text-[var(--foreground)]">About</a>
-            <a href="#how-to" className="block py-2 font-body text-[var(--foreground)]">Services</a>
-            <a href="#contact" className="block py-2 font-body text-[var(--foreground)]">Contact</a>
+            <a href="#home" className="block py-2 font-body text-[var(--foreground)]">Начало</a>
+            <a href="#products" className="block py-2 font-body text-[var(--foreground)]">Продукти</a>
+            <a href="#awards" className="block py-2 font-body text-[var(--foreground)]">Награди</a>
+            <a href="#how-to" className="block py-2 font-body text-[var(--foreground)]">Процес</a>
+            <a href="#faq" className="block py-2 font-body text-[var(--foreground)]">Въпроси</a>
+            <a href="#contact" className="block py-2 font-body text-[var(--foreground)]">Контакти</a>
             <div className="flex items-center gap-2 pt-2">
               <button className="w-14 h-10 rounded-full bg-[var(--soft-rose)] text-white flex items-center justify-center">
                 <span className="text-xl">🇧🇬</span>

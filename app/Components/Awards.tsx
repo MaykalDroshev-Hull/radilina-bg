@@ -1,11 +1,11 @@
 "use client";
 
-import { awards } from '../data/mockData';
-import { Award, ExternalLink, ArrowRight, Trophy } from 'lucide-react';
+import { ExternalLink, ArrowRight, Trophy } from 'lucide-react';
 
 export default function Awards() {
   return (
-    <>    <div className="flex items-start justify-between w-full gap-6 px-12 mt-12 mb-12">
+    <section id="awards">
+    <div className="flex items-start justify-between w-full gap-6 px-12 mt-12 mb-12">
     {/* Left side */}
     <div className="flex items-center gap-2">
       <span className="w-3 h-3 bg-red-500 rounded-full"></span>
@@ -95,8 +95,7 @@ export default function Awards() {
       </div>
     </div>
   </section>
-    
-    </>
+    </section>
   );
 }
 
