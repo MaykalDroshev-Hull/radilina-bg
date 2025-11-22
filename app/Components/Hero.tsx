@@ -1,9 +1,10 @@
 import { ArrowRight, Coffee, Circle, Square, ChefHat, Apple, Droplets, Cigarette, RectangleHorizontal, Utensils, Wine, Bell, Plus } from 'lucide-react';
+import { AnimatedSection, AnimatedContainer, AnimatedItem } from '../lib/animations';
 
 export default function Hero() {
   return (
     <div className="px-5">
-      <section
+      <AnimatedSection
         id="home"
         className="relative h-[80vh] overflow-hidden rounded-4xl px-6 md:px-10 lg:px-14"
       >   {/* Background Image */}
@@ -19,25 +20,26 @@ export default function Hero() {
       
       {/* Content centered and positioned */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-8">
-        {/* Placeholder text and button - centered in middle */}
-        <div className="mb-auto mt-auto">
-          <p className="font-body text-white/90 text-base md:text-lg mb-6 max-w-2xl">
-          <span
-            className=" text-2xl md:text-3xl text-white block mb-2"
-          >
-            Традиция, уют и ръчно изработена керамика с български дух.
-          </span>
-          </p>
-          
+        <AnimatedContainer className="mb-auto mt-auto">
+          <AnimatedItem>
+            <p className="font-body text-white/90 text-base md:text-lg mb-6 max-w-2xl">
+            <span className="text-2xl md:text-3xl text-white block mb-2">
+              Традиция, уют и ръчно изработена керамика с български дух.
+            </span>
+            </p>
+          </AnimatedItem>
+
           {/* View Products button */}
-          <a
-            href="#products"
-            className="inline-flex items-center gap-2 text-white font-body text-sm md:text-base hover:gap-3 transition-all"
-          >
-            Разгледайте нашите продукти
-            <ArrowRight size={20} />
-          </a>
-        </div>
+          <AnimatedItem>
+            <a
+              href="#products"
+              className="inline-flex items-center gap-2 text-white font-body text-sm md:text-base hover:gap-3 transition-all"
+            >
+              Разгледайте нашите продукти
+              <ArrowRight size={20} />
+            </a>
+          </AnimatedItem>
+        </AnimatedContainer>
       </div>
       
       {/* Business name - Absolutely positioned at bottom, centered, flush with edge */}
@@ -73,12 +75,12 @@ export default function Hero() {
                  tracking-tight translate-y-[22%]">
     Radilina
   </h1>
-  
+
 </div>
-      </section>
+      </AnimatedSection>
 
       {/* Product Categories Animated Carousel */}
-      <div className="mt-8 mb-12 relative w-full overflow-hidden">
+      <AnimatedSection className="mt-8 mb-12 relative w-full overflow-hidden">
         {/* Fade edges */}
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-[var(--background)] to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-[var(--background)] to-transparent" />
@@ -140,7 +142,7 @@ export default function Hero() {
             );
           })}
         </div>
-      </div>
+      </AnimatedSection>
     </div>
   );
 }

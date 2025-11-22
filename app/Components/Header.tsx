@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { smoothScroll } from '../lib/animations';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,23 +22,23 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Начало</a>
-            <a href="#selected-products" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Избрани продукти</a>
-            <a href="#awards" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Награди</a>
-            <a href="#products" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Продукти</a>
-            <a href="#how-to" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Процес</a>
-            <a href="#faq" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Въпроси</a>
-            <a href="#contact" className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Контакти</a>  
+            <button onClick={() => smoothScroll('#home')} className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Начало</button>
+            <button onClick={() => smoothScroll('#selected-products')} className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Избрани продукти</button>
+            <button onClick={() => smoothScroll('#awards')} className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Награди</button>
+            <button onClick={() => smoothScroll('#products')} className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Продукти</button>
+            <button onClick={() => smoothScroll('#how-to')} className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Процес</button>
+            <button onClick={() => smoothScroll('#faq')} className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Въпроси</button>
+            <button onClick={() => smoothScroll('#contact')} className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Контакти</button>
           </nav>
 
           {/* Right Side: Contact Us + Language Button */}
           <div className="hidden md:flex items-center gap-3">
-            <a
-              href="#contact"
+            <button
+              onClick={() => smoothScroll('#contact')}
               className="bg-[var(--foreground)] text-white px-6 py-2.5 rounded-full font-body font-medium hover:bg-[var(--foreground)]/90 transition-colors"
             >
               Контакти
-            </a>
+            </button>
             <button className="w-14 h-10 rounded-full bg-[var(--soft-rose)] text-white flex items-center justify-center hover:bg-[var(--soft-rose)]/90 transition-colors">
               <span className="text-xl">🇧🇬</span>
             </button>
@@ -57,12 +58,12 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-[var(--foreground)]/20" style={{ backgroundColor: '#f6f7f9' }}>
           <div className="px-4 pt-2 pb-4 space-y-2">
-            <a href="#home" className="block py-2 font-body text-[var(--foreground)]">Начало</a>
-            <a href="#products" className="block py-2 font-body text-[var(--foreground)]">Продукти</a>
-            <a href="#awards" className="block py-2 font-body text-[var(--foreground)]">Награди</a>
-            <a href="#how-to" className="block py-2 font-body text-[var(--foreground)]">Процес</a>
-            <a href="#faq" className="block py-2 font-body text-[var(--foreground)]">Въпроси</a>
-            <a href="#contact" className="block py-2 font-body text-[var(--foreground)]">Контакти</a>
+            <button onClick={() => smoothScroll('#home')} className="block py-2 font-body text-[var(--foreground)] text-left w-full">Начало</button>
+            <button onClick={() => smoothScroll('#products')} className="block py-2 font-body text-[var(--foreground)] text-left w-full">Продукти</button>
+            <button onClick={() => smoothScroll('#awards')} className="block py-2 font-body text-[var(--foreground)] text-left w-full">Награди</button>
+            <button onClick={() => smoothScroll('#how-to')} className="block py-2 font-body text-[var(--foreground)] text-left w-full">Процес</button>
+            <button onClick={() => smoothScroll('#faq')} className="block py-2 font-body text-[var(--foreground)] text-left w-full">Въпроси</button>
+            <button onClick={() => smoothScroll('#contact')} className="block py-2 font-body text-[var(--foreground)] text-left w-full">Контакти</button>
             <div className="flex items-center gap-2 pt-2">
               <button className="w-14 h-10 rounded-full bg-[var(--soft-rose)] text-white flex items-center justify-center">
                 <span className="text-xl">🇧🇬</span>

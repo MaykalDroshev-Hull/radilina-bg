@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat, Playfair_Display, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
+import { LenisProvider } from "./lib/animations";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -36,7 +37,9 @@ export default function RootLayout({
         className={`${montserrat.variable} ${playfairDisplay.variable} ${sourceSans3.variable} antialiased`}
         style={{ backgroundColor: '#f6f7f9' }}
       >
-        {children}
+        <LenisProvider>
+          {children}
+        </LenisProvider>
       </body>
     </html>
   );
