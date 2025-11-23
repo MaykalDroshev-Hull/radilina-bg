@@ -10,14 +10,17 @@ import Footer from './Components/Footer';
 
 export default function HomePage() {
   return (
-    <>      <Header />
-      <Hero />
-      <SelectedProducts />
-      <Awards />
-      <AllProducts />
-      <HowItWorks />
-      <FAQ />
-      <Contact />
+    <>
+      <Header />
+      <div className="w-full max-w-[1620px] mx-auto">
+        <Hero />
+        <SelectedProducts />
+        <Awards />
+        <AllProducts />
+        <HowItWorks />
+        <FAQ />
+        <Contact />
+      </div>
       <Footer />
     </>
   );

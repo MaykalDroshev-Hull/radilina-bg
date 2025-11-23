@@ -25,43 +25,43 @@ export default function FAQ() {
   return (
     <section id="faq">
       {/* 50/50 Grid Section */}
-      <div className="w-full px-12 mb-12">
-        <div className="grid grid-cols-2 gap-12">
+      <div className="w-full px-6 md:px-12 mb-8 md:mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {/* Left Column - Caption, Subtitle, and Image */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4 md:gap-6">
             <div className="flex items-center gap-2">
-            <span className="w-3 h-3 bg-red-500 rounded-full"></span>
-            <span className="text-xl text-gray-700">Често задавани въпроси</span>
+              <span className="w-3 h-3 bg-red-500 rounded-full flex-shrink-0"></span>
+              <span className="text-base md:text-xl text-gray-700 font-body">Често задавани въпроси</span>
             </div>
             
-            <h3 className="text-4xl leading-tight">
-              <span className="font-semibold text-gray-900">
+            <h3 className="text-xl md:text-4xl leading-tight">
+              <span className="font-semibold text-gray-900 font-headline">
                 Ясни обяснения как работим,
               </span>
-              <span className="text-gray-500">
+              <span className="text-gray-500 font-headline">
                 {" "}какво използваме и какво можете да очаквате
               </span>
             </h3>
 
-            <div className="rounded-3xl overflow-hidden mt-4">
+            <div className="rounded-2xl md:rounded-3xl overflow-hidden mt-2 md:mt-4">
               <img
                 src="/images/slide-3.jpg"
                 alt="Керамични изделия"
-                className="w-full h-[400px] object-cover"
+                className="w-full h-64 md:h-[400px] object-cover"
               />
             </div>
           </div>
 
           {/* Right Column - FAQ Items (All Expanded) */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3 md:gap-4">
             {faqData.map((faq, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-sm p-6 flex gap-4 hover:shadow-md transition-shadow">
+              <div key={index} className="bg-white rounded-xl md:rounded-2xl shadow-sm p-4 md:p-6 flex gap-3 md:gap-4 hover:shadow-md transition-shadow">
                 <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
-                <div className="flex flex-col gap-2">
-                  <h4 className="text-lg font-semibold text-gray-900">
+                <div className="flex flex-col gap-1 md:gap-2">
+                  <h4 className="text-base md:text-lg font-semibold text-gray-900 font-headline">
                     {faq.question}
                   </h4>
-                  <p className="text-base text-gray-600 leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed font-body">
                     {faq.answer}
                   </p>
                 </div>
