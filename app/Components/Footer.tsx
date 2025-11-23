@@ -51,6 +51,7 @@ export default function Footer() {
               <h4 className="font-headline font-semibold mb-4 md:mb-6 text-base md:text-lg">Бързи връзки</h4>
               <ul className="space-y-2.5 md:space-y-3 font-body text-white/70 text-sm md:text-base">
                 <li><a href="#home" className="hover:text-white transition-colors">Начало</a></li>
+                <li><a href="#courses" className="hover:text-white transition-colors">Курсове</a></li>
                 <li><a href="#products" className="hover:text-white transition-colors">Продукти</a></li>
                 <li><a href="#awards" className="hover:text-white transition-colors">Награди</a></li>
                 <li><a href="#how-to" className="hover:text-white transition-colors">Процес на работа</a></li>

@@ -33,6 +33,7 @@ export default function Header() {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               <button onClick={() => smoothScroll('#home')} className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Начало</button>
+              <button onClick={() => smoothScroll('#courses')} className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Курсове</button>
               <button onClick={() => smoothScroll('#selected-products')} className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Избрани продукти</button>
               <button onClick={() => smoothScroll('#awards')} className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Награди</button>
               <button onClick={() => smoothScroll('#products')} className="font-body text-[var(--foreground)] hover:text-[var(--soft-rose)] transition-colors">Продукти</button>
@@ -117,6 +118,12 @@ export default function Header() {
                 className="py-4 px-6 font-body text-black text-left border-b border-black/10 hover:bg-black/5 transition-colors"
               >
                 Начало
+              </button>
+              <button
+                onClick={() => handleMenuClick('#courses')}
+                className="py-4 px-6 font-body text-black text-left border-b border-black/10 hover:bg-black/5 transition-colors"
+              >
+                Курсове
               </button>
               <button
                 onClick={() => handleMenuClick('#selected-products')}
