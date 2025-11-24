@@ -25,45 +25,45 @@ import { AnimatedSection, AnimatedContainer, AnimatedItem } from '../lib/animati
 
 export default function SelectedProducts() {
   return (
-    <AnimatedSection id="selected-products" className="py-12 md:py-20">
-      <AnimatedContainer className="px-6 md:px-12">
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between w-full gap-6 md:gap-6 mb-8 md:mb-12">
+    <AnimatedSection id="selected-products" className="py-12 md:py-16 lg:py-20">
+      <AnimatedContainer className="px-6 md:px-10 lg:px-12">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between w-full gap-6 md:gap-8 lg:gap-10 mb-8 md:mb-10 lg:mb-12">
           {/* Left side */}
-          <AnimatedItem className="flex items-center gap-2">
-            <span className="w-3 h-3 bg-red-500 rounded-full flex-shrink-0"></span>
-            <span className="text-base md:text-xl text-gray-700 font-body">Избрани продукти</span>
+          <AnimatedItem className="flex items-center gap-2 md:gap-3">
+            <span className="w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full flex-shrink-0"></span>
+            <span className="text-base md:text-lg lg:text-xl text-gray-700 font-body">Избрани продукти</span>
           </AnimatedItem>
           {/* Right side */}
-          <AnimatedItem className="md:max-w-[50%] text-left md:text-right text-xl md:text-4xl">
-            <span className="font-semibold text-gray-900 font-headline">
+          <AnimatedItem className="md:max-w-[55%] lg:max-w-[50%] text-left md:text-right text-xl md:text-2xl lg:text-4xl">
+            <span className="font-semibold text-gray-900 font-headline leading-tight">
               Всеки продукт е диалог между дизайн и цел,
             </span>
-            <span className="text-gray-400 font-headline">
+            <span className="text-gray-400 font-headline leading-tight">
               {" "}превръщайки видение в значими цифрови преживявания
             </span>
           </AnimatedItem>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 lg:gap-6">
           {projects.map((p, index) => (
             <AnimatedItem key={p.title} delay={index * 0.1}>
-              <div className="bg-white rounded-3xl p-3 md:p-4 border border-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div className="overflow-hidden rounded-2xl">
+              <div className="bg-white rounded-3xl md:rounded-[2rem] lg:rounded-3xl p-3 md:p-4 lg:p-5 border border-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer group">
+                <div className="overflow-hidden rounded-2xl md:rounded-[1.5rem]">
                   <img
                     src={p.image}
                     alt={p.title}
-                    className="w-full h-56 md:h-48 object-cover transition-transform duration-500 hover:scale-105"
+                    className="w-full h-56 md:h-56 lg:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
 
-                <div className="flex items-center justify-between mt-3 md:mt-4">
-                  <h3 className="text-lg md:text-xl font-light text-gray-900 font-body">
+                <div className="flex items-center justify-between mt-3 md:mt-4 lg:mt-5">
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-light text-gray-900 font-body">
                     {p.title}
                   </h3>
 
-                  <span className="text-xs md:text-sm font-bold text-gray-900 flex items-center gap-1 font-body">
+                  <span className="text-xs md:text-sm lg:text-base font-bold text-gray-900 flex items-center gap-1 md:gap-1.5 font-body whitespace-nowrap">
                     {p.category}
-                    <span className="text-red-500">↗</span>
+                    <span className="text-red-500 text-base md:text-lg">↗</span>
                   </span>
                 </div>
               </div>

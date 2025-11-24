@@ -160,41 +160,41 @@ export default function AllProducts() {
   return (
     <section id="products">
       {/* Header Section */}
-      <div className="flex flex-col md:flex-row md:items-start md:justify-between w-full gap-6 px-6 md:px-12 mt-8 md:mt-12 mb-8 md:mb-12">
+      <div className="flex flex-col md:flex-row md:items-start md:justify-between w-full gap-6 md:gap-8 lg:gap-10 px-6 md:px-10 lg:px-12 mt-8 md:mt-10 lg:mt-12 mb-8 md:mb-10 lg:mb-12">
         {/* Left side */}
-        <div className="flex items-center gap-2">
-          <span className="w-3 h-3 bg-red-500 rounded-full flex-shrink-0"></span>
-          <span className="text-base md:text-xl text-gray-700 font-body">Всички продукти</span>
+        <div className="flex items-center gap-2 md:gap-3">
+          <span className="w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full flex-shrink-0"></span>
+          <span className="text-base md:text-lg lg:text-xl text-gray-700 font-body">Всички продукти</span>
         </div>
         {/* Right side */}
-        <p className="md:max-w-[50%] text-left md:text-right text-xl md:text-4xl">
-          <span className="font-semibold text-gray-900 font-headline">
+        <p className="md:max-w-[55%] lg:max-w-[50%] text-left md:text-right text-xl md:text-2xl lg:text-4xl">
+          <span className="font-semibold text-gray-900 font-headline leading-tight">
             Разгледайте цялата ни колекция
           </span>
-          <span className="text-gray-400 font-headline">
+          <span className="text-gray-400 font-headline leading-tight">
             {" "}от ръчно изработена керамика
           </span>
         </p>
       </div>
 
       {/* Black Container with Categories */}
-      <section className="w-full px-6 md:px-12 mb-8 md:mb-12">
-        <div className="bg-black rounded-2xl md:rounded-3xl p-5 md:p-8">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
+      <section className="w-full px-6 md:px-10 lg:px-12 mb-8 md:mb-10 lg:mb-12">
+        <div className="bg-black rounded-2xl md:rounded-[2rem] lg:rounded-3xl p-5 md:p-7 lg:p-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-5 lg:gap-6">
             {categories.map((category, index) => (
               <div 
                 key={index}
                 className="flex flex-col gap-2 md:gap-3 group cursor-pointer"
                 onClick={() => openModal(category)}
               >
-                <div className="relative overflow-hidden rounded-xl md:rounded-2xl aspect-square bg-gray-800">
+                <div className="relative overflow-hidden rounded-xl md:rounded-xl lg:rounded-2xl aspect-square bg-gray-800 ring-2 ring-transparent group-hover:ring-white/20 transition-all">
                   <img
                     src={category.image}
                     alt={category.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
-                <h3 className="text-white text-center font-body text-sm md:text-lg">
+                <h3 className="text-white text-center font-body text-sm md:text-base lg:text-lg">
                   {category.name}
                 </h3>
               </div>
@@ -206,47 +206,47 @@ export default function AllProducts() {
       {/* Modal */}
       {isModalOpen && selectedCategory && (
         <div 
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 md:p-6"
           onClick={closeModal}
         >
           <div 
-            className="bg-white rounded-2xl md:rounded-3xl max-w-4xl w-full max-h-[85vh] md:max-h-[80vh] overflow-y-auto shadow-2xl"
+            className="bg-white rounded-2xl md:rounded-[2rem] lg:rounded-3xl max-w-4xl w-full max-h-[85vh] md:max-h-[80vh] overflow-y-auto shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="sticky top-0 bg-white border-b border-gray-200 px-5 md:px-8 py-5 md:py-6 rounded-t-2xl md:rounded-t-3xl flex items-center justify-between">
+            <div className="sticky top-0 bg-white border-b border-gray-200 px-5 md:px-7 lg:px-8 py-5 md:py-6 lg:py-7 rounded-t-2xl md:rounded-t-[2rem] lg:rounded-t-3xl flex items-center justify-between z-10">
               <div className="flex-1 pr-4">
-                <h2 className="text-xl md:text-3xl font-semibold text-gray-900 font-headline">{selectedCategory.name}</h2>
-                <p className="text-sm md:text-base text-gray-600 mt-1 font-body">Изберете подкатегория</p>
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-900 font-headline">{selectedCategory.name}</h2>
+                <p className="text-sm md:text-base text-gray-600 mt-1 md:mt-2 font-body">Изберете подкатегория</p>
               </div>
               <button
                 onClick={closeModal}
-                className="p-2 hover:bg-gray-100 rounded-full transition-colors flex-shrink-0"
+                className="p-2 md:p-2.5 hover:bg-gray-100 active:bg-gray-200 rounded-full transition-colors flex-shrink-0"
               >
-                <X className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
+                <X className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-gray-600" />
               </button>
             </div>
 
             {/* Modal Content */}
-            <div className="p-5 md:p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="p-5 md:p-7 lg:p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 lg:gap-6">
                 {selectedCategory.subcategories.map((subcategory, index) => (
                   <div
                     key={index}
-                    className="bg-white rounded-xl md:rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow cursor-pointer"
+                    className="bg-white rounded-xl md:rounded-xl lg:rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all cursor-pointer group"
                   >
-                    <div className="relative h-40 md:h-48 overflow-hidden bg-gray-100">
+                    <div className="relative h-40 md:h-48 lg:h-52 overflow-hidden bg-gray-100">
                       <img
                         src={subcategory.image}
                         alt={subcategory.name}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
-                    <div className="p-4 md:p-6">
-                      <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-1 md:mb-2 font-headline">
+                    <div className="p-4 md:p-5 lg:p-6">
+                      <h3 className="text-lg md:text-xl lg:text-xl font-semibold text-gray-900 mb-1 md:mb-2 font-headline">
                         {subcategory.name}
                       </h3>
-                      <p className="text-sm md:text-base text-gray-600 font-body">
+                      <p className="text-sm md:text-base text-gray-600 font-body leading-relaxed">
                         {subcategory.subtitle}
                       </p>
                     </div>
