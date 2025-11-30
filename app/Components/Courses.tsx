@@ -4,35 +4,40 @@ import { AnimatedSection, AnimatedContainer, AnimatedItem } from '../lib/animati
 const courses = [
   {
     title: "Въведение в грънчарството",
-    duration: "4 седмици",
-    level: "Начинаещи",
-    participants: "До 6 участници",
-    description: "Научете основите на работата с глина и грънчарското колело",
+    duration: "3-5 часа",
+    level: "Еднократна демонстрация",
+    participants: "До 20 участници",
+    description: "Изработете глинен съд или нашарайте чиния с типичната троянска шарка",
     image: "/images/slide-3.jpg",
-    highlights: ["Основни техники", "Практика с колело", "Собствен проект"],
-    price: "280 лв",
-    featured: false,
-  },
-  {
-    title: "Майсторски клас: Традиционна керамика",
-    duration: "8 седмици",
-    level: "Напреднали",
-    participants: "До 4 участници",
-    description: "Задълбочено обучение в традиционните троянски техники и мотиви",
-    image: "/images/kana.jpg",
-    highlights: ["Троянски мотиви", "Глазиране", "Художествена декорация"],
-    price: "560 лв",
+    highlights: [
+      "Изработете собствен съд от глина",
+      "Или нашарайте чиния с троянска шарка",
+      "Продуктът остава за вас"
+    ],
+    price: "25 лв",
+    priceNote: "суров продукт",
+    priceAlt: "40 лв",
+    priceAltNote: "изпечен продукт",
+    upsell: "+15 лв за втори продукт",
     featured: true,
   },
   {
-    title: "Семейна работилница",
-    duration: "1 ден",
-    level: "Всички нива",
-    participants: "2-4 човека",
-    description: "Създайте незабравими спомени заедно със семейството",
-    image: "/images/guvech.jpg",
-    highlights: ["Семейно забавление", "За деца 8+", "Вземете творбите си"],
-    price: "120 лв",
+    title: "Мобилна демонстрация",
+    duration: "3-5 часа",
+    level: "Хотел / Конферентна зала",
+    participants: "До 40 участници",
+    description: "Организираме демонстрация на ваше място със всички необходими материали",
+    image: "/images/kana.jpg",
+    highlights: [
+      "Пълно оборудване и материали",
+      "Подходящо за корпоративни събития",
+      "Изработете съд или шарете чиния",
+    ],
+    price: "25 лв",
+    priceNote: "суров продукт",
+    priceAlt: "40 лв",
+    priceAltNote: "изпечен продукт",
+    upsell: "+15 лв за втори продукт",
     featured: false,
   },
 ];
@@ -61,7 +66,7 @@ export default function Courses() {
         </div>
 
         {/* Courses Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 lg:gap-8 mb-8 md:mb-10 lg:mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6 lg:gap-8 mb-8 md:mb-10 lg:mb-12">
           {courses.map((course, index) => (
             <AnimatedItem key={course.title} delay={index * 0.1}>
               <div className={`
@@ -137,14 +142,24 @@ export default function Courses() {
                   </div>
 
                   {/* Price and CTA */}
-                  <div className="flex items-center justify-between pt-4 md:pt-5 border-t border-gray-100">
-                    <div>
-                      <div className="text-sm md:text-base text-gray-500 font-body">Цена</div>
-                      <div className="text-2xl md:text-3xl font-bold text-gray-900 font-headline">{course.price}</div>
+                  <div className="pt-4 md:pt-5 border-t border-gray-100">
+                    <div className="mb-4">
+                      <div className="text-sm md:text-base text-gray-500 font-body mb-3">Цена за 1 продукт</div>
+                      <div className="space-y-2 mb-2">
+                        <div className="flex items-baseline gap-2">
+                          <div className="text-2xl md:text-3xl font-bold text-gray-900 font-headline">{course.price}</div>
+                          <div className="text-sm md:text-base text-gray-500 font-body">({course.priceNote})</div>
+                        </div>
+                        <div className="flex items-baseline gap-2">
+                          <div className="text-2xl md:text-3xl font-bold text-gray-900 font-headline">{course.priceAlt}</div>
+                          <div className="text-sm md:text-base text-gray-500 font-body">({course.priceAltNote})</div>
+                        </div>
+                      </div>
+                      <div className="text-sm text-[#F4A7A7] font-semibold font-body mt-2">{course.upsell}</div>
                     </div>
                     <button className={`
-                      px-4 md:px-5 lg:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-semibold
-                      transition-all duration-300 flex items-center gap-2 font-body
+                      w-full px-4 md:px-5 lg:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-semibold
+                      transition-all duration-300 flex items-center justify-center gap-2 font-body
                       active:scale-95
                       ${course.featured
                         ? 'bg-[#F4A7A7] text-white hover:bg-[#E89696] shadow-md'
@@ -182,9 +197,6 @@ export default function Courses() {
                   Свържете се с нас
                   <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
                 </button>
-                <button className="px-6 md:px-7 py-3 md:py-3.5 bg-white text-gray-900 rounded-full text-sm md:text-base font-semibold hover:bg-gray-50 active:scale-95 transition-all border border-gray-200 font-body whitespace-nowrap">
-                  Вижте разписание
-                </button>
               </div>
             </div>
           </div>
@@ -198,8 +210,8 @@ export default function Courses() {
                 <Award className="w-5 h-5 md:w-6 md:h-6 text-[#CFE6D7]" style={{ color: '#4A9D7E' }} />
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-1 md:mb-1.5 font-headline text-sm md:text-base lg:text-lg">Сертификат</h4>
-                <p className="text-xs md:text-sm lg:text-base text-gray-600 font-body leading-relaxed">Получавате официален сертификат след приключване</p>
+                <h4 className="font-semibold text-gray-900 mb-1 md:mb-1.5 font-headline text-sm md:text-base lg:text-lg">Суров продукт</h4>
+                <p className="text-xs md:text-sm lg:text-base text-gray-600 font-body leading-relaxed">Само за декорация, не може да се мокри</p>
               </div>
             </div>
 
@@ -208,8 +220,8 @@ export default function Courses() {
                 <Users className="w-5 h-5 md:w-6 md:h-6 text-[#F4A7A7]" />
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-1 md:mb-1.5 font-headline text-sm md:text-base lg:text-lg">Малки групи</h4>
-                <p className="text-xs md:text-sm lg:text-base text-gray-600 font-body leading-relaxed">Индивидуално внимание за всеки участник</p>
+                <h4 className="font-semibold text-gray-900 mb-1 md:mb-1.5 font-headline text-sm md:text-base lg:text-lg">Изпечен продукт</h4>
+                <p className="text-xs md:text-sm lg:text-base text-gray-600 font-body leading-relaxed">Готов за пълна употреба във вашия дом</p>
               </div>
             </div>
 

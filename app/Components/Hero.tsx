@@ -16,67 +16,44 @@ export default function Hero() {
 />
       
       {/* Gradient overlay for better text contrast */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
       
-      {/* Content centered and positioned */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 md:px-10 lg:px-12">
-        <AnimatedContainer className="mb-auto mt-auto">
-          <AnimatedItem>
-            <p className="font-body text-white/90 text-sm md:text-base lg:text-lg mb-4 md:mb-6 lg:mb-8 max-w-2xl lg:max-w-3xl">
-            <span className="text-xl md:text-2xl lg:text-3xl text-white block mb-2 md:mb-3 font-headline leading-tight md:leading-tight">
-              Традиция, уют и ръчно изработена керамика с български дух.
-            </span>
-            </p>
-          </AnimatedItem>
+      {/* Content */}
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 md:px-10 lg:px-12">
+        <AnimatedContainer className="max-w-4xl">
+          {/* Glassmorphism container */}
+          <div className="relative backdrop-blur-md bg-white/5 rounded-3xl md:rounded-[2rem] p-8 md:p-12 lg:p-16 border border-white/30 shadow-2xl">
+            {/* Liquid gradient background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/20 to-[#F4A7A7]/30 rounded-3xl md:rounded-[2rem]"></div>
+            
+            {/* Content with higher z-index */}
+            <div className="relative z-10">
+              <AnimatedItem>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white font-headline font-semibold mb-6 md:mb-8 leading-tight drop-shadow-2xl">
+                  Традиция, уют и ръчно изработена керамика с български дух
+                </h1>
+              </AnimatedItem>
 
-          {/* View Products button */}
-          <AnimatedItem>
-            <a
-              href="#products"
-              className="inline-flex items-center gap-2 md:gap-3 text-white font-body text-xs md:text-sm lg:text-base hover:gap-3 md:hover:gap-4 transition-all"
-            >
-              Разгледайте нашите продукти
-              <ArrowRight size={16} className="md:w-5 md:h-5 lg:w-6 lg:h-6" />
-            </a>
-          </AnimatedItem>
+              <AnimatedItem>
+                <p className="text-base md:text-lg lg:text-xl text-white font-body mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
+                  Всяко изделие е създадено с любов и внимание към детайла
+                </p>
+              </AnimatedItem>
+
+              {/* View Products button */}
+              <AnimatedItem>
+                <a
+                  href="#products"
+                  className="inline-flex items-center gap-2 md:gap-3 bg-[#F4A7A7] text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-body text-sm md:text-base lg:text-lg font-semibold hover:bg-[#E89696] transition-all shadow-lg hover:shadow-xl active:scale-95"
+                >
+                  Разгледайте нашите продукти
+                  <ArrowRight size={18} className="md:w-5 md:h-5 lg:w-6 lg:h-6" />
+                </a>
+              </AnimatedItem>
+            </div>
+          </div>
         </AnimatedContainer>
       </div>
-      
-      {/* Business name - Absolutely positioned at bottom, centered, flush with edge */}
-
-  {/* Progressive white glow with gradual blur */}
-  {/* Very light blur (bottom 35%) */}
-  <div className="absolute inset-0 pointer-events-none">
-    <div className="absolute bottom-0 left-0 right-0 h-[35%]
-      bg-gradient-to-t from-white/70 via-white/10 to-transparent
-      backdrop-blur-[1px]">
-    </div>
-  </div>
-
-  {/* Light blur (bottom 25%) */}
-  <div className="absolute inset-0 pointer-events-none">
-    <div className="absolute bottom-0 left-0 right-0 h-[25%]
-      bg-gradient-to-t from-white/60 via-white/8 to-transparent
-      backdrop-blur-[2x]">
-    </div>
-  </div>
-
-  {/* Medium blur (bottom 15%) */}
-  <div className="absolute inset-0 pointer-events-none">
-    <div className="absolute bottom-0 left-0 right-0 h-[15%]
-      bg-gradient-to-t from-white/50 via-white/6 to-transparent
-      backdrop-blur-[3px]">
-    </div>
-  </div>
-
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full">
-  <h1 className="font-headline text-[16vw] md:text-[14vw] lg:text-[15vw] xl:text-[18vw]
-                 font-semibold text-white leading-none text-center
-                 tracking-tight translate-y-[22%] md:translate-y-[20%] lg:translate-y-[22%]">
-    Radilina
-  </h1>
-
-</div>
       </AnimatedSection>
 
       {/* Product Categories Animated Carousel */}

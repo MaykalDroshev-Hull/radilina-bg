@@ -52,16 +52,24 @@ export default function Contact() {
                 <div className="bg-red-50 p-2.5 md:p-3 lg:p-3.5 rounded-full flex-shrink-0">
                   <Phone className="text-red-500 w-5 h-5 md:w-6 md:h-6" />
                 </div>
-                <div>
+                <div className="flex-1">
                   <h3 className="text-lg md:text-xl lg:text-xl font-semibold text-gray-900 mb-1 md:mb-2 font-headline">
                     Телефон
                   </h3>
-                  <a 
-                    href="tel:+359123456789" 
-                    className="text-sm md:text-base lg:text-lg text-gray-600 hover:text-red-500 transition-colors font-body"
-                  >
-                    +359 123 456 789
-                  </a>
+                  <div className="space-y-1">
+                    <a 
+                      href="tel:+359889964773" 
+                      className="text-sm md:text-base lg:text-lg text-gray-600 hover:text-red-500 transition-colors font-body block"
+                    >
+                      +359 889 964 773
+                    </a>
+                    <a 
+                      href="tel:+359887181368" 
+                      className="text-sm md:text-base lg:text-lg text-gray-600 hover:text-red-500 transition-colors font-body block"
+                    >
+                      +359 887 181 368
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

@@ -23,14 +23,18 @@ export default function Footer() {
                 <h4 className="font-headline font-semibold mb-4 md:mb-5 lg:mb-6 text-base md:text-lg lg:text-xl">Последвайте ни</h4>
                 <div className="flex gap-3 md:gap-4 mb-4 md:mb-5 lg:mb-6">
                   <a 
-                    href="#" 
+                    href="https://www.facebook.com/share/1Q1EAaXXHZ/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-white/10 p-2.5 md:p-3 lg:p-3.5 rounded-full hover:bg-white/20 active:scale-95 transition-all"
                     aria-label="Facebook"
                   >
                     <Facebook size={18} className="md:w-6 md:h-6 lg:w-6 lg:h-6" />
                   </a>
                   <a 
-                    href="#" 
+                    href="https://www.instagram.com/radilinaceramics" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-white/10 p-2.5 md:p-3 lg:p-3.5 rounded-full hover:bg-white/20 active:scale-95 transition-all"
                     aria-label="Instagram"
                   >
@@ -39,7 +43,8 @@ export default function Footer() {
                 </div>
                 <div className="font-body text-white/70 space-y-2 md:space-y-2.5 text-sm md:text-base lg:text-base">
                   <p><a href="mailto:hello@radilina.bg" className="hover:text-white transition-colors">hello@radilina.bg</a></p>
-                  <p><a href="tel:+359123456789" className="hover:text-white transition-colors">+359 123 456 789</a></p>
+                  <p><a href="tel:+359889964773" className="hover:text-white transition-colors">+359 889 964 773</a></p>
+                  <p><a href="tel:+359887181368" className="hover:text-white transition-colors">+359 887 181 368</a></p>
                   <p>Троян, България</p>
                 </div>
               </div>
@@ -50,13 +55,13 @@ export default function Footer() {
             <div>
               <h4 className="font-headline font-semibold mb-4 md:mb-5 lg:mb-6 text-base md:text-lg lg:text-xl">Бързи връзки</h4>
               <ul className="space-y-2.5 md:space-y-3 lg:space-y-3.5 font-body text-white/70 text-sm md:text-base lg:text-base">
-                <li><a href="#home" className="hover:text-white transition-colors inline-block">Начало</a></li>
-                <li><a href="#courses" className="hover:text-white transition-colors inline-block">Курсове</a></li>
-                <li><a href="#products" className="hover:text-white transition-colors inline-block">Продукти</a></li>
-                <li><a href="#awards" className="hover:text-white transition-colors inline-block">Награди</a></li>
-                <li><a href="#how-to" className="hover:text-white transition-colors inline-block">Процес на работа</a></li>
-                <li><a href="#faq" className="hover:text-white transition-colors inline-block">Въпроси</a></li>
-                <li><a href="#contact" className="hover:text-white transition-colors inline-block">Контакти</a></li>
+                <li><a href="/#home" className="hover:text-white transition-colors inline-block">Начало</a></li>
+                <li><a href="/#courses" className="hover:text-white transition-colors inline-block">Курсове</a></li>
+                <li><a href="/#products" className="hover:text-white transition-colors inline-block">Продукти</a></li>
+                <li><a href="/#awards" className="hover:text-white transition-colors inline-block">Награди</a></li>
+                <li><a href="/#about" className="hover:text-white transition-colors inline-block">За нас</a></li>
+                <li><a href="/gallery" className="hover:text-white transition-colors inline-block">Галерия</a></li>
+                <li><a href="/#contact" className="hover:text-white transition-colors inline-block">Контакти</a></li>
               </ul>
             </div>
           </div>
