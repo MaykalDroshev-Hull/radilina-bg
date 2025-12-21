@@ -1,145 +1,124 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 
 const categories = [
   { 
-    name: "Чаши и халби", 
-    image: "/images/rakia cup.jpg",
+    name: "Гювечи и гърнета", 
+    image: "/images/guvech.jpg",
     subcategories: [
-      { name: "Чаша за ракия", subtitle: "Традиционна малка чаша", image: "/images/rakia cup.jpg", code: "CH-RAK-001", price: "8 лв" },
-      { name: "Халба за бира", subtitle: "Голяма керамична халба", image: "/images/slide-3.jpg", code: "CH-BIR-001", price: "15 лв" },
-      { name: "Чаша за кафе", subtitle: "Среден размер", image: "/images/slide-3.jpg", code: "CH-KAF-001", price: "10 лв" },
-      { name: "Чаша за чай", subtitle: "С дръжка", image: "/images/slide-3.jpg", code: "CH-CHY-001", price: "9 лв" },
+      { name: "Гювече", subtitle: "0.500 л", image: "/images/guvech.jpg", code: "1001", price: "" },
+      { name: "Гювеч", subtitle: "1 л", image: "/images/guvech.jpg", code: "1002", price: "" },
+      { name: "Гювеч", subtitle: "3 л", image: "/images/guvech.jpg", code: "1003", price: "" },
+      { name: "Гювеч", subtitle: "6 л", image: "/images/guvech.jpg", code: "1004", price: "" },
+      { name: "Гърне за боб", subtitle: "3 л", image: "/images/slide-3.jpg", code: "1005", price: "" },
+      { name: "Гърне за боб", subtitle: "5 л", image: "/images/slide-3.jpg", code: "1006", price: "" },
     ]
   },
   { 
-    name: "Чинии", 
+    name: "Купи и сосиерки", 
     image: "/images/slide-3.jpg",
     subcategories: [
-      { name: "Плитка чиния", subtitle: "Диаметър 25см", image: "/images/slide-3.jpg", code: "CHN-PLT-025", price: "18 лв" },
-      { name: "Дълбока чиния", subtitle: "За супи", image: "/images/slide-3.jpg", code: "CHN-DLB-001", price: "20 лв" },
-      { name: "Десертна чиния", subtitle: "Малък размер", image: "/images/slide-3.jpg", code: "CHN-DES-001", price: "12 лв" },
+      { name: "Купа малка", subtitle: "Ø 12 см", image: "/images/slide-3.jpg", code: "2001", price: "" },
+      { name: "Купа средна", subtitle: "Ø 14 см", image: "/images/slide-3.jpg", code: "2002", price: "" },
+      { name: "Купа голяма", subtitle: "Ø 16 см", image: "/images/slide-3.jpg", code: "2003", price: "" },
+      { name: "Купа №3", subtitle: "Ø 18 см", image: "/images/slide-3.jpg", code: "2004", price: "" },
+      { name: "Купа №5", subtitle: "Ø 20 см", image: "/images/slide-3.jpg", code: "2005", price: "" },
+      { name: "Купа №7", subtitle: "Ø 24 см", image: "/images/slide-3.jpg", code: "2006", price: "" },
+      { name: "Купа №13", subtitle: "Ø 28 см", image: "/images/slide-3.jpg", code: "2007", price: "" },
+      { name: "Купа с дръжка", subtitle: "400 мл", image: "/images/slide-3.jpg", code: "2008", price: "" },
+      { name: "Купа за спагети", subtitle: "", image: "/images/slide-3.jpg", code: "2009", price: "" },
+      { name: "Сосиерка", subtitle: "", image: "/images/slide-3.jpg", code: "2010", price: "" },
     ]
   },
   { 
-    name: "Купи", 
+    name: "Чинии и пахари", 
     image: "/images/slide-3.jpg",
     subcategories: [
-      { name: "Малка купа", subtitle: "За сосове", image: "/images/slide-3.jpg", code: "KUP-MLK-001", price: "7 лв" },
-      { name: "Средна купа", subtitle: "Универсална", image: "/images/slide-3.jpg", code: "KUP-SRD-001", price: "12 лв" },
-      { name: "Голяма купа", subtitle: "За салати", image: "/images/slide-3.jpg", code: "KUP-GLM-001", price: "18 лв" },
+      { name: "Чиния", subtitle: "Ø 15 см", image: "/images/slide-3.jpg", code: "3001", price: "" },
+      { name: "Чиния", subtitle: "Ø 18 см", image: "/images/slide-3.jpg", code: "3002", price: "" },
+      { name: "Чиния", subtitle: "Ø 22 см", image: "/images/slide-3.jpg", code: "3003", price: "" },
+      { name: "Чиния", subtitle: "Ø 26 см", image: "/images/slide-3.jpg", code: "3004", price: "" },
+      { name: "Чиния", subtitle: "Ø 30 см", image: "/images/slide-3.jpg", code: "3005", price: "" },
+      { name: "Пахар", subtitle: "Ø 17 см", image: "/images/slide-3.jpg", code: "3006", price: "" },
     ]
   },
   { 
     name: "Тави", 
     image: "/images/slide-3.jpg",
     subcategories: [
-      { name: "Правоъгълна тава", subtitle: "За печене", image: "/images/slide-3.jpg", code: "TAV-PRV-001", price: "25 лв" },
-      { name: "Кръгла тава", subtitle: "Декоративна", image: "/images/slide-3.jpg", code: "TAV-KRG-001", price: "22 лв" },
+      { name: "Тава №5", subtitle: "Ø 20 см", image: "/images/slide-3.jpg", code: "4001", price: "" },
+      { name: "Тава №7", subtitle: "Ø 24 см", image: "/images/slide-3.jpg", code: "4002", price: "" },
+      { name: "Тава №13", subtitle: "Ø 28 см", image: "/images/slide-3.jpg", code: "4003", price: "" },
+      { name: "Тава за пиле", subtitle: "Ø 28 см", image: "/images/slide-3.jpg", code: "4004", price: "" },
     ]
   },
   { 
-    name: "Гювечи", 
-    image: "/images/guvech.jpg",
+    name: "Чаши за алкохол", 
+    image: "/images/rakia cup.jpg",
     subcategories: [
-      { name: "Троянски гювеч", subtitle: "Традиционен дизайн", image: "/images/guvech.jpg", code: "GUV-TRY-001", price: "15 лв" },
-      { name: "Гювеч с капак", subtitle: "За готвене на огън", image: "/images/slide-3.jpg", code: "GUV-KAP-001", price: "20 лв" },
+      { name: "Чаша за ракия", subtitle: "100 мл", image: "/images/rakia cup.jpg", code: "5001", price: "" },
+      { name: "Чаша шот", subtitle: "100 мл", image: "/images/rakia cup.jpg", code: "5002", price: "" },
+      { name: "Мини халба", subtitle: "100 мл", image: "/images/slide-3.jpg", code: "5003", price: "" },
+      { name: "Юзче", subtitle: "100 мл", image: "/images/slide-3.jpg", code: "5004", price: "" },
+      { name: "Чаша за вино", subtitle: "200 мл", image: "/images/slide-3.jpg", code: "5005", price: "" },
     ]
   },
   { 
-    name: "Фруктиери", 
+    name: "Чаши за кафе и чай", 
     image: "/images/slide-3.jpg",
     subcategories: [
-      { name: "Голяма фруктиера", subtitle: "Централна част", image: "/images/slide-3.jpg", code: "FRK-GLM-001", price: "35 лв" },
-      { name: "Малка фруктиера", subtitle: "Декоративна", image: "/images/slide-3.jpg", code: "FRK-MLK-001", price: "22 лв" },
+      { name: "Чаша за кафе \"Столче\"", subtitle: "", image: "/images/slide-3.jpg", code: "6001", price: "" },
+      { name: "Чаша за кафе лате", subtitle: "", image: "/images/slide-3.jpg", code: "6002", price: "" },
+      { name: "Чаша за кафе \"Канче\"", subtitle: "", image: "/images/slide-3.jpg", code: "6003", price: "" },
+      { name: "Чаша за кафе \"Бонбон\"", subtitle: "", image: "/images/slide-3.jpg", code: "6004", price: "" },
+      { name: "Чаша за кафе \"Лале\"", subtitle: "", image: "/images/slide-3.jpg", code: "6005", price: "" },
+      { name: "Чаша за кафе \"Буре\"", subtitle: "", image: "/images/slide-3.jpg", code: "6006", price: "" },
+      { name: "Чаша за кафе ристрето", subtitle: "", image: "/images/slide-3.jpg", code: "6007", price: "" },
+      { name: "Чаша за кафе с чинийка \"Лаваца\"", subtitle: "", image: "/images/slide-3.jpg", code: "6008", price: "" },
+      { name: "Чаша за кафе с чинийка", subtitle: "", image: "/images/slide-3.jpg", code: "6009", price: "" },
+      { name: "Чаша за чай с чинийка", subtitle: "", image: "/images/slide-3.jpg", code: "6010", price: "" },
     ]
   },
   { 
-    name: "Оливерници", 
-    image: "/images/Olivernik karuca.jpg",
-    subcategories: [
-      { name: "Оливерник каруца", subtitle: "С разделители", image: "/images/Olivernik karuca.jpg", code: "OLV-KAR-001", price: "28 лв" },
-      { name: "Класически оливерник", subtitle: "Прост дизайн", image: "/images/slide-3.jpg", code: "OLV-KLS-001", price: "18 лв" },
-    ]
-  },
-  { 
-    name: "Солници и захарници", 
+    name: "Чаши за напитки и халби", 
     image: "/images/slide-3.jpg",
     subcategories: [
-      { name: "Солница", subtitle: "С капаче", image: "/images/slide-3.jpg", code: "SOL-KAP-001", price: "8 лв" },
-      { name: "Захарница", subtitle: "С лъжичка", image: "/images/slide-3.jpg", code: "ZAH-LZH-001", price: "12 лв" },
-    ]
-  },
-  { 
-    name: "Пепелници", 
-    image: "/images/slide-3.jpg",
-    subcategories: [
-      { name: "Малък пепелник", subtitle: "Индивидуален", image: "/images/slide-3.jpg", code: "PEP-MLK-001", price: "6 лв" },
-      { name: "Голям пепелник", subtitle: "За маса", image: "/images/slide-3.jpg", code: "PEP-GLM-001", price: "10 лв" },
-    ]
-  },
-  { 
-    name: "Салфетници", 
-    image: "/images/slide-3.jpg",
-    subcategories: [
-      { name: "Класически салфетник", subtitle: "Правоъгълен", image: "/images/slide-3.jpg", code: "SLF-KLS-001", price: "14 лв" },
+      { name: "Чаша за мляко", subtitle: "400 мл", image: "/images/slide-3.jpg", code: "7001", price: "" },
+      { name: "Чаша за безалкохолно", subtitle: "400 мл", image: "/images/slide-3.jpg", code: "7002", price: "" },
+      { name: "Халба", subtitle: "500 мл", image: "/images/slide-3.jpg", code: "7003", price: "" },
     ]
   },
   { 
     name: "Сервизи", 
     image: "/images/slide-3.jpg",
     subcategories: [
-      { name: "Сервиз за кафе", subtitle: "6 чаши", image: "/images/slide-3.jpg", code: "SRV-KAF-006", price: "85 лв" },
-      { name: "Сервиз за ракия", subtitle: "Бутилка и чаши", image: "/images/slide-3.jpg", code: "SRV-RAK-001", price: "95 лв" },
+      { name: "Сервиз оливерник", subtitle: "", image: "/images/Olivernik karuca.jpg", code: "8001", price: "" },
+      { name: "Сервиз оливерник \"Каручка\"", subtitle: "", image: "/images/Olivernik karuca.jpg", code: "8002", price: "" },
+      { name: "Сервиз за вино", subtitle: "", image: "/images/slide-3.jpg", code: "8003", price: "" },
+      { name: "Сервиз за ракия", subtitle: "", image: "/images/rakia cup.jpg", code: "8004", price: "" },
     ]
   },
   { 
-    name: "Пахари", 
-    image: "/images/slide-3.jpg",
-    subcategories: [
-      { name: "Керамичен пахар", subtitle: "За вино", image: "/images/slide-3.jpg", code: "PAH-VIN-001", price: "12 лв" },
-    ]
-  },
-  { 
-    name: "Буркани", 
+    name: "Дребни аксесоари", 
     image: "/images/Sreden Burkan.jpg",
     subcategories: [
-      { name: "Малък буркан", subtitle: "За подправки", image: "/images/slide-3.jpg", code: "BUR-MLK-001", price: "10 лв" },
-      { name: "Среден буркан", subtitle: "За съхранение", image: "/images/Sreden Burkan.jpg", code: "BUR-SRD-001", price: "15 лв" },
-      { name: "Голям буркан", subtitle: "Декоративен", image: "/images/slide-3.jpg", code: "BUR-GLM-001", price: "22 лв" },
-    ]
-  },
-  { 
-    name: "Камбанки", 
-    image: "/images/slide-3.jpg",
-    subcategories: [
-      { name: "Декоративна камбанка", subtitle: "С троянски мотиви", image: "/images/slide-3.jpg", code: "KMB-DKR-001", price: "8 лв" },
-    ]
-  },
-  { 
-    name: "Тигани", 
-    image: "/images/Tigan s kapak.jpg",
-    subcategories: [
-      { name: "Тиган с капак", subtitle: "За готвене", image: "/images/Tigan s kapak.jpg", code: "TIG-KAP-001", price: "30 лв" },
-      { name: "Класически тиган", subtitle: "С дръжка", image: "/images/slide-3.jpg", code: "TIG-KLS-001", price: "25 лв" },
-    ]
-  },
-  { 
-    name: "Други", 
-    image: "/images/slide-3.jpg",
-    subcategories: [
-      { name: "Свещник", subtitle: "Керамичен", image: "/images/slide-3.jpg", code: "SVE-KRM-001", price: "12 лв" },
-      { name: "Ваза", subtitle: "За цветя", image: "/images/slide-3.jpg", code: "VAZ-CVT-001", price: "18 лв" },
-    ]
-  },
-  { 
-    name: "Стомни и кани", 
-    image: "/images/kana.jpg",
-    subcategories: [
-      { name: "Троянска кана", subtitle: "С декорация", image: "/images/kana.jpg", code: "KAN-TRY-001", price: "45 лв" },
-      { name: "Стомна", subtitle: "Традиционна", image: "/images/slide-3.jpg", code: "STM-TRD-001", price: "40 лв" },
+      { name: "Яйчарка", subtitle: "", image: "/images/slide-3.jpg", code: "9001", price: "" },
+      { name: "Камбанка", subtitle: "", image: "/images/slide-3.jpg", code: "9002", price: "" },
+      { name: "Лимоноизтисквачка", subtitle: "", image: "/images/slide-3.jpg", code: "9003", price: "" },
+      { name: "Чесновка", subtitle: "", image: "/images/slide-3.jpg", code: "9004", price: "" },
+      { name: "Буркан малък", subtitle: "60 мл", image: "/images/slide-3.jpg", code: "9005", price: "" },
+      { name: "Буркан среден", subtitle: "150 мл", image: "/images/Sreden Burkan.jpg", code: "9006", price: "" },
+      { name: "Буркан голям", subtitle: "350 мл", image: "/images/slide-3.jpg", code: "9007", price: "" },
+      { name: "Захарник малък", subtitle: "150 мл", image: "/images/slide-3.jpg", code: "9008", price: "" },
+      { name: "Захарник голям", subtitle: "350 мл", image: "/images/slide-3.jpg", code: "9009", price: "" },
+      { name: "Пепелник за една цигара", subtitle: "", image: "/images/slide-3.jpg", code: "9010", price: "" },
+      { name: "Пепелник за две цигари", subtitle: "", image: "/images/slide-3.jpg", code: "9011", price: "" },
+      { name: "Пепелник за три цигари", subtitle: "", image: "/images/slide-3.jpg", code: "9012", price: "" },
+      { name: "Градински пепелник", subtitle: "", image: "/images/slide-3.jpg", code: "9013", price: "" },
+      { name: "Магнит чинийка", subtitle: "", image: "/images/slide-3.jpg", code: "9014", price: "" },
+      { name: "Ваза", subtitle: "20 см", image: "/images/slide-3.jpg", code: "9015", price: "" },
     ]
   },
 ];
@@ -157,6 +136,28 @@ export default function AllProducts() {
     setIsModalOpen(false);
     setTimeout(() => setSelectedCategory(null), 300);
   };
+
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    if (isModalOpen) {
+      // Save current scroll position
+      const scrollY = window.scrollY;
+      // Lock body scroll
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
+      document.body.style.overflow = 'hidden';
+      
+      return () => {
+        // Restore scroll position when modal closes
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        document.body.style.overflow = '';
+        window.scrollTo(0, scrollY);
+      };
+    }
+  }, [isModalOpen]);
   return (
     <section id="products">
       {/* Header Section */}
@@ -254,11 +255,13 @@ export default function AllProducts() {
                             Код: {subcategory.code}
                           </p>
                         </div>
-                        <div className="text-right flex-shrink-0">
-                          <div className="text-xl md:text-2xl font-bold text-[#F4A7A7] font-headline">
-                            {subcategory.price}
+                        {subcategory.price && (
+                          <div className="text-right flex-shrink-0">
+                            <div className="text-xl md:text-2xl font-bold text-[#F4A7A7] font-headline">
+                              {subcategory.price}
+                            </div>
                           </div>
-                        </div>
+                        )}
                       </div>
                       <p className="text-sm md:text-base text-gray-600 font-body leading-relaxed">
                         {subcategory.subtitle}

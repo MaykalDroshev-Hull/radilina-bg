@@ -3,33 +3,51 @@ import { ArrowRight } from 'lucide-react';
 const processSteps = [
   {
     number: 1,
-    title: "Избор на материали",
-    subtitle: "Сертифицирани глини и естествени бои",
+    title: "Подготовка на глината",
+    subtitle: "Подбираме и подготвяме глината с подходяща плътност и еластичност за ръчна обработка",
     image: "/images/slide-3.jpg",
   },
   {
     number: 2,
-    title: "Грънчарско колело",
-    subtitle: "Ръчно изработване на всеки артикул",
+    title: "Оформяне на грънчарско колело",
+    subtitle: "Изделието се оформя ръчно на грънчарско колело и придобива своята основна форма",
     image: "/images/slide-3.jpg",
   },
   {
     number: 3,
-    title: "Художествена обработка",
-    subtitle: "Традиционни троянски мотиви и декорация",
+    title: "Дооформяне и заглаждане",
+    subtitle: "Извършват се фините корекции и заглаждане на детайлите",
     image: "/images/kana.jpg",
   },
   {
     number: 4,
-    title: "Изсушаване",
-    subtitle: "Естествено изсушаване за оптимално качество",
+    title: "Декорация (рисуване)",
+    subtitle: "Всеки артикул се декорира ръчно с традиционни троянски орнаменти",
     image: "/images/slide-3.jpg",
   },
   {
     number: 5,
-    title: "Изпичане",
-    subtitle: "Високотемпературно изпичане във фурна",
+    title: "Първо изпичане",
+    subtitle: "След декорацията изделието се изпича, за да стане здраво и устойчиво",
     image: "/images/guvech.jpg",
+  },
+  {
+    number: 6,
+    title: "Глазиране",
+    subtitle: "Нанася се глазура, която придава завършен вид, цвят и защита",
+    image: "/images/slide-3.jpg",
+  },
+  {
+    number: 7,
+    title: "Второ изпичане",
+    subtitle: "Фиксират се глазурата и декорацията и се постига крайният резултат",
+    image: "/images/guvech.jpg",
+  },
+  {
+    number: 8,
+    title: "Контрол на качеството и опаковане",
+    subtitle: "Всяко изделие се проверява внимателно и се подготвя за клиентите",
+    image: "/images/slide-3.jpg",
   },
 ];
 
@@ -56,107 +74,37 @@ export default function HowItWorks() {
 
       {/* Grid Section */}
       <section className="w-full px-6 md:px-10 lg:px-12 mb-8 md:mb-10 lg:mb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-4 md:gap-5 lg:gap-6">
-          {/* Element 1 — Top Left */}
-          <div className="md:col-span-1 lg:col-span-1 lg:row-span-1 rounded-xl md:rounded-xl lg:rounded-2xl bg-white shadow-sm hover:shadow-md overflow-hidden group cursor-pointer transition-shadow">
-            <div className="relative h-40 md:h-48 lg:h-52 overflow-hidden">
-              <img
-                src={processSteps[0].image}
-                alt={processSteps[0].title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-            </div>
-            <div className="p-4 md:p-5 lg:p-6">
-              <div className="flex items-center gap-3 mb-2 md:mb-3">
-                <span className="w-7 h-7 md:w-9 md:h-9 lg:w-10 lg:h-10 bg-red-500 rounded-full flex items-center justify-center text-white text-xs md:text-sm lg:text-base font-bold">
-                  {processSteps[0].number}
-                </span>
-                <h3 className="text-lg md:text-xl lg:text-xl font-semibold text-gray-900 font-headline">{processSteps[0].title}</h3>
+        {/* Introductory Text */}
+        <div className="mb-6 md:mb-8 lg:mb-10">
+          <p className="text-base md:text-lg lg:text-xl text-gray-700 font-body leading-relaxed max-w-4xl">
+            Процесът на изработка на всяко изделие е изцяло ръчен и отнема приблизително 20 дни – от първоначалната подготовка до крайния завършен етап.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6">
+          {processSteps.map((step, index) => (
+            <div 
+              key={step.number} 
+              className="md:col-span-1 lg:col-span-1 rounded-xl md:rounded-xl lg:rounded-2xl bg-white shadow-sm hover:shadow-md overflow-hidden group cursor-pointer transition-shadow"
+            >
+              <div className="relative h-40 md:h-48 lg:h-52 overflow-hidden">
+                <img
+                  src={step.image}
+                  alt={step.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
               </div>
-              <p className="text-sm md:text-base text-gray-600 font-body leading-relaxed">{processSteps[0].subtitle}</p>
-            </div>
-          </div>
-
-          {/* Element 2 — Middle (next to element 1 on tablet, spans 2 rows on desktop) */}
-          <div className="md:col-span-1 lg:col-span-1 lg:row-span-2 rounded-xl md:rounded-xl lg:rounded-2xl bg-white shadow-sm hover:shadow-md overflow-hidden group cursor-pointer transition-shadow">
-            <div className="relative h-64 md:h-96 lg:h-full overflow-hidden">
-              <img
-                src={processSteps[2].image}
-                alt={processSteps[2].title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 lg:p-7">
-                <div className="flex items-center gap-3 md:gap-4 mb-2 md:mb-3">
-                  <span className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-red-500 rounded-full flex items-center justify-center text-white text-sm md:text-base lg:text-lg font-bold">
-                    {processSteps[2].number}
+              <div className="p-4 md:p-5 lg:p-6">
+                <div className="flex items-center gap-3 mb-2 md:mb-3">
+                  <span className="w-7 h-7 md:w-9 md:h-9 lg:w-10 lg:h-10 bg-red-500 rounded-full flex items-center justify-center text-white text-xs md:text-sm lg:text-base font-bold flex-shrink-0">
+                    {step.number}
                   </span>
-                  <h3 className="text-xl md:text-2xl lg:text-2xl font-semibold text-white font-headline">{processSteps[2].title}</h3>
+                  <h3 className="text-lg md:text-xl lg:text-xl font-semibold text-gray-900 font-headline">{step.title}</h3>
                 </div>
-                <p className="text-white/90 text-sm md:text-base font-body leading-relaxed">{processSteps[2].subtitle}</p>
+                <p className="text-sm md:text-base text-gray-600 font-body leading-relaxed">{step.subtitle}</p>
               </div>
             </div>
-          </div>
-
-          {/* Element 3 — Top Right */}
-          <div className="md:col-span-1 lg:col-span-1 lg:row-span-1 rounded-xl md:rounded-xl lg:rounded-2xl bg-white shadow-sm hover:shadow-md overflow-hidden group cursor-pointer transition-shadow">
-            <div className="relative h-40 md:h-48 lg:h-52 overflow-hidden">
-              <img
-                src={processSteps[1].image}
-                alt={processSteps[1].title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-            </div>
-            <div className="p-4 md:p-5 lg:p-6">
-              <div className="flex items-center gap-3 mb-2 md:mb-3">
-                <span className="w-7 h-7 md:w-9 md:h-9 lg:w-10 lg:h-10 bg-red-500 rounded-full flex items-center justify-center text-white text-xs md:text-sm lg:text-base font-bold">
-                  {processSteps[1].number}
-                </span>
-                <h3 className="text-lg md:text-xl lg:text-xl font-semibold text-gray-900 font-headline">{processSteps[1].title}</h3>
-              </div>
-              <p className="text-sm md:text-base text-gray-600 font-body leading-relaxed">{processSteps[1].subtitle}</p>
-            </div>
-          </div>
-
-          {/* Element 4 — Bottom Left */}
-          <div className="md:col-span-1 lg:col-span-1 lg:row-span-1 rounded-xl md:rounded-xl lg:rounded-2xl bg-white shadow-sm hover:shadow-md overflow-hidden group cursor-pointer transition-shadow">
-            <div className="relative h-40 md:h-48 lg:h-52 overflow-hidden">
-              <img
-                src={processSteps[3].image}
-                alt={processSteps[3].title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-            </div>
-            <div className="p-4 md:p-5 lg:p-6">
-              <div className="flex items-center gap-3 mb-2 md:mb-3">
-                <span className="w-7 h-7 md:w-9 md:h-9 lg:w-10 lg:h-10 bg-red-500 rounded-full flex items-center justify-center text-white text-xs md:text-sm lg:text-base font-bold">
-                  {processSteps[3].number}
-                </span>
-                <h3 className="text-lg md:text-xl lg:text-xl font-semibold text-gray-900 font-headline">{processSteps[3].title}</h3>
-              </div>
-              <p className="text-sm md:text-base text-gray-600 font-body leading-relaxed">{processSteps[3].subtitle}</p>
-            </div>
-          </div>
-
-          {/* Element 5 — Bottom Right */}
-          <div className="md:col-span-1 lg:col-span-1 lg:row-span-1 rounded-xl md:rounded-xl lg:rounded-2xl bg-white shadow-sm hover:shadow-md overflow-hidden group cursor-pointer transition-shadow">
-            <div className="relative h-40 md:h-48 lg:h-52 overflow-hidden">
-              <img
-                src={processSteps[4].image}
-                alt={processSteps[4].title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-            </div>
-            <div className="p-4 md:p-5 lg:p-6">
-              <div className="flex items-center gap-3 mb-2 md:mb-3">
-                <span className="w-7 h-7 md:w-9 md:h-9 lg:w-10 lg:h-10 bg-red-500 rounded-full flex items-center justify-center text-white text-xs md:text-sm lg:text-base font-bold">
-                  {processSteps[4].number}
-                </span>
-                <h3 className="text-lg md:text-xl lg:text-xl font-semibold text-gray-900 font-headline">{processSteps[4].title}</h3>
-              </div>
-              <p className="text-sm md:text-base text-gray-600 font-body leading-relaxed">{processSteps[4].subtitle}</p>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Learn More Button */}
@@ -165,6 +113,36 @@ export default function HowItWorks() {
             Научете повече
             <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
           </button>
+        </div>
+      </section>
+
+      {/* Usage Instructions Section */}
+      <section className="w-full px-6 md:px-10 lg:px-12 mb-8 md:mb-10 lg:mb-12">
+        <div className="bg-gradient-to-br from-[#FFF7F7] to-white rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl p-6 md:p-8 lg:p-10 border border-[#F4A7A7]/20">
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-900 mb-4 md:mb-6 font-headline">
+            Указания за употреба на глинен съд
+          </h3>
+          
+          <div className="space-y-4 md:space-y-5 text-base md:text-lg text-gray-700 font-body leading-relaxed">
+            <p>
+              Глиненият съд е подходящ за приготвяне на ястия във фурна.
+              Поставяйте съда в студена фурна, след което я загрявайте постепенно.
+            </p>
+            
+            <p>
+              Избягвайте резки температурни промени.
+              Не поставяйте горещ съд върху студена или мокра повърхност, за да се предотврати термичен шок.
+            </p>
+            
+            <p>
+              Съдът е подходящ за използване в микровълнова фурна.
+              Може да се почиства в съдомиялна машина.
+            </p>
+            
+            <p className="text-gray-600">
+              Не е подходящ за директен контакт с открит огън или котлон.
+            </p>
+          </div>
         </div>
       </section>
     </section>

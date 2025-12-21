@@ -32,7 +32,7 @@ export default function Header() {
               className="flex-shrink-0 cursor-pointer"
             >
               <img
-                src="/images/logo.svg"
+                src="/images/Radilina - Logo.png"
                 alt="Radilina"
                 className="h-20 md:h-24 lg:h-26 w-auto transition-all"
               />

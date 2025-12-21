@@ -96,6 +96,60 @@ export default function Awards() {
           </AnimatedItem>
         </AnimatedContainer>
       </section>
+
+      {/* Videos Section */}
+      <section className="w-full px-6 md:px-10 lg:px-12 mb-8 md:mb-10 lg:mb-12">
+        <AnimatedContainer>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+            {/* YouTube Video 1 */}
+            <AnimatedItem className="rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden bg-gray-100 aspect-video">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/sxWyMXiQuS0"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </AnimatedItem>
+
+            {/* YouTube Video 2 */}
+            <AnimatedItem className="rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden bg-gray-100 aspect-video">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/B1PrI5w-Xm0"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </AnimatedItem>
+
+            {/* BTV Article Button */}
+            <AnimatedItem className="rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl bg-gradient-to-br from-[#FFF7F7] to-white border border-[#F4A7A7]/20 p-6 md:p-8 lg:p-10 flex flex-col items-center justify-center gap-4 md:gap-5 hover:shadow-lg transition-all">
+              <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-900 font-headline text-center">
+                Вкусът на България
+              </h3>
+              <p className="text-sm md:text-base text-gray-600 font-body text-center leading-relaxed">
+                Гледайте нашето участие в предаването на БТВ
+              </p>
+              <a
+                href="https://www.btv.bg/shows/vkusat-na-bulgaria/videos/vkusat-na-balgarija-v-trojanskija-balkan-01-11-2025-1-chast.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 rounded-full bg-black text-white text-sm md:text-base font-semibold hover:bg-gray-800 active:scale-95 transition-all font-body w-full md:w-auto"
+              >
+                Гледайте в БТВ
+                <ExternalLink className="w-4 h-4 md:w-5 md:h-5" />
+              </a>
+            </AnimatedItem>
+          </div>
+        </AnimatedContainer>
+      </section>
     </AnimatedSection>
   );
 }

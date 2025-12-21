@@ -30,13 +30,13 @@ export default function Hero() {
             <div className="relative z-10">
               <AnimatedItem>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white font-headline font-semibold mb-6 md:mb-8 leading-tight drop-shadow-2xl">
-                  Традиция, уют и ръчно изработена керамика с български дух
+                  Глина, вода, ръце и огън
                 </h1>
               </AnimatedItem>
 
               <AnimatedItem>
-                <p className="text-base md:text-lg lg:text-xl text-white font-body mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
-                  Всяко изделие е създадено с любов и внимание към детайла
+                <p className="text-base md:text-lg lg:text-xl text-white font-body mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
+                  Четири елемента, които превръщат природата в изкуство. Водата събужда глината, ръцете ѝ дават форма, а огънят я прави вечна. Така се раждат ръчно източени керамични изделия с душа и характер.
                 </p>
               </AnimatedItem>
 

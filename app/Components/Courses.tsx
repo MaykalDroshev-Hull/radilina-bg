@@ -3,41 +3,60 @@ import { AnimatedSection, AnimatedContainer, AnimatedItem } from '../lib/animati
 
 const courses = [
   {
-    title: "Въведение в грънчарството",
-    duration: "3-5 часа",
-    level: "Еднократна демонстрация",
-    participants: "До 20 участници",
-    description: "Изработете глинен съд или нашарайте чиния с типичната троянска шарка",
+    title: "Демонстрация на източване на керамика",
+    duration: "Демонстрация",
+    level: "За деца и туристи",
+    participants: "Подходящо за всички възрасти",
+    description: "Заповядайте на интересно и забавно преживяване с глина! Ще видите как на грънчарското колело, с помощта на вода и сръчни ръце, меката глина се превръща в истинско керамично изделие.",
     image: "/images/slide-3.jpg",
     highlights: [
-      "Изработете собствен съд от глина",
-      "Или нашарайте чиния с троянска шарка",
-      "Продуктът остава за вас"
+      "Децата ще се докоснат до традиционен български занаят",
+      "Туристите ще открият магията на троянската керамика",
+      "Създадена от глина, вода, ръце и огън"
     ],
     price: "25 лв",
-    priceNote: "суров продукт",
-    priceAlt: "40 лв",
-    priceAltNote: "изпечен продукт",
-    upsell: "+15 лв за втори продукт",
+    priceNote: "",
+    priceAlt: "",
+    priceAltNote: "",
+    upsell: "",
+    featured: false,
+  },
+  {
+    title: "Пакет \"Точене и шарене\"",
+    duration: "Комбинирано преживяване",
+    level: "За деца и туристи",
+    participants: "Идеално за деца, семейства и гости",
+    description: "Елате и се потопете в света на троянската керамика с едно комбинирано преживяване, което включва демонстрация на източване на керамика на грънчарско колело с майстор Радина и декориране и шарене на троянска капка с майстор Илина Илиева.",
+    image: "/images/kana.jpg",
+    highlights: [
+      "Демонстрация на източване с майстор Радина",
+      "Декориране и шарене с майстор Илина Илиева",
+      "Ще се докоснете до магията на глина, вода, ръце и огън"
+    ],
+    price: "40 лв",
+    priceNote: "",
+    priceAlt: "",
+    priceAltNote: "",
+    upsell: "",
     featured: true,
   },
   {
-    title: "Мобилна демонстрация",
-    duration: "3-5 часа",
-    level: "Хотел / Конферентна зала",
-    participants: "До 40 участници",
-    description: "Организираме демонстрация на ваше място със всички необходими материали",
-    image: "/images/kana.jpg",
+    title: "Демонстрация на декориране и шарене на троянска капка",
+    duration: "Демонстрация",
+    level: "За деца и туристи",
+    participants: "Подходящо за всички възрасти",
+    description: "Заповядайте на цветна и интересна демонстрация на традиционно декориране и шарене на троянска капка. С помощта на майстор Илина Илиева ще видите как се създават характерните троянски шарки и орнаменти.",
+    image: "/images/slide-3.jpg",
     highlights: [
-      "Пълно оборудване и материали",
-      "Подходящо за корпоративни събития",
-      "Изработете съд или шарете чиния",
+      "Децата ще се забавляват",
+      "Туристите ще се докоснат до магията на троянската керамика",
+      "Български занаятчийски традиции"
     ],
     price: "25 лв",
-    priceNote: "суров продукт",
-    priceAlt: "40 лв",
-    priceAltNote: "изпечен продукт",
-    upsell: "+15 лв за втори продукт",
+    priceNote: "",
+    priceAlt: "",
+    priceAltNote: "",
+    upsell: "",
     featured: false,
   },
 ];
@@ -66,7 +85,7 @@ export default function Courses() {
         </div>
 
         {/* Courses Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6 lg:gap-8 mb-8 md:mb-10 lg:mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 lg:gap-8 mb-8 md:mb-10 lg:mb-12">
           {courses.map((course, index) => (
             <AnimatedItem key={course.title} delay={index * 0.1}>
               <div className={`
@@ -81,7 +100,7 @@ export default function Courses() {
                 {course.featured && (
                   <div className="absolute top-4 md:top-5 right-4 md:right-5 z-10 bg-[#F4A7A7] text-white px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-semibold flex items-center gap-1 md:gap-1.5 font-body">
                     <Sparkles className="w-3 h-3 md:w-4 md:h-4" />
-                    Популярен избор
+                    Комбиниран пакет
                   </div>
                 )}
 
@@ -144,18 +163,24 @@ export default function Courses() {
                   {/* Price and CTA */}
                   <div className="pt-4 md:pt-5 border-t border-gray-100">
                     <div className="mb-4">
-                      <div className="text-sm md:text-base text-gray-500 font-body mb-3">Цена за 1 продукт</div>
-                      <div className="space-y-2 mb-2">
-                        <div className="flex items-baseline gap-2">
-                          <div className="text-2xl md:text-3xl font-bold text-gray-900 font-headline">{course.price}</div>
+                      <div className="text-sm md:text-base text-gray-500 font-body mb-3">Цена</div>
+                      <div className="flex items-baseline gap-2">
+                        <div className="text-2xl md:text-3xl font-bold text-gray-900 font-headline">{course.price}</div>
+                        {course.priceNote && (
                           <div className="text-sm md:text-base text-gray-500 font-body">({course.priceNote})</div>
-                        </div>
-                        <div className="flex items-baseline gap-2">
-                          <div className="text-2xl md:text-3xl font-bold text-gray-900 font-headline">{course.priceAlt}</div>
-                          <div className="text-sm md:text-base text-gray-500 font-body">({course.priceAltNote})</div>
-                        </div>
+                        )}
                       </div>
-                      <div className="text-sm text-[#F4A7A7] font-semibold font-body mt-2">{course.upsell}</div>
+                      {course.priceAlt && (
+                        <div className="flex items-baseline gap-2 mt-2">
+                          <div className="text-2xl md:text-3xl font-bold text-gray-900 font-headline">{course.priceAlt}</div>
+                          {course.priceAltNote && (
+                            <div className="text-sm md:text-base text-gray-500 font-body">({course.priceAltNote})</div>
+                          )}
+                        </div>
+                      )}
+                      {course.upsell && (
+                        <div className="text-sm text-[#F4A7A7] font-semibold font-body mt-2">{course.upsell}</div>
+                      )}
                     </div>
                     <button className={`
                       w-full px-4 md:px-5 lg:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-semibold
