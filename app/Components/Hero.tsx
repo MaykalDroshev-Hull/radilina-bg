@@ -1,4 +1,5 @@
-import { ArrowRight, Coffee, Circle, Square, ChefHat, Apple, Droplets, Cigarette, RectangleHorizontal, Utensils, Wine, Bell, Plus } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { AnimatedSection, AnimatedContainer, AnimatedItem } from '../lib/animations';
 
 export default function Hero() {
@@ -6,59 +7,84 @@ export default function Hero() {
     <div className="px-3 md:px-5 lg:px-6">
       <AnimatedSection
         id="home"
-        className="relative h-[70vh] md:h-[75vh] lg:h-[80vh] overflow-hidden rounded-3xl md:rounded-[2rem] lg:rounded-4xl px-4 md:px-10 lg:px-14"
-      >   {/* Background Image */}
-      
-<img
-  src="/images/slide-3.jpg"
-  alt="Radilina ceramics"
-  className="absolute inset-0 w-full h-full object-cover"
-/>
-      
-      {/* Gradient overlay for better text contrast */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
-      
-      {/* Content */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 md:px-10 lg:px-12">
-        <AnimatedContainer className="max-w-4xl">
-          {/* Glassmorphism container */}
-          <div className="relative backdrop-blur-md bg-white/5 rounded-3xl md:rounded-[2rem] p-8 md:p-12 lg:p-16 border border-white/30 shadow-2xl">
-            {/* Liquid gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/20 to-[#F4A7A7]/30 rounded-3xl md:rounded-[2rem]"></div>
-            
-            {/* Content with higher z-index */}
-            <div className="relative z-10">
-              <AnimatedItem>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white font-headline font-semibold mb-6 md:mb-8 leading-tight drop-shadow-2xl">
-                  Глина, вода, ръце и огън
-                </h1>
-              </AnimatedItem>
+        className="relative h-[75vh] md:h-[80vh] lg:h-[85vh] overflow-hidden rounded-3xl md:rounded-[2rem] lg:rounded-4xl"
+      >
+        {/* Background Image — Mobile & Tablet */}
+        <Image
+          src="/images/Hero Image - Mobile.png"
+          alt="Radilina ceramics"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center lg:hidden"
+          quality={100}
+        />
+        {/* Background Image — Desktop */}
+        <Image
+          src="/images/Hero Image.png"
+          alt="Radilina ceramics"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center hidden lg:block"
+          quality={100}
+        />
 
-              <AnimatedItem>
-                <p className="text-base md:text-lg lg:text-xl text-white font-body mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
-                  Четири елемента, които превръщат природата в изкуство. Водата събужда глината, ръцете ѝ дават форма, а огънят я прави вечна. Така се раждат ръчно източени керамични изделия с душа и характер.
-                </p>
-              </AnimatedItem>
+        {/* Subtle gradient overlay — darken bottom for button readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
 
-              {/* View Products button */}
-              <AnimatedItem>
-                <a
-                  href="#products"
-                  className="inline-flex items-center gap-2 md:gap-3 bg-[#F4A7A7] text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-body text-sm md:text-base lg:text-lg font-semibold hover:bg-[#E89696] transition-all shadow-lg hover:shadow-xl active:scale-95"
-                >
-                  Разгледайте нашите продукти
-                  <ArrowRight size={18} className="md:w-5 md:h-5 lg:w-6 lg:h-6" />
-                </a>
-              </AnimatedItem>
-            </div>
-          </div>
-        </AnimatedContainer>
-      </div>
+        {/* Content — positioned upper area like reference */}
+        <div className="absolute inset-0 flex flex-col justify-between px-6 md:px-10 lg:px-16 py-10 md:py-14 lg:py-20">
+          {/* Top — Title & Subtitle (dark text on light image background) */}
+          <AnimatedContainer className="text-center pt-2 md:pt-4 lg:pt-0 lg:-mt-6 xl:-mt-10">
+            <AnimatedItem>
+              <h1 className="font-headline font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-gray-900 leading-tight">
+                Керамика Радилина
+              </h1>
+            </AnimatedItem>
+
+            <AnimatedItem>
+              <p className="font-body text-base sm:text-lg md:text-xl lg:text-3xl xl:text-4xl text-gray-700 mt-3 md:mt-4 lg:mt-5 tracking-wide">
+              Глина, вода, ръце и огън
+              </p>
+            </AnimatedItem>
+          </AnimatedContainer>
+
+          {/* Bottom — CTA Buttons (dark theme) */}
+          <AnimatedContainer className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-4 md:gap-6 pb-2 md:pb-4">
+            <AnimatedItem>
+              <Link
+                href="/#courses"
+                className="min-w-[180px] md:min-w-[200px] text-center px-8 md:px-10 py-3 md:py-3.5
+                  bg-[#111] backdrop-blur-sm text-white
+                  border border-gray-700
+                  rounded-lg font-headline text-sm md:text-base tracking-[0.15em] uppercase
+                  shadow-lg hover:bg-[#222] hover:shadow-xl
+                  active:scale-95 transition-all"
+              >
+                Продукти
+              </Link>
+            </AnimatedItem>
+
+            <AnimatedItem>
+              <Link
+                href="/about"
+                className="min-w-[180px] md:min-w-[200px] text-center px-8 md:px-10 py-3 md:py-3.5
+                  bg-[#111] backdrop-blur-sm text-white
+                  border border-gray-700
+                  rounded-lg font-headline text-sm md:text-base tracking-[0.15em] uppercase
+                  shadow-lg hover:bg-[#222] hover:shadow-xl
+                  active:scale-95 transition-all"
+              >
+                За нас
+              </Link>
+            </AnimatedItem>
+          </AnimatedContainer>
+        </div>
       </AnimatedSection>
 
       {/* Product Categories Animated Carousel */}
       <AnimatedSection className="mt-6 md:mt-8 lg:mt-10 mb-8 md:mb-12 lg:mb-14 relative w-full overflow-hidden">
-        {/* Fade edges */}
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 md:w-24 lg:w-32 bg-gradient-to-r from-[var(--background)] to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 md:w-24 lg:w-32 bg-gradient-to-l from-[var(--background)] to-transparent" />
 
@@ -72,48 +98,44 @@ export default function Hero() {
           }}
         >
           {[
-            { name: "Чаши и халби", icon: Coffee },
-            { name: "чинии", icon: Circle },
-            { name: "купи", icon: Circle },
-            { name: "тави", icon: Square },
-            { name: "гювечи", icon: ChefHat },
-            { name: "фруктиери", icon: Apple },
-            { name: "Оливерници", icon: Droplets },
-            { name: "солници и захарници", icon: Droplets },
-            { name: "пепелници", icon: Cigarette },
-            { name: "салфетници", icon: RectangleHorizontal },
-            { name: "сервизи", icon: Utensils },
-            { name: "пахари", icon: Wine },
-            { name: "буркани", icon: Wine },
-            { name: "камбанки", icon: Bell },
-            { name: "Тигани", icon: ChefHat },
-            { name: "Стомни и кани", icon: Wine },
-            { name: "И още много", icon: Plus }
-          ].concat([
-            { name: "Чаши и халби", icon: Coffee },
-            { name: "чинии", icon: Circle },
-            { name: "купи", icon: Circle },
-            { name: "тави", icon: Square },
-            { name: "гювечи", icon: ChefHat },
-            { name: "фруктиери", icon: Apple },
-            { name: "Оливерници", icon: Droplets },
-            { name: "солници и захарници", icon: Droplets },
-            { name: "пепелници", icon: Cigarette },
-            { name: "салфетници", icon: RectangleHorizontal },
-            { name: "сервизи", icon: Utensils },
-            { name: "пахари", icon: Wine },
-            { name: "буркани", icon: Wine },
-            { name: "камбанки", icon: Bell },
-            { name: "Тигани", icon: ChefHat },
-            { name: "Стомни и кани", icon: Wine },
-            { name: "И още много", icon: Plus }
-          ]).map((item, index) => {
-            const IconComponent = item.icon;
+            "Чаши и халби",
+            "чинии",
+            "купи",
+            "тави",
+            "гювечи",
+            "фруктиери",
+            "Оливерници",
+            "солници и захарници",
+            "пепелници",
+            "салфетници",
+            "сервизи",
+            "пахари",
+            "буркани",
+            "камбанки",
+            "Тигани",
+            "Стомни и кани",
+            "Чаши и халби",
+            "чинии",
+            "купи",
+            "тави",
+            "гювечи",
+            "фруктиери",
+            "Оливерници",
+            "солници и захарници",
+            "пепелници",
+            "салфетници",
+            "сервизи",
+            "пахари",
+            "буркани",
+            "камбанки",
+            "Тигани",
+            "Стомни и кани",
+            "И още много",
+          ].map((name, index) => {
             return (
-              <div key={index} className="flex items-center gap-2.5 md:gap-3 lg:gap-4 bg-[var(--blush-white)]/60 backdrop-blur-sm rounded-lg md:rounded-xl px-4 md:px-5 lg:px-6 py-3 md:py-3.5 lg:py-4 shadow-sm hover:shadow-md border border-[var(--foreground)]/10 flex-shrink-0 transition-all">
-                <IconComponent size={18} className="md:w-5 md:h-5 lg:w-6 lg:h-6 text-black flex-shrink-0" fill="currentColor" />
-                <span className="text-sm md:text-base lg:text-lg text-black font-body whitespace-nowrap">
-                  {item.name}
+              <div key={index} className="bg-[#111]/80 backdrop-blur-sm rounded-lg md:rounded-xl px-4 md:px-5 lg:px-6 py-3 md:py-3.5 lg:py-4 shadow-sm hover:shadow-md border border-gray-800 flex-shrink-0 transition-all">
+                <span className="text-sm md:text-base lg:text-lg text-gray-300 font-body whitespace-nowrap">
+                  {name}
                 </span>
               </div>
             );
@@ -123,4 +145,3 @@ export default function Hero() {
     </div>
   );
 }
-

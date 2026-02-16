@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050505;
+  --foreground: #f5f5f5;
   
   /* Bulgarian Flag Inspired Color Palette - Enhanced */
   --soft-rose: #E87373;
-  --blush-white: #FFFFFF;
+  --blush-white: #111111;
   --sage-mist: #8FB89C;
   --soft-mint: #B8D9C9;
   --clay-beige: #D4BDA8;

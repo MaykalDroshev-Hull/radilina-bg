@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const faqData = [
   {
     question: "Може ли керамичният съд да се използва във фурна?",
@@ -51,11 +53,11 @@ export default function FAQ() {
           <div className="flex flex-col gap-4 md:gap-5 lg:gap-6">
             <div className="flex items-center gap-2 md:gap-3">
               <span className="w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full flex-shrink-0"></span>
-              <span className="text-base md:text-lg lg:text-xl text-gray-700 font-body">Често задавани въпроси</span>
+              <span className="text-base md:text-lg lg:text-xl text-gray-400 font-body">Често задавани въпроси</span>
             </div>
             
             <h3 className="text-xl md:text-2xl lg:text-4xl leading-tight">
-              <span className="font-semibold text-gray-900 font-headline">
+              <span className="font-semibold text-white font-headline">
                 Ясни обяснения как работим,
               </span>
               <span className="text-gray-500 font-headline">
@@ -63,11 +65,13 @@ export default function FAQ() {
               </span>
             </h3>
 
-            <div className="rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden mt-2 md:mt-4 lg:mt-6 group">
-              <img
+            <div className="relative rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden mt-2 md:mt-4 lg:mt-6 group h-64 md:h-80 lg:h-[400px]">
+              <Image
                 src="/images/slide-3.jpg"
                 alt="Керамични изделия"
-                className="w-full h-64 md:h-80 lg:h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
           </div>
@@ -75,13 +79,13 @@ export default function FAQ() {
           {/* Right Column - FAQ Items (All Expanded) */}
           <div className="flex flex-col gap-3 md:gap-4 lg:gap-5">
             {faqData.map((faq, index) => (
-              <div key={index} className="bg-white rounded-xl md:rounded-xl lg:rounded-2xl shadow-sm p-4 md:p-5 lg:p-6 flex gap-3 md:gap-4 hover:shadow-md transition-all cursor-pointer">
+              <div key={index} className="bg-[#0a0a0a] rounded-xl md:rounded-xl lg:rounded-2xl shadow-sm p-4 md:p-5 lg:p-6 flex gap-3 md:gap-4 hover:shadow-md transition-all cursor-pointer border border-gray-800">
                 <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-red-500 rounded-full mt-2 md:mt-2.5 flex-shrink-0"></span>
                 <div className="flex flex-col gap-1 md:gap-2">
-                  <h4 className="text-base md:text-lg lg:text-xl font-semibold text-gray-900 font-headline">
+                  <h4 className="text-base md:text-lg lg:text-xl font-semibold text-white font-headline">
                     {faq.question}
                   </h4>
-                  <p className="text-sm md:text-base lg:text-base text-gray-600 leading-relaxed font-body">
+                  <p className="text-sm md:text-base lg:text-base text-gray-400 leading-relaxed font-body">
                     {faq.answer}
                   </p>
                 </div>
@@ -93,4 +97,3 @@ export default function FAQ() {
     </section>
   );
 }
-

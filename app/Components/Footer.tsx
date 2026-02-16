@@ -59,9 +59,9 @@ export default function Footer() {
                 <li><a href="/#courses" className="hover:text-white transition-colors inline-block">Курсове</a></li>
                 <li><a href="/#products" className="hover:text-white transition-colors inline-block">Продукти</a></li>
                 <li><a href="/#awards" className="hover:text-white transition-colors inline-block">Награди</a></li>
-                <li><a href="/#about" className="hover:text-white transition-colors inline-block">За нас</a></li>
+                <li><a href="/about" className="hover:text-white transition-colors inline-block">За нас</a></li>
                 <li><a href="/gallery" className="hover:text-white transition-colors inline-block">Галерия</a></li>
-                <li><a href="/#contact" className="hover:text-white transition-colors inline-block">Контакти</a></li>
+                <li><a href="/contact" className="hover:text-white transition-colors inline-block">Контакти</a></li>
               </ul>
             </div>
           </div>
@@ -102,4 +102,3 @@ export default function Footer() {
     </footer>
   );
 }
-

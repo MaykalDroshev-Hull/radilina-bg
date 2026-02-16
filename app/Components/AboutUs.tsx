@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Heart, Award, Users, Sparkles } from 'lucide-react';
 import { AnimatedSection, AnimatedContainer, AnimatedItem } from '../lib/animations';
 
@@ -10,15 +11,15 @@ export default function AboutUs() {
           {/* Left side */}
           <AnimatedItem className="flex items-center gap-2 md:gap-3">
             <span className="w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full flex-shrink-0"></span>
-            <span className="text-base md:text-lg lg:text-xl text-gray-700 font-body">За нас</span>
+            <span className="text-base md:text-lg lg:text-xl text-gray-400 font-body">За нас</span>
           </AnimatedItem>
           
           {/* Right side */}
           <AnimatedItem className="md:max-w-[55%] lg:max-w-[50%] text-left md:text-right text-xl md:text-2xl lg:text-4xl">
-            <span className="font-semibold text-gray-900 font-headline leading-tight">
+            <span className="font-semibold text-white font-headline leading-tight">
               Традиция, страст и занаят,
             </span>
-            <span className="text-gray-400 font-headline leading-tight">
+            <span className="text-gray-500 font-headline leading-tight">
               {" "}предавани от поколение на поколение
             </span>
           </AnimatedItem>
@@ -28,11 +29,13 @@ export default function AboutUs() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 mb-8 md:mb-10 lg:mb-12">
           {/* Image */}
           <AnimatedItem>
-            <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden shadow-lg group">
-              <img
-                src="/images/About-us.jpg"
+            <div className="relative aspect-[3/2] sm:aspect-[4/5] lg:aspect-auto lg:h-[600px] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden shadow-lg group">
+              <Image
+                src="/branding/Radilina branding_AP-71.avif"
                 alt="Радилина керамика - семейна традиция"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
             </div>
@@ -42,10 +45,10 @@ export default function AboutUs() {
           <AnimatedItem>
             <div className="flex flex-col justify-center h-full space-y-6 md:space-y-8">
               <div>
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 mb-4 md:mb-5 font-headline leading-tight">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-4 md:mb-5 font-headline leading-tight">
                   История на Радилина
                 </h3>
-                <div className="space-y-4 md:space-y-5 text-base md:text-lg text-gray-700 font-body leading-relaxed">
+                <div className="space-y-4 md:space-y-5 text-base md:text-lg text-gray-400 font-body leading-relaxed">
                   <p>
                     С над 46 години опит в керамичното производство, ние създаваме ръчно изработена троянска керамика с внимание към всеки детайл. Ние сме семейна фирма, основана от Пламен и Таня Илиеви, а днес дъщерите им – Радина и Илина – работят рамо до рамо с тях, продължавайки семейната традиция и любовта към занаята. Всички изделия се създават изцяло ръчно – от оформянето на грънчарското колело до финалните детайли, без използване на машинно производство. Използваме само сертифицирани и висококачествени материали.
                   </p>
@@ -65,14 +68,14 @@ export default function AboutUs() {
               </div>
 
               {/* Stats/Features */}
-              <div className="grid grid-cols-2 gap-4 md:gap-6 pt-6 md:pt-8 border-t border-gray-200">
+              <div className="grid grid-cols-2 gap-4 md:gap-6 pt-6 md:pt-8 border-t border-gray-800">
                 <div className="text-center">
                   <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F4A7A7] mb-2 font-headline">46+</div>
-                  <div className="text-sm md:text-base text-gray-600 font-body">Години опит</div>
+                  <div className="text-sm md:text-base text-gray-400 font-body">Години опит</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F4A7A7] mb-2 font-headline">100%</div>
-                  <div className="text-sm md:text-base text-gray-600 font-body">Ръчна изработка</div>
+                  <div className="text-sm md:text-base text-gray-400 font-body">Ръчна изработка</div>
                 </div>
               </div>
             </div>
@@ -81,8 +84,8 @@ export default function AboutUs() {
 
         {/* Production Section */}
         <AnimatedItem>
-          <div className="mb-8 md:mb-10 lg:mb-12 bg-gradient-to-br from-[#FFF7F7] to-white rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl p-6 md:p-8 lg:p-10 border border-[#F4A7A7]/20">
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 mb-6 md:mb-8 font-headline">
+          <div className="mb-8 md:mb-10 lg:mb-12 bg-gradient-to-br from-[#111] to-[#0a0a0a] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl p-6 md:p-8 lg:p-10 border border-gray-800">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-6 md:mb-8 font-headline">
               Производство
             </h3>
             
@@ -90,12 +93,12 @@ export default function AboutUs() {
               {/* Битова керамика */}
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-[#F4A7A7]/20 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-[#F4A7A7]/10 flex items-center justify-center">
                     <Heart className="w-5 h-5 text-[#F4A7A7]" />
                   </div>
-                  <h4 className="text-lg md:text-xl font-semibold text-gray-900 font-headline">Битова керамика</h4>
+                  <h4 className="text-lg md:text-xl font-semibold text-white font-headline">Битова керамика</h4>
                 </div>
-                <ul className="space-y-2 text-sm md:text-base text-gray-600 font-body">
+                <ul className="space-y-2 text-sm md:text-base text-gray-400 font-body">
                   <li>• Бурканчета</li>
                   <li>• Чайници</li>
                   <li>• Чаши</li>
@@ -115,12 +118,12 @@ export default function AboutUs() {
               {/* Сувенирна керамика */}
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-[#CFE6D7]/30 flex items-center justify-center">
-                    <Sparkles className="w-5 h-5" style={{ color: '#4A9D7E' }} />
+                  <div className="w-10 h-10 rounded-full bg-[#CFE6D7]/10 flex items-center justify-center">
+                    <Sparkles className="w-5 h-5 text-[#CFE6D7]" />
                   </div>
-                  <h4 className="text-lg md:text-xl font-semibold text-gray-900 font-headline">Сувенирна керамика</h4>
+                  <h4 className="text-lg md:text-xl font-semibold text-white font-headline">Сувенирна керамика</h4>
                 </div>
-                <ul className="space-y-2 text-sm md:text-base text-gray-600 font-body">
+                <ul className="space-y-2 text-sm md:text-base text-gray-400 font-body">
                   <li>• Часовници</li>
                   <li>• Панички</li>
                   <li>• Свещници</li>
@@ -139,12 +142,12 @@ export default function AboutUs() {
               {/* Сервизи */}
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-[#E8DCCF]/30 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-[#C1AFA3]/10 flex items-center justify-center">
                     <Award className="w-5 h-5 text-[#C1AFA3]" />
                   </div>
-                  <h4 className="text-lg md:text-xl font-semibold text-gray-900 font-headline">Сервизи</h4>
+                  <h4 className="text-lg md:text-xl font-semibold text-white font-headline">Сервизи</h4>
                 </div>
-                <ul className="space-y-2 text-sm md:text-base text-gray-600 font-body">
+                <ul className="space-y-2 text-sm md:text-base text-gray-400 font-body">
                   <li>• Сервиз за вино</li>
                   <li>• Сервиз за ракия</li>
                   <li>• Кратуни</li>
@@ -159,34 +162,34 @@ export default function AboutUs() {
         <AnimatedItem>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-6 lg:gap-8">
             {/* Value 1 */}
-            <div className="bg-gradient-to-br from-[#FFF7F7] to-white rounded-2xl md:rounded-[1.75rem] p-6 md:p-7 lg:p-8 border border-[#F4A7A7]/20 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#F4A7A7]/20 flex items-center justify-center mb-4 md:mb-5">
+            <div className="bg-gradient-to-br from-[#111] to-[#0a0a0a] rounded-2xl md:rounded-[1.75rem] p-6 md:p-7 lg:p-8 border border-gray-800 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#F4A7A7]/10 flex items-center justify-center mb-4 md:mb-5">
                 <Heart className="w-6 h-6 md:w-7 md:h-7 text-[#F4A7A7]" />
               </div>
-              <h4 className="text-lg md:text-xl font-semibold text-gray-900 mb-3 font-headline">Ръчна изработка</h4>
-              <p className="text-sm md:text-base text-gray-600 font-body leading-relaxed">
+              <h4 className="text-lg md:text-xl font-semibold text-white mb-3 font-headline">Ръчна изработка</h4>
+              <p className="text-sm md:text-base text-gray-400 font-body leading-relaxed">
                 Всяко изделие е създадено изцяло на ръка с грънчарско колело
               </p>
             </div>
 
             {/* Value 2 */}
-            <div className="bg-gradient-to-br from-[#E8F6EF] to-white rounded-2xl md:rounded-[1.75rem] p-6 md:p-7 lg:p-8 border border-[#CFE6D7]/30 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#CFE6D7]/30 flex items-center justify-center mb-4 md:mb-5">
-                <Award className="w-6 h-6 md:w-7 md:h-7" style={{ color: '#4A9D7E' }} />
+            <div className="bg-gradient-to-br from-[#111] to-[#0a0a0a] rounded-2xl md:rounded-[1.75rem] p-6 md:p-7 lg:p-8 border border-gray-800 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#CFE6D7]/10 flex items-center justify-center mb-4 md:mb-5">
+                <Award className="w-6 h-6 md:w-7 md:h-7 text-[#CFE6D7]" />
               </div>
-              <h4 className="text-lg md:text-xl font-semibold text-gray-900 mb-3 font-headline">Сертифицирани материали</h4>
-              <p className="text-sm md:text-base text-gray-600 font-body leading-relaxed">
+              <h4 className="text-lg md:text-xl font-semibold text-white mb-3 font-headline">Сертифицирани материали</h4>
+              <p className="text-sm md:text-base text-gray-400 font-body leading-relaxed">
                 Използваме само готови сертифицирани материали за качество
               </p>
             </div>
 
             {/* Value 3 */}
-            <div className="bg-gradient-to-br from-[#E8DCCF] to-white rounded-2xl md:rounded-[1.75rem] p-6 md:p-7 lg:p-8 border border-[#C1AFA3]/20 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#C1AFA3]/20 flex items-center justify-center mb-4 md:mb-5">
+            <div className="bg-gradient-to-br from-[#111] to-[#0a0a0a] rounded-2xl md:rounded-[1.75rem] p-6 md:p-7 lg:p-8 border border-gray-800 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#C1AFA3]/10 flex items-center justify-center mb-4 md:mb-5">
                 <Users className="w-6 h-6 md:w-7 md:h-7 text-[#C1AFA3]" />
               </div>
-              <h4 className="text-lg md:text-xl font-semibold text-gray-900 mb-3 font-headline">46 години опит</h4>
-              <p className="text-sm md:text-base text-gray-600 font-body leading-relaxed">
+              <h4 className="text-lg md:text-xl font-semibold text-white mb-3 font-headline">46 години опит</h4>
+              <p className="text-sm md:text-base text-gray-400 font-body leading-relaxed">
                 Богат асортимент и доказано качество на артикулите
               </p>
             </div>
@@ -196,4 +199,3 @@ export default function AboutUs() {
     </AnimatedSection>
   );
 }
-

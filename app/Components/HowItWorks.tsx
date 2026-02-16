@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
 const processSteps = [
@@ -5,49 +6,49 @@ const processSteps = [
     number: 1,
     title: "Подготовка на глината",
     subtitle: "Подбираме и подготвяме глината с подходяща плътност и еластичност за ръчна обработка",
-    image: "/images/slide-3.jpg",
+    image: "/branding/Radilina branding_AP-224.avif",
   },
   {
     number: 2,
     title: "Оформяне на грънчарско колело",
     subtitle: "Изделието се оформя ръчно на грънчарско колело и придобива своята основна форма",
-    image: "/images/slide-3.jpg",
+    image: "/branding/Radilina branding_AP-209.avif",
   },
   {
     number: 3,
     title: "Дооформяне и заглаждане",
     subtitle: "Извършват се фините корекции и заглаждане на детайлите",
-    image: "/images/kana.jpg",
+    image: "/branding/Radilina branding_AP-156.avif",
   },
   {
     number: 4,
     title: "Декорация (рисуване)",
     subtitle: "Всеки артикул се декорира ръчно с традиционни троянски орнаменти",
-    image: "/images/slide-3.jpg",
+    image: "/branding/Radilina branding_AP-109.avif",
   },
   {
     number: 5,
     title: "Първо изпичане",
     subtitle: "След декорацията изделието се изпича, за да стане здраво и устойчиво",
-    image: "/images/guvech.jpg",
+    image: "/branding/Radilina branding_AP-187.avif",
   },
   {
     number: 6,
     title: "Глазиране",
     subtitle: "Нанася се глазура, която придава завършен вид, цвят и защита",
-    image: "/images/slide-3.jpg",
+    image: "/branding/Radilina branding_AP-116.avif",
   },
   {
     number: 7,
     title: "Второ изпичане",
     subtitle: "Фиксират се глазурата и декорацията и се постига крайният резултат",
-    image: "/images/guvech.jpg",
+    image: "/branding/Radilina branding_AP-40.avif",
   },
   {
     number: 8,
     title: "Контрол на качеството и опаковане",
     subtitle: "Всяко изделие се проверява внимателно и се подготвя за клиентите",
-    image: "/images/slide-3.jpg",
+    image: "/branding/Radilina branding_AP-18.avif",
   },
 ];
 
@@ -59,14 +60,14 @@ export default function HowItWorks() {
         {/* Left side */}
         <div className="flex items-center gap-2 md:gap-3">
           <span className="w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full flex-shrink-0"></span>
-          <span className="text-base md:text-lg lg:text-xl text-gray-700 font-body">Процес на работа</span>
+          <span className="text-base md:text-lg lg:text-xl text-gray-400 font-body">Процес на работа</span>
         </div>
         {/* Right side */}
         <p className="md:max-w-[55%] lg:max-w-[50%] text-left md:text-right text-xl md:text-2xl lg:text-4xl">
-          <span className="font-semibold text-gray-900 font-headline leading-tight">
+          <span className="font-semibold text-white font-headline leading-tight">
             Внимателно изработване от избор на материал
           </span>
-          <span className="text-gray-400 font-headline leading-tight">
+          <span className="text-gray-500 font-headline leading-tight">
             {" "}до финалния продукт в дома ви
           </span>
         </p>
@@ -76,22 +77,24 @@ export default function HowItWorks() {
       <section className="w-full px-6 md:px-10 lg:px-12 mb-8 md:mb-10 lg:mb-12">
         {/* Introductory Text */}
         <div className="mb-6 md:mb-8 lg:mb-10">
-          <p className="text-base md:text-lg lg:text-xl text-gray-700 font-body leading-relaxed max-w-4xl">
+          <p className="text-base md:text-lg lg:text-xl text-gray-400 font-body leading-relaxed max-w-4xl">
             Процесът на изработка на всяко изделие е изцяло ръчен и отнема приблизително 20 дни – от първоначалната подготовка до крайния завършен етап.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6">
-          {processSteps.map((step, index) => (
+          {processSteps.map((step) => (
             <div 
               key={step.number} 
-              className="md:col-span-1 lg:col-span-1 rounded-xl md:rounded-xl lg:rounded-2xl bg-white shadow-sm hover:shadow-md overflow-hidden group cursor-pointer transition-shadow"
+              className="md:col-span-1 lg:col-span-1 rounded-xl md:rounded-xl lg:rounded-2xl bg-[#0a0a0a] shadow-sm hover:shadow-md overflow-hidden group cursor-pointer transition-shadow border border-gray-800"
             >
-              <div className="relative h-40 md:h-48 lg:h-52 overflow-hidden">
-                <img
+              <div className="relative aspect-[3/2] overflow-hidden">
+                <Image
                   src={step.image}
                   alt={step.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <div className="p-4 md:p-5 lg:p-6">
@@ -99,9 +102,9 @@ export default function HowItWorks() {
                   <span className="w-7 h-7 md:w-9 md:h-9 lg:w-10 lg:h-10 bg-red-500 rounded-full flex items-center justify-center text-white text-xs md:text-sm lg:text-base font-bold flex-shrink-0">
                     {step.number}
                   </span>
-                  <h3 className="text-lg md:text-xl lg:text-xl font-semibold text-gray-900 font-headline">{step.title}</h3>
+                  <h3 className="text-lg md:text-xl lg:text-xl font-semibold text-white font-headline">{step.title}</h3>
                 </div>
-                <p className="text-sm md:text-base text-gray-600 font-body leading-relaxed">{step.subtitle}</p>
+                <p className="text-sm md:text-base text-gray-400 font-body leading-relaxed">{step.subtitle}</p>
               </div>
             </div>
           ))}
@@ -109,7 +112,7 @@ export default function HowItWorks() {
 
         {/* Learn More Button */}
         <div className="mt-6 md:mt-8 lg:mt-10">
-          <button className="flex items-center justify-center gap-2 md:gap-2.5 px-6 md:px-7 lg:px-8 py-3 md:py-3.5 rounded-full bg-black text-white text-sm md:text-base hover:bg-gray-800 active:scale-95 transition-all w-full md:w-auto font-body">
+          <button className="flex items-center justify-center gap-2 md:gap-2.5 px-6 md:px-7 lg:px-8 py-3 md:py-3.5 rounded-full bg-white text-black text-sm md:text-base hover:bg-gray-200 active:scale-95 transition-all w-full md:w-auto font-body">
             Научете повече
             <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
           </button>
@@ -118,12 +121,12 @@ export default function HowItWorks() {
 
       {/* Usage Instructions Section */}
       <section className="w-full px-6 md:px-10 lg:px-12 mb-8 md:mb-10 lg:mb-12">
-        <div className="bg-gradient-to-br from-[#FFF7F7] to-white rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl p-6 md:p-8 lg:p-10 border border-[#F4A7A7]/20">
-          <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-900 mb-4 md:mb-6 font-headline">
+        <div className="bg-gradient-to-br from-[#111] to-[#0a0a0a] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl p-6 md:p-8 lg:p-10 border border-gray-800">
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-4 md:mb-6 font-headline">
             Указания за употреба на глинен съд
           </h3>
           
-          <div className="space-y-4 md:space-y-5 text-base md:text-lg text-gray-700 font-body leading-relaxed">
+          <div className="space-y-4 md:space-y-5 text-base md:text-lg text-gray-400 font-body leading-relaxed">
             <p>
               Глиненият съд е подходящ за приготвяне на ястия във фурна.
               Поставяйте съда в студена фурна, след което я загрявайте постепенно.
@@ -139,7 +142,7 @@ export default function HowItWorks() {
               Може да се почиства в съдомиялна машина.
             </p>
             
-            <p className="text-gray-600">
+            <p className="text-gray-500">
               Не е подходящ за директен контакт с открит огън или котлон.
             </p>
           </div>
@@ -148,4 +151,3 @@ export default function HowItWorks() {
     </section>
   );
 }
-
