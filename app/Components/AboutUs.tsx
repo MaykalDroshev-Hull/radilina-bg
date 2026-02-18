@@ -84,7 +84,7 @@ export default function AboutUs() {
 
         {/* Production Section */}
         <AnimatedItem>
-          <div className="mb-8 md:mb-10 lg:mb-12 bg-gradient-to-br from-[#111] to-[#0a0a0a] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl p-6 md:p-8 lg:p-10 border border-gray-800">
+          <div className="mb-8 md:mb-10 lg:mb-12 bg-gradient-to-br from-[#1a1614] to-[#1a1614] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl p-6 md:p-8 lg:p-10 border border-gray-800">
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-6 md:mb-8 font-headline">
               Производство
             </h3>
@@ -162,7 +162,7 @@ export default function AboutUs() {
         <AnimatedItem>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-6 lg:gap-8">
             {/* Value 1 */}
-            <div className="bg-gradient-to-br from-[#111] to-[#0a0a0a] rounded-2xl md:rounded-[1.75rem] p-6 md:p-7 lg:p-8 border border-gray-800 hover:shadow-lg transition-shadow">
+            <div className="bg-gradient-to-br from-[#1a1614] to-[#1a1614] rounded-2xl md:rounded-[1.75rem] p-6 md:p-7 lg:p-8 border border-gray-800 hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#F4A7A7]/10 flex items-center justify-center mb-4 md:mb-5">
                 <Heart className="w-6 h-6 md:w-7 md:h-7 text-[#F4A7A7]" />
               </div>
@@ -173,7 +173,7 @@ export default function AboutUs() {
             </div>
 
             {/* Value 2 */}
-            <div className="bg-gradient-to-br from-[#111] to-[#0a0a0a] rounded-2xl md:rounded-[1.75rem] p-6 md:p-7 lg:p-8 border border-gray-800 hover:shadow-lg transition-shadow">
+            <div className="bg-gradient-to-br from-[#1a1614] to-[#1a1614] rounded-2xl md:rounded-[1.75rem] p-6 md:p-7 lg:p-8 border border-gray-800 hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#CFE6D7]/10 flex items-center justify-center mb-4 md:mb-5">
                 <Award className="w-6 h-6 md:w-7 md:h-7 text-[#CFE6D7]" />
               </div>
@@ -184,7 +184,7 @@ export default function AboutUs() {
             </div>
 
             {/* Value 3 */}
-            <div className="bg-gradient-to-br from-[#111] to-[#0a0a0a] rounded-2xl md:rounded-[1.75rem] p-6 md:p-7 lg:p-8 border border-gray-800 hover:shadow-lg transition-shadow">
+            <div className="bg-gradient-to-br from-[#1a1614] to-[#1a1614] rounded-2xl md:rounded-[1.75rem] p-6 md:p-7 lg:p-8 border border-gray-800 hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#C1AFA3]/10 flex items-center justify-center mb-4 md:mb-5">
                 <Users className="w-6 h-6 md:w-7 md:h-7 text-[#C1AFA3]" />
               </div>

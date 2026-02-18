@@ -35,7 +35,7 @@ export default function GalleryGrid({ columns }: GalleryGridProps) {
         </div>
 
         {/* Bottom Info */}
-        <div className="mt-10 md:mt-12 lg:mt-16 bg-gradient-to-br from-[#111] to-[#0a0a0a] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl p-6 md:p-8 lg:p-10 border border-gray-800 text-center">
+        <div className="mt-10 md:mt-12 lg:mt-16 bg-gradient-to-br from-[#1a1614] to-[#1a1614] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl p-6 md:p-8 lg:p-10 border border-gray-800 text-center">
           <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-4 md:mb-5 font-headline">
             Харесва ли ви каквото виждате?
           </h3>

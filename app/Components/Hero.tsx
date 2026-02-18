@@ -56,7 +56,7 @@ export default function Hero() {
               <Link
                 href="/#courses"
                 className="min-w-[180px] md:min-w-[200px] text-center px-8 md:px-10 py-3 md:py-3.5
-                  bg-[#111] backdrop-blur-sm text-white
+                  bg-[#1a1614] backdrop-blur-sm text-white
                   border border-gray-700
                   rounded-lg font-headline text-sm md:text-base tracking-[0.15em] uppercase
                   shadow-lg hover:bg-[#222] hover:shadow-xl
@@ -70,7 +70,7 @@ export default function Hero() {
               <Link
                 href="/about"
                 className="min-w-[180px] md:min-w-[200px] text-center px-8 md:px-10 py-3 md:py-3.5
-                  bg-[#111] backdrop-blur-sm text-white
+                  bg-[#1a1614] backdrop-blur-sm text-white
                   border border-gray-700
                   rounded-lg font-headline text-sm md:text-base tracking-[0.15em] uppercase
                   shadow-lg hover:bg-[#222] hover:shadow-xl
@@ -133,7 +133,7 @@ export default function Hero() {
             "И още много",
           ].map((name, index) => {
             return (
-              <div key={index} className="bg-[#111]/80 backdrop-blur-sm rounded-lg md:rounded-xl px-4 md:px-5 lg:px-6 py-3 md:py-3.5 lg:py-4 shadow-sm hover:shadow-md border border-gray-800 flex-shrink-0 transition-all">
+              <div key={index} className="bg-[#1a1614]/80 backdrop-blur-sm rounded-lg md:rounded-xl px-4 md:px-5 lg:px-6 py-3 md:py-3.5 lg:py-4 shadow-sm hover:shadow-md border border-gray-800 flex-shrink-0 transition-all">
                 <span className="text-sm md:text-base lg:text-lg text-gray-300 font-body whitespace-nowrap">
                   {name}
                 </span>

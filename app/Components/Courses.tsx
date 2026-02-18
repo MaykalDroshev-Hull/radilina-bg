@@ -35,8 +35,8 @@ const courses = [
       "Декориране и шарене с майстор Илина Илиева",
       "Ще се докоснете до магията на глина, вода, ръце и огън"
     ],
-    price: "25 €",
-    priceBgn: "48.90 лв",
+    price: "20 €",
+    priceBgn: "39.12 лв",
     priceNote: "",
     priceAlt: "",
     priceAltNote: "",
@@ -93,7 +93,7 @@ export default function Courses() {
           {courses.map((course, index) => (
             <AnimatedItem key={course.title} delay={index * 0.1}>
               <div className={`
-                relative h-full bg-[#0a0a0a] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden
+                relative h-full bg-[#1a1614] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden
                 border transition-all duration-300
                 ${course.featured 
                   ? 'border-[#F4A7A7] shadow-lg md:shadow-xl lg:scale-105 lg:-translate-y-2' 
@@ -150,22 +150,6 @@ export default function Courses() {
                     </div>
                   </div>
 
-                  {/* Highlights */}
-                  <div className="mb-5 md:mb-6">
-                    <div className="flex items-center gap-1.5 md:gap-2 mb-2.5 md:mb-3">
-                      <BookOpen className="w-4 h-4 md:w-5 md:h-5 text-[#F4A7A7]" />
-                      <span className="text-xs md:text-sm font-semibold text-gray-300 font-body">Какво ще научите:</span>
-                    </div>
-                    <ul className="space-y-1.5 md:space-y-2">
-                      {course.highlights.map((highlight) => (
-                        <li key={highlight} className="text-sm md:text-base text-gray-400 flex items-start gap-2 md:gap-2.5 font-body">
-                          <span className="text-[#F4A7A7] mt-1 flex-shrink-0">•</span>
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
                   {/* Price and CTA */}
                   <div className="pt-4 md:pt-5 border-t border-gray-800">
                     <div className="mb-4">
@@ -212,7 +196,7 @@ export default function Courses() {
 
         {/* Bottom CTA Section */}
         <AnimatedItem>
-          <div className="bg-gradient-to-br from-[#111] to-[#0a0a0a] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl p-6 md:p-8 lg:p-10 border border-gray-800">
+          <div className="bg-gradient-to-br from-[#1a1614] to-[#1a1614] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl p-6 md:p-8 lg:p-10 border border-gray-800">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8">
               <div className="flex-1">
                 <div className="flex items-center gap-2 md:gap-3 mb-3 md:mb-4">
@@ -239,7 +223,7 @@ export default function Courses() {
         {/* Additional Info */}
         <AnimatedItem>
           <div className="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6">
-            <div className="flex items-start gap-3 md:gap-4 p-4 md:p-5 lg:p-6 bg-[#0a0a0a] rounded-xl md:rounded-2xl border border-gray-800 hover:shadow-md transition-shadow">
+            <div className="flex items-start gap-3 md:gap-4 p-4 md:p-5 lg:p-6 bg-[#1a1614] rounded-xl md:rounded-2xl border border-gray-800 hover:shadow-md transition-shadow">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#F4A7A7]/10 flex items-center justify-center flex-shrink-0">
                 <Award className="w-5 h-5 md:w-6 md:h-6 text-[#F4A7A7]" />
               </div>
@@ -249,7 +233,7 @@ export default function Courses() {
               </div>
             </div>
 
-            <div className="flex items-start gap-3 md:gap-4 p-4 md:p-5 lg:p-6 bg-[#0a0a0a] rounded-xl md:rounded-2xl border border-gray-800 hover:shadow-md transition-shadow">
+            <div className="flex items-start gap-3 md:gap-4 p-4 md:p-5 lg:p-6 bg-[#1a1614] rounded-xl md:rounded-2xl border border-gray-800 hover:shadow-md transition-shadow">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#F4A7A7]/10 flex items-center justify-center flex-shrink-0">
                 <Users className="w-5 h-5 md:w-6 md:h-6 text-[#F4A7A7]" />
               </div>
@@ -259,7 +243,7 @@ export default function Courses() {
               </div>
             </div>
 
-            <div className="flex items-start gap-3 md:gap-4 p-4 md:p-5 lg:p-6 bg-[#0a0a0a] rounded-xl md:rounded-2xl border border-gray-800 hover:shadow-md transition-shadow">
+            <div className="flex items-start gap-3 md:gap-4 p-4 md:p-5 lg:p-6 bg-[#1a1614] rounded-xl md:rounded-2xl border border-gray-800 hover:shadow-md transition-shadow">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#F4A7A7]/10 flex items-center justify-center flex-shrink-0">
                 <BookOpen className="w-5 h-5 md:w-6 md:h-6 text-[#F4A7A7]" />
               </div>

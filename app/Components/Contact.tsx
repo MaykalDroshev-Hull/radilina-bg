@@ -27,7 +27,7 @@ export default function Contact() {
           {/* Left Column - Contact Info */}
           <div className="flex flex-col gap-4 md:gap-5 lg:gap-6">
             {/* Email */}
-            <div className="bg-[#0a0a0a] rounded-xl md:rounded-xl lg:rounded-2xl shadow-sm p-5 md:p-6 lg:p-7 hover:shadow-md transition-all cursor-pointer border border-gray-800">
+            <div className="bg-[#1a1614] rounded-xl md:rounded-xl lg:rounded-2xl shadow-sm p-5 md:p-6 lg:p-7 hover:shadow-md transition-all cursor-pointer border border-gray-800">
               <div className="flex items-start gap-3 md:gap-4">
                 <div className="bg-red-500/10 p-2.5 md:p-3 lg:p-3.5 rounded-full flex-shrink-0">
                   <Mail className="text-red-500 w-5 h-5 md:w-6 md:h-6" />
@@ -47,7 +47,7 @@ export default function Contact() {
             </div>
 
             {/* Phone */}
-            <div className="bg-[#0a0a0a] rounded-xl md:rounded-xl lg:rounded-2xl shadow-sm p-5 md:p-6 lg:p-7 hover:shadow-md transition-all cursor-pointer border border-gray-800">
+            <div className="bg-[#1a1614] rounded-xl md:rounded-xl lg:rounded-2xl shadow-sm p-5 md:p-6 lg:p-7 hover:shadow-md transition-all cursor-pointer border border-gray-800">
               <div className="flex items-start gap-3 md:gap-4">
                 <div className="bg-red-500/10 p-2.5 md:p-3 lg:p-3.5 rounded-full flex-shrink-0">
                   <Phone className="text-red-500 w-5 h-5 md:w-6 md:h-6" />
@@ -79,7 +79,7 @@ export default function Contact() {
               href="https://maps.app.goo.gl/ogmz6BxABdWoQzfT9" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-[#0a0a0a] rounded-xl md:rounded-xl lg:rounded-2xl shadow-sm p-5 md:p-6 lg:p-7 hover:shadow-md transition-all cursor-pointer block border border-gray-800"
+              className="bg-[#1a1614] rounded-xl md:rounded-xl lg:rounded-2xl shadow-sm p-5 md:p-6 lg:p-7 hover:shadow-md transition-all cursor-pointer block border border-gray-800"
             >
               <div className="flex items-start gap-3 md:gap-4">
                 <div className="bg-red-500/10 p-2.5 md:p-3 lg:p-3.5 rounded-full flex-shrink-0">
@@ -102,7 +102,7 @@ export default function Contact() {
               href="https://www.google.com/maps/place/Lagat,+ul.+%22Hristo+Botev%22+231,+5600+Troyan,+Bulgaria/@42.8797534,24.70638,17z/data=!3m1!4b1!4m6!3m5!1s0x40a97f3273ccbc2d:0x85743a1a9dd22f4c!8m2!3d42.8797495!4d24.7089549!16s%2Fg%2F11khm_mm3b?hl=en&entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-[#0a0a0a] rounded-xl md:rounded-xl lg:rounded-2xl shadow-sm p-5 md:p-6 lg:p-7 hover:shadow-md transition-all cursor-pointer block border border-gray-800"
+              className="bg-[#1a1614] rounded-xl md:rounded-xl lg:rounded-2xl shadow-sm p-5 md:p-6 lg:p-7 hover:shadow-md transition-all cursor-pointer block border border-gray-800"
             >
               <div className="flex items-start gap-3 md:gap-4">
                 <div className="bg-red-500/10 p-2.5 md:p-3 lg:p-3.5 rounded-full flex-shrink-0">
@@ -122,7 +122,7 @@ export default function Contact() {
           </div>
 
           {/* Right Column - Contact Form */}
-          <div className="bg-[#0a0a0a] rounded-xl md:rounded-xl lg:rounded-2xl shadow-sm p-6 md:p-7 lg:p-8 border border-gray-800">
+          <div className="bg-[#1a1614] rounded-xl md:rounded-xl lg:rounded-2xl shadow-sm p-6 md:p-7 lg:p-8 border border-gray-800">
             <form className="space-y-5 md:space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm md:text-base lg:text-base font-medium text-white mb-2 md:mb-2.5 font-body">
@@ -132,7 +132,7 @@ export default function Contact() {
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full px-4 md:px-5 py-3 md:py-3.5 text-sm md:text-base rounded-xl border border-gray-700 bg-[#111] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[var(--soft-rose)] focus:border-transparent transition-all font-body"
+                  className="w-full px-4 md:px-5 py-3 md:py-3.5 text-sm md:text-base rounded-xl border border-gray-700 bg-[#1a1614] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[var(--soft-rose)] focus:border-transparent transition-all font-body"
                   placeholder="Вашето име"
                 />
               </div>
@@ -145,7 +145,7 @@ export default function Contact() {
                   type="tel"
                   id="phone"
                   name="phone"
-                  className="w-full px-4 md:px-5 py-3 md:py-3.5 text-sm md:text-base rounded-xl border border-gray-700 bg-[#111] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[var(--soft-rose)] focus:border-transparent transition-all font-body"
+                  className="w-full px-4 md:px-5 py-3 md:py-3.5 text-sm md:text-base rounded-xl border border-gray-700 bg-[#1a1614] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[var(--soft-rose)] focus:border-transparent transition-all font-body"
                   placeholder="+359 ..."
                 />
               </div>
@@ -158,7 +158,7 @@ export default function Contact() {
                   id="message"
                   name="message"
                   rows={5}
-                  className="w-full px-4 md:px-5 py-3 md:py-3.5 text-sm md:text-base rounded-xl border border-gray-700 bg-[#111] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[var(--soft-rose)] focus:border-transparent resize-none transition-all font-body"
+                  className="w-full px-4 md:px-5 py-3 md:py-3.5 text-sm md:text-base rounded-xl border border-gray-700 bg-[#1a1614] text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[var(--soft-rose)] focus:border-transparent resize-none transition-all font-body"
                   placeholder="Разкажете ни за вашия проект или задайте въпрос..."
                 ></textarea>
               </div>

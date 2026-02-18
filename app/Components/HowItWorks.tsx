@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 const processSteps = [
@@ -86,7 +87,7 @@ export default function HowItWorks() {
           {processSteps.map((step) => (
             <div 
               key={step.number} 
-              className="md:col-span-1 lg:col-span-1 rounded-xl md:rounded-xl lg:rounded-2xl bg-[#0a0a0a] shadow-sm hover:shadow-md overflow-hidden group cursor-pointer transition-shadow border border-gray-800"
+              className="md:col-span-1 lg:col-span-1 rounded-xl md:rounded-xl lg:rounded-2xl bg-[#1a1614] shadow-sm hover:shadow-md overflow-hidden group cursor-pointer transition-shadow border border-gray-800"
             >
               <div className="relative aspect-[3/2] overflow-hidden">
                 <Image
@@ -112,16 +113,16 @@ export default function HowItWorks() {
 
         {/* Learn More Button */}
         <div className="mt-6 md:mt-8 lg:mt-10">
-          <button className="flex items-center justify-center gap-2 md:gap-2.5 px-6 md:px-7 lg:px-8 py-3 md:py-3.5 rounded-full bg-white text-black text-sm md:text-base hover:bg-gray-200 active:scale-95 transition-all w-full md:w-auto font-body">
-            Научете повече
+          <Link href="/#courses" className="flex items-center justify-center gap-2 md:gap-2.5 px-6 md:px-7 lg:px-8 py-3 md:py-3.5 rounded-full bg-white text-black text-sm md:text-base hover:bg-gray-200 active:scale-95 transition-all w-full md:w-auto font-body">
+            Нашите курсове
             <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
-          </button>
+          </Link>
         </div>
       </section>
 
       {/* Usage Instructions Section */}
       <section className="w-full px-6 md:px-10 lg:px-12 mb-8 md:mb-10 lg:mb-12">
-        <div className="bg-gradient-to-br from-[#111] to-[#0a0a0a] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl p-6 md:p-8 lg:p-10 border border-gray-800">
+        <div className="bg-gradient-to-br from-[#1a1614] to-[#1a1614] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl p-6 md:p-8 lg:p-10 border border-gray-800">
           <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-4 md:mb-6 font-headline">
             Указания за употреба на глинен съд
           </h3>

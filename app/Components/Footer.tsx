@@ -2,7 +2,7 @@ import { Facebook, Instagram } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white relative overflow-hidden px-4 md:px-5 lg:px-6">
+    <footer className="bg-[#1a1614] text-white relative overflow-hidden px-4 md:px-5 lg:px-6">
       <div className="relative">
         {/* Large "Radilina" text docked to top */}
         <div className="w-full overflow-hidden">
@@ -55,7 +55,7 @@ export default function Footer() {
             <div>
               <h4 className="font-headline font-semibold mb-4 md:mb-5 lg:mb-6 text-base md:text-lg lg:text-xl">Бързи връзки</h4>
               <ul className="space-y-2.5 md:space-y-3 lg:space-y-3.5 font-body text-white/70 text-sm md:text-base lg:text-base">
-                <li><a href="/#home" className="hover:text-white transition-colors inline-block">Начало</a></li>
+                <li><a href="/" className="hover:text-white transition-colors inline-block">Начало</a></li>
                 <li><a href="/#courses" className="hover:text-white transition-colors inline-block">Курсове</a></li>
                 <li><a href="/#products" className="hover:text-white transition-colors inline-block">Продукти</a></li>
                 <li><a href="/#awards" className="hover:text-white transition-colors inline-block">Награди</a></li>

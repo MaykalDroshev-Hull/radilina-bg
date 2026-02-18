@@ -27,7 +27,7 @@ export default function AllProducts() {
 
       {/* Category Grid */}
       <section className="w-full px-6 md:px-10 lg:px-12 mb-8 md:mb-10 lg:mb-12">
-        <div className="bg-[#0a0a0a] rounded-2xl md:rounded-[2rem] lg:rounded-3xl p-5 md:p-7 lg:p-8 border border-gray-800">
+        <div className="bg-[#1a1614] rounded-2xl md:rounded-[2rem] lg:rounded-3xl p-5 md:p-7 lg:p-8 border border-gray-800">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-5 lg:gap-6">
             {categories.map((category) => (
               <Link 
@@ -35,7 +35,7 @@ export default function AllProducts() {
                 href={`/category/${category.slug}`}
                 className="flex flex-col gap-2 md:gap-3 group cursor-pointer"
               >
-                <div className="relative overflow-hidden rounded-xl md:rounded-xl lg:rounded-2xl aspect-square bg-gray-900 ring-2 ring-transparent group-hover:ring-white/20 transition-all">
+                <div className="relative overflow-hidden rounded-xl md:rounded-xl lg:rounded-2xl aspect-square bg-[#1a1614] ring-2 ring-transparent group-hover:ring-white/20 transition-all">
                   <Image
                     src={category.image}
                     alt={category.name}

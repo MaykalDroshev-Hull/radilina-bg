@@ -47,7 +47,7 @@ export default function SelectedProducts() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 lg:gap-6">
           {projects.map((p, index) => (
             <AnimatedItem key={p.title} delay={index * 0.1}>
-              <div className="bg-[#0a0a0a] rounded-3xl md:rounded-[2rem] lg:rounded-3xl p-3 md:p-4 lg:p-5 border border-gray-800 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer group">
+              <div className="bg-[#1a1614] rounded-3xl md:rounded-[2rem] lg:rounded-3xl p-3 md:p-4 lg:p-5 border border-gray-800 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer group">
                 <div className="overflow-hidden rounded-2xl md:rounded-[1.5rem]">
                   <div className="relative h-56 md:h-56 lg:h-64">
                     <Image

@@ -52,18 +52,18 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
       {/* Subcategories Grid */}
       <section className="w-full px-6 md:px-10 lg:px-12 pb-12 md:pb-16 lg:pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6">
+        <div className={`grid grid-cols-1 md:grid-cols-2 ${category.slug === 'chashi-alkohol' || category.slug === 'chashi-kafe' || category.slug === 'chashi-napitki' || category.slug === 'servizi' ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} gap-4 md:gap-5 lg:gap-6`}>
           {category.subcategories.map((subcategory, index) => (
             <div
               key={index}
-              className="bg-[#0a0a0a] rounded-xl md:rounded-xl lg:rounded-2xl shadow-sm border border-gray-800 overflow-hidden hover:shadow-md transition-all cursor-pointer group"
+              className="bg-[#1a1614] rounded-xl md:rounded-xl lg:rounded-2xl shadow-sm border border-gray-800 overflow-hidden hover:shadow-md transition-all cursor-pointer group"
             >
-              <div className="relative aspect-[3/2] overflow-hidden bg-gradient-to-b from-[#F5F0EB] via-[#EDE6DE] to-[#E5DDD5]">
+              <div className={`relative ${category.slug === 'chashi-alkohol' || category.slug === 'chashi-kafe' || category.slug === 'chashi-napitki' || category.slug === 'servizi' ? 'aspect-[2/3]' : 'aspect-[3/2]'} overflow-hidden bg-white`}>
                 <Image
                   src={subcategory.image}
                   alt={subcategory.name}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes={category.slug === 'chashi-alkohol' || category.slug === 'chashi-kafe' || category.slug === 'chashi-napitki' || category.slug === 'servizi' ? "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw" : "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"}
                   className="object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -96,7 +96,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </div>
 
         {/* Wholesale Notice */}
-        <div className="mt-8 md:mt-10 bg-gradient-to-br from-[#111] to-[#0a0a0a] rounded-xl md:rounded-2xl p-5 md:p-6 border border-gray-800">
+        <div className="mt-8 md:mt-10 bg-gradient-to-br from-[#1a1614] to-[#1a1614] rounded-xl md:rounded-2xl p-5 md:p-6 border border-gray-800">
           <div className="flex items-start gap-3 md:gap-4">
             <span className="text-3xl md:text-4xl flex-shrink-0">📦</span>
             <div>

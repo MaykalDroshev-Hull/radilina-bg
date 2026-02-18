@@ -65,21 +65,36 @@ export default function FAQ() {
               </span>
             </h3>
 
-            <div className="relative rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden mt-2 md:mt-4 lg:mt-6 group h-64 md:h-80 lg:h-[400px]">
-              <Image
-                src="/images/slide-3.jpg"
-                alt="Керамични изделия"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+            {/* Images Grid - Responsive Layout */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3 md:gap-4 lg:gap-5 mt-2 md:mt-4 lg:mt-6">
+              {/* First Image - Full width on mobile, spans 2 columns on tablet, full width on desktop */}
+              <div className="relative rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden group aspect-[3/2] sm:col-span-2 lg:col-span-1">
+                <Image
+                  src="/branding/Radilina branding_AP-3.avif"
+                  alt="Керамични изделия"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              
+              {/* Second Image - Full width on mobile, half width on tablet, full width on desktop */}
+              <div className="relative rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden group aspect-[3/2] sm:col-span-1 lg:col-span-1">
+                <Image
+                  src="/branding/Radilina branding_AP-39.avif"
+                  alt="Керамични изделия"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
             </div>
           </div>
 
           {/* Right Column - FAQ Items (All Expanded) */}
           <div className="flex flex-col gap-3 md:gap-4 lg:gap-5">
             {faqData.map((faq, index) => (
-              <div key={index} className="bg-[#0a0a0a] rounded-xl md:rounded-xl lg:rounded-2xl shadow-sm p-4 md:p-5 lg:p-6 flex gap-3 md:gap-4 hover:shadow-md transition-all cursor-pointer border border-gray-800">
+              <div key={index} className="bg-[#1a1614] rounded-xl md:rounded-xl lg:rounded-2xl shadow-sm p-4 md:p-5 lg:p-6 flex gap-3 md:gap-4 hover:shadow-md transition-all cursor-pointer border border-gray-800">
                 <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-red-500 rounded-full mt-2 md:mt-2.5 flex-shrink-0"></span>
                 <div className="flex flex-col gap-1 md:gap-2">
                   <h4 className="text-base md:text-lg lg:text-xl font-semibold text-white font-headline">

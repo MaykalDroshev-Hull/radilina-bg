@@ -56,7 +56,7 @@ export default function PageHero({ title, subtitle, images, ctaButtons }: PageHe
                     href={btn.href}
                     className={
                       btn.variant === 'secondary'
-                        ? 'px-6 py-2.5 rounded-lg bg-[#111] border border-gray-700 text-gray-100 font-medium text-sm hover:bg-[#222] transition-colors text-center font-headline tracking-wide'
+                        ? 'px-6 py-2.5 rounded-lg bg-[#1a1614] border border-gray-700 text-gray-100 font-medium text-sm hover:bg-[#2a2520] transition-colors text-center font-headline tracking-wide'
                         : 'px-6 py-2.5 rounded-lg bg-white text-black font-medium text-sm hover:bg-gray-200 transition-colors text-center font-headline tracking-wide'
                     }
                   >

@@ -34,7 +34,7 @@ export default function Awards() {
       <section className="w-full py-6 md:py-10 lg:py-12 px-6 md:px-10 lg:px-12">
         <AnimatedContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-4 md:gap-5 lg:gap-6">
           {/* Element 1 — Award Card (spans 2 cols on tablet/desktop) */}
-          <AnimatedItem className="md:col-span-2 lg:col-span-2 lg:row-span-1 rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl bg-[#0a0a0a] shadow-sm hover:shadow-md transition-shadow p-5 md:p-7 lg:p-8 flex flex-col gap-3 md:gap-4 lg:gap-5 border border-gray-800">
+          <AnimatedItem className="md:col-span-2 lg:col-span-2 lg:row-span-1 rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl bg-[#1a1614] shadow-sm hover:shadow-md transition-shadow p-5 md:p-7 lg:p-8 flex flex-col gap-3 md:gap-4 lg:gap-5 border border-gray-800">
             <div className="flex flex-col gap-2 md:gap-3">
               <Trophy className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-yellow-500" />
               <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold font-headline text-white mt-2">Мастер на традиционното занаятчийство 2024</h2>
@@ -48,14 +48,14 @@ export default function Awards() {
               <button className="flex items-center justify-center gap-2 px-5 md:px-6 py-2.5 md:py-3 rounded-full bg-white text-black text-xs md:text-sm lg:text-base font-body hover:bg-gray-200 active:scale-95 transition-all">
                 Вижте нашата колекция <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
               </button>
-              <button className="flex items-center justify-center gap-2 px-5 md:px-6 py-2.5 md:py-3 rounded-full bg-[#111] border border-gray-800 text-gray-300 text-xs md:text-sm lg:text-base font-body hover:bg-[#1a1a1a] active:scale-95 transition-all">
+              <button className="flex items-center justify-center gap-2 px-5 md:px-6 py-2.5 md:py-3 rounded-full bg-[#1a1614] border border-gray-800 text-gray-300 text-xs md:text-sm lg:text-base font-body hover:bg-[#2a2520] active:scale-95 transition-all">
                 Представени в национални изложби <ExternalLink className="w-4 h-4 md:w-5 md:h-5" />
               </button>
             </div>
           </AnimatedItem>
 
           {/* Element 2 — Large Image Placeholder (spans col 3, rows 1–2 on large screens only) */}
-          <AnimatedItem className="md:col-span-2 lg:col-span-1 lg:row-span-2 relative rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden bg-gray-900 h-64 md:h-80 lg:h-auto group border border-gray-800">
+          <AnimatedItem className="md:col-span-2 lg:col-span-1 lg:row-span-2 relative rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden bg-[#1a1614] h-64 md:h-80 lg:h-auto group border border-gray-800">
             <Image
               src="/images/kana.jpg"
               alt="Керамична кана"
@@ -75,7 +75,7 @@ export default function Awards() {
           </AnimatedItem>
 
           {/* Element 3 — Best UX Nominee */}
-          <AnimatedItem className="md:col-span-1 lg:col-span-1 lg:row-span-1 rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl bg-[#0a0a0a] shadow-sm hover:shadow-md transition-shadow p-5 md:p-6 lg:p-7 flex flex-col justify-center gap-3 md:gap-3 lg:gap-4 border border-gray-800">
+          <AnimatedItem className="md:col-span-1 lg:col-span-1 lg:row-span-1 rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl bg-[#1a1614] shadow-sm hover:shadow-md transition-shadow p-5 md:p-6 lg:p-7 flex flex-col justify-center gap-3 md:gap-3 lg:gap-4 border border-gray-800">
             <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-white font-headline leading-tight">Най-добър производител на ръчна керамика</p>
             <h4 className="text-base md:text-lg lg:text-xl font-semibold text-gray-300 font-headline mt-2">Признание за качество</h4>
             <p className="text-base md:text-lg lg:text-xl font-medium text-white font-body mt-2">35 години опит в традиционното занаятчийство</p>
@@ -109,7 +109,7 @@ export default function Awards() {
         <AnimatedContainer>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
             {/* YouTube Video 1 */}
-            <AnimatedItem className="rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden bg-gray-900 aspect-video border border-gray-800">
+            <AnimatedItem className="rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden bg-[#1a1614] aspect-video border border-gray-800">
               <iframe
                 width="100%"
                 height="100%"
@@ -123,7 +123,7 @@ export default function Awards() {
             </AnimatedItem>
 
             {/* YouTube Video 2 */}
-            <AnimatedItem className="rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden bg-gray-900 aspect-video border border-gray-800">
+            <AnimatedItem className="rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden bg-[#1a1614] aspect-video border border-gray-800">
               <iframe
                 width="100%"
                 height="100%"
@@ -137,7 +137,7 @@ export default function Awards() {
             </AnimatedItem>
 
             {/* BTV Article Button */}
-            <AnimatedItem className="rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl bg-gradient-to-br from-[#111] to-[#0a0a0a] border border-gray-800 p-6 md:p-8 lg:p-10 flex flex-col items-center justify-center gap-4 md:gap-5 hover:shadow-lg transition-all">
+            <AnimatedItem className="rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl bg-gradient-to-br from-[#1a1614] to-[#1a1614] border border-gray-800 p-6 md:p-8 lg:p-10 flex flex-col items-center justify-center gap-4 md:gap-5 hover:shadow-lg transition-all">
               <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-white font-headline text-center">
                 Вкусът на България
               </h3>
