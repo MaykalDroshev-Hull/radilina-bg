@@ -4,10 +4,10 @@ import Awards from './Components/Awards';
 
 export default function HomePage() {
   return (
-    <div className="w-full max-w-[1620px] mx-auto">
-      <Hero />
-      <Courses />
-      <Awards />
-    </div>
+      <div className="w-full max-w-[1620px] mx-auto">
+        <Hero />
+        <Courses />
+        <Awards />
+      </div>
   );
 }
