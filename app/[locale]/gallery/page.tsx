@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import PageHero from '../../Components/PageHero';
-import GalleryGrid from '../../../gallery/GalleryGrid';
+import GalleryGrid from '../../gallery/GalleryGrid';
 
 export async function generateMetadata() {
   const t = await getTranslations();
