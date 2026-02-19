@@ -1,59 +1,64 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+"use client";
 
-const processSteps = [
-  {
-    number: 1,
-    title: "Подготовка на глината",
-    subtitle: "Подбираме и подготвяме глината с подходяща плътност и еластичност за ръчна обработка",
-    image: "/branding/Radilina branding_AP-224.avif",
-  },
-  {
-    number: 2,
-    title: "Оформяне на грънчарско колело",
-    subtitle: "Изделието се оформя ръчно на грънчарско колело и придобива своята основна форма",
-    image: "/branding/Radilina branding_AP-209.avif",
-  },
-  {
-    number: 3,
-    title: "Дооформяне и заглаждане",
-    subtitle: "Извършват се фините корекции и заглаждане на детайлите",
-    image: "/branding/Radilina branding_AP-156.avif",
-  },
-  {
-    number: 4,
-    title: "Декорация (рисуване)",
-    subtitle: "Всеки артикул се декорира ръчно с традиционни троянски орнаменти",
-    image: "/branding/Radilina branding_AP-109.avif",
-  },
-  {
-    number: 5,
-    title: "Първо изпичане",
-    subtitle: "След декорацията изделието се изпича, за да стане здраво и устойчиво",
-    image: "/branding/Radilina branding_AP-187.avif",
-  },
-  {
-    number: 6,
-    title: "Глазиране",
-    subtitle: "Нанася се глазура, която придава завършен вид, цвят и защита",
-    image: "/branding/Radilina branding_AP-116.avif",
-  },
-  {
-    number: 7,
-    title: "Второ изпичане",
-    subtitle: "Фиксират се глазурата и декорацията и се постига крайният резултат",
-    image: "/branding/Radilina branding_AP-40.avif",
-  },
-  {
-    number: 8,
-    title: "Контрол на качеството и опаковане",
-    subtitle: "Всяко изделие се проверява внимателно и се подготвя за клиентите",
-    image: "/branding/Radilina branding_AP-18.avif",
-  },
-];
+import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { Link } from '../../i18n/routing';
 
 export default function HowItWorks() {
+  const t = useTranslations();
+  
+  const processSteps = [
+    {
+      number: 1,
+      title: t('howItWorks.step1.title'),
+      subtitle: t('howItWorks.step1.subtitle'),
+      image: "/branding/Radilina branding_AP-224.avif",
+    },
+    {
+      number: 2,
+      title: t('howItWorks.step2.title'),
+      subtitle: t('howItWorks.step2.subtitle'),
+      image: "/branding/Radilina branding_AP-209.avif",
+    },
+    {
+      number: 3,
+      title: t('howItWorks.step3.title'),
+      subtitle: t('howItWorks.step3.subtitle'),
+      image: "/branding/Radilina branding_AP-156.avif",
+    },
+    {
+      number: 4,
+      title: t('howItWorks.step4.title'),
+      subtitle: t('howItWorks.step4.subtitle'),
+      image: "/branding/Radilina branding_AP-109.avif",
+    },
+    {
+      number: 5,
+      title: t('howItWorks.step5.title'),
+      subtitle: t('howItWorks.step5.subtitle'),
+      image: "/branding/Radilina branding_AP-187.avif",
+    },
+    {
+      number: 6,
+      title: t('howItWorks.step6.title'),
+      subtitle: t('howItWorks.step6.subtitle'),
+      image: "/branding/Radilina branding_AP-116.avif",
+    },
+    {
+      number: 7,
+      title: t('howItWorks.step7.title'),
+      subtitle: t('howItWorks.step7.subtitle'),
+      image: "/branding/Radilina branding_AP-40.avif",
+    },
+    {
+      number: 8,
+      title: t('howItWorks.step8.title'),
+      subtitle: t('howItWorks.step8.subtitle'),
+      image: "/branding/Radilina branding_AP-18.avif",
+    },
+  ];
+
   return (
     <section id="how-to">
       {/* Header Section */}
@@ -61,15 +66,15 @@ export default function HowItWorks() {
         {/* Left side */}
         <div className="flex items-center gap-2 md:gap-3">
           <span className="w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full flex-shrink-0"></span>
-          <span className="text-base md:text-lg lg:text-xl text-gray-400 font-body">Процес на работа</span>
+          <span className="text-base md:text-lg lg:text-xl text-gray-400 font-body">{t('howItWorks.sectionTitle')}</span>
         </div>
         {/* Right side */}
         <p className="md:max-w-[55%] lg:max-w-[50%] text-left md:text-right text-xl md:text-2xl lg:text-4xl">
           <span className="font-semibold text-white font-headline leading-tight">
-            Внимателно изработване от избор на материал
+            {t('howItWorks.header')}
           </span>
           <span className="text-gray-500 font-headline leading-tight">
-            {" "}до финалния продукт в дома ви
+            {" "}{t('howItWorks.headerSub')}
           </span>
         </p>
       </div>
@@ -79,7 +84,7 @@ export default function HowItWorks() {
         {/* Introductory Text */}
         <div className="mb-6 md:mb-8 lg:mb-10">
           <p className="text-base md:text-lg lg:text-xl text-gray-400 font-body leading-relaxed max-w-4xl">
-            Процесът на изработка на всяко изделие е изцяло ръчен и отнема приблизително 20 дни – от първоначалната подготовка до крайния завършен етап.
+            {t('howItWorks.intro')}
           </p>
         </div>
         
@@ -114,7 +119,7 @@ export default function HowItWorks() {
         {/* Learn More Button */}
         <div className="mt-6 md:mt-8 lg:mt-10">
           <Link href="/#courses" className="flex items-center justify-center gap-2 md:gap-2.5 px-6 md:px-7 lg:px-8 py-3 md:py-3.5 rounded-full bg-white text-black text-sm md:text-base hover:bg-gray-200 active:scale-95 transition-all w-full md:w-auto font-body">
-            Нашите курсове
+            {t('howItWorks.ourCourses')}
             <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
           </Link>
         </div>
@@ -124,27 +129,24 @@ export default function HowItWorks() {
       <section className="w-full px-6 md:px-10 lg:px-12 mb-8 md:mb-10 lg:mb-12">
         <div className="bg-gradient-to-br from-[#1a1614] to-[#1a1614] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl p-6 md:p-8 lg:p-10 border border-gray-800">
           <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-4 md:mb-6 font-headline">
-            Указания за употреба на глинен съд
+            {t('howItWorks.usageTitle')}
           </h3>
           
           <div className="space-y-4 md:space-y-5 text-base md:text-lg text-gray-400 font-body leading-relaxed">
             <p>
-              Глиненият съд е подходящ за приготвяне на ястия във фурна.
-              Поставяйте съда в студена фурна, след което я загрявайте постепенно.
+              {t('howItWorks.usage1')}
             </p>
             
             <p>
-              Избягвайте резки температурни промени.
-              Не поставяйте горещ съд върху студена или мокра повърхност, за да се предотврати термичен шок.
+              {t('howItWorks.usage2')}
             </p>
             
             <p>
-              Съдът е подходящ за използване в микровълнова фурна.
-              Може да се почиства в съдомиялна машина.
+              {t('howItWorks.usage3')}
             </p>
             
             <p className="text-gray-500">
-              Не е подходящ за директен контакт с открит огън или котлон.
+              {t('howItWorks.usage4')}
             </p>
           </div>
         </div>

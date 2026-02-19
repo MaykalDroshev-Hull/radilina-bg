@@ -1,0 +1,258 @@
+{
+  "common": {
+    "home": "Acasă",
+    "products": "Produse",
+    "courses": "Cursuri",
+    "awards": "Premii",
+    "about": "Despre noi",
+    "gallery": "Galerie",
+    "contact": "Contact",
+    "menu": "MENIU",
+    "code": "Cod",
+    "price": "Preț",
+    "contactUs": "Contactați-ne",
+    "backToHome": "Înapoi acasă",
+    "viewCollection": "Vizualizați colecția noastră",
+    "orderNow": "Comandați acum",
+    "allRightsReserved": "Toate drepturile rezervate",
+    "privacyPolicy": "Politica de confidențialitate",
+    "termsOfService": "Termeni și condiții",
+    "builtBy": "Construit de"
+  },
+  "hero": {
+    "title": "Ceramică Radilina",
+    "subtitle": "Argilă, apă, mâini și foc",
+    "productsButton": "Produse",
+    "aboutButton": "Despre noi"
+  },
+  "courses": {
+    "sectionTitle": "Cursuri de ceramică",
+    "header": "Scufundați-vă în lumea ceramicii tradiționale,",
+    "headerSub": "unde abilitățile seculare prind viață în mâinile voastre",
+    "course1": {
+      "title": "Demonstrație de modelare ceramică",
+      "duration": "Demonstrație",
+      "level": "Pentru copii și turiști",
+      "participants": "Potrivit pentru toate vârstele",
+      "description": "Bun venit la o experiență interesantă și distractivă cu argila! Veți vedea cum pe roata olarului, cu ajutorul apei și al mâinilor pricepute, argila moale se transformă într-o piesă ceramică adevărată."
+    },
+    "course2": {
+      "title": "Pachet \"Modelare și pictare\"",
+      "duration": "Experiență combinată",
+      "level": "Pentru copii și turiști",
+      "participants": "Ideal pentru copii, familii și oaspeți",
+      "description": "Veniți și scufundați-vă în lumea ceramicii troiene cu o experiență combinată care include o demonstrație de modelare ceramică pe roata olarului cu maestrul Radina și decorarea și pictarea unei piese troiene cu maestrul Ilina Ilieva.",
+      "featuredBadge": "Pachet Combinat"
+    },
+    "course3": {
+      "title": "Demonstrație de decorare și pictare ceramică troiană",
+      "duration": "Demonstrație",
+      "level": "Pentru copii și turiști",
+      "participants": "Potrivit pentru toate vârstele",
+      "description": "Bun venit la o demonstrație colorată și interesantă de decorare și pictare tradițională a ceramicii troiene. Cu ajutorul maestrului Ilina Ilieva, veți vedea cum se creează modelele și ornamentele caracteristice troiene."
+    },
+    "signUp": "Înscrieți-vă",
+    "notSure": "Nu sunteți sigur ce curs să alegeți?",
+    "consultation": "Contactați-ne pentru o consultație gratuită. Vă vom ajuta să găsiți cursul care se potrivește cel mai bine intereselor și abilităților dumneavoastră.",
+    "contactButton": "Contactați-ne",
+    "rawProduct": "Produs Brut",
+    "rawProductDesc": "Doar pentru decorare, nu poate fi udat",
+    "bakedProduct": "Produs Coctat",
+    "bakedProductDesc": "Gata pentru utilizare completă în casa dumneavoastră",
+    "materialsIncluded": "Materiale Incluse",
+    "materialsIncludedDesc": "Toate materialele necesare sunt furnizate"
+  },
+  "about": {
+    "sectionTitle": "Despre noi",
+    "header": "Tradiție, pasiune și meșteșug,",
+    "headerSub": "transmise din generație în generație",
+    "historyTitle": "Istoria Radilina",
+    "history1": "Cu peste 46 de ani de experiență în producția de ceramică, creăm ceramică troiană făcută manual cu atenție la fiecare detaliu. Suntem o afacere de familie fondată de Plamen și Tanya Ilievi, iar astăzi fiicele lor - Radina și Ilina - lucrează alături de ei, continuând tradiția familiei și dragostea pentru meșteșug. Toate produsele sunt create în întregime manual - de la modelarea pe roata olarului până la detaliile finale, fără utilizarea producției mecanice. Folosim doar materiale certificate și de înaltă calitate.",
+    "history2": "Ceramica noastră este oferită și apreciată de clienți din întreaga lume, iar meșteșugul nostru este prezentat în diverse programe de televiziune dedicate tradițiilor și meșteșugurilor bulgare. Oferim ceramică troiană pentru uz casnic și suveniruri care aduce confort, tradiție și atmosferă autentică în casa dumneavoastră. Sortimentul nostru bogat și calitatea dovedită sunt o garanție de durabilitate și satisfacție.",
+    "history3": "Producția ceramicii noastre este un proces complet manual care a păstrat tradițiile meșteșugului troian prin generații. Fiecare piesă este modelată pe roata olarului cu atenție la detalii, răbdare și meșteșug acumulat de-a lungul anilor.",
+    "history4": "Folosim doar materiale certificate și de înaltă calitate care garantează rezistență, siguranță și durabilitate a produselor. Toate etapele - de la modelare și uscare, prin decorare și glazurare, până la ardere - se fac manual, fără utilizarea producției mecanice.",
+    "history5": "Datorită acestui abordare, fiecare piesă este unică și poartă propriul caracter, căldură și autenticitate. Este munca manuală care face ceramica noastră nu doar un obiect, ci parte din tradiția bulgară și confortul casei.",
+    "yearsExperience": "Ani de Experiență",
+    "handmade": "Făcut Manual",
+    "production": "Producție",
+    "household": "Ceramică pentru Uz Casnic",
+    "souvenir": "Ceramică Suvenir",
+    "sets": "Servicii",
+    "value1Title": "Făcut Manual",
+    "value1Desc": "Fiecare piesă este creată în întregime manual pe roata olarului",
+    "value2Title": "Materiale Certificate",
+    "value2Desc": "Folosim doar materiale certificate gata pentru calitate",
+    "value3Title": "46 de Ani de Experiență",
+    "value3Desc": "Sortiment bogat și calitate dovedită a articolelor"
+  },
+  "howItWorks": {
+    "sectionTitle": "Proces de Lucru",
+    "header": "Creare atentă de la selecția materialului",
+    "headerSub": "până la produsul final în casa dumneavoastră",
+    "intro": "Procesul de fabricare a fiecărei piese este complet manual și durează aproximativ 20 de zile - de la pregătirea inițială până la etapa finală finalizată.",
+    "step1": {
+      "title": "Pregătirea Argilei",
+      "subtitle": "Selectăm și pregătim argila cu densitate și elasticitate adecvate pentru procesare manuală"
+    },
+    "step2": {
+      "title": "Modelare pe Rota Olarului",
+      "subtitle": "Piesa este modelată manual pe roata olarului și își dobândește forma de bază"
+    },
+    "step3": {
+      "title": "Finisare și Netezire",
+      "subtitle": "Se efectuează corecții fine și netezirea detaliilor"
+    },
+    "step4": {
+      "title": "Decorare (Pictare)",
+      "subtitle": "Fiecare articol este decorat manual cu ornamente troiene tradiționale"
+    },
+    "step5": {
+      "title": "Prima Ardere",
+      "subtitle": "După decorare, piesa este arsă pentru a deveni puternică și durabilă"
+    },
+    "step6": {
+      "title": "Glazurare",
+      "subtitle": "Se aplică glazură, care oferă un aspect finit, culoare și protecție"
+    },
+    "step7": {
+      "title": "A Doua Ardere",
+      "subtitle": "Glazura și decorarea sunt fixate și se obține rezultatul final"
+    },
+    "step8": {
+      "title": "Control de Calitate și Ambalare",
+      "subtitle": "Fiecare piesă este verificată cu atenție și pregătită pentru clienți"
+    },
+    "ourCourses": "Cursurile Noastre",
+    "usageTitle": "Instrucțiuni pentru Utilizarea Ceramicii din Argilă",
+    "usage1": "Vasul din argilă este potrivit pentru gătirea felurilor în cuptor. Plasați vasul într-un cuptor rece, apoi încălziți-l treptat.",
+    "usage2": "Evitați schimbările bruște de temperatură. Nu plasați un vas fierbinte pe o suprafață rece sau umedă pentru a preveni șocul termic.",
+    "usage3": "Vasul este potrivit pentru utilizare în cuptor cu microunde. Poate fi curățat în mașină de spălat vase.",
+    "usage4": "Nu este potrivit pentru contact direct cu foc deschis sau plită."
+  },
+  "faq": {
+    "sectionTitle": "Întrebări Frecvente",
+    "header": "Explicații clare despre cum lucrăm,",
+    "headerSub": "ce folosim și ce vă puteți aștepta",
+    "q1": "Poate fi folosit vasul ceramic în cuptor?",
+    "a1": "Da, este potrivit pentru utilizare în cuptor. Plasați-l într-un cuptor rece și încălziți-l treptat.",
+    "q2": "Este potrivit pentru cuptor cu microunde?",
+    "a2": "Da, vasul ceramic poate fi folosit în cuptor cu microunde.",
+    "q3": "Poate fi spălat în mașină de spălat vase?",
+    "a3": "Da, vasul este potrivit pentru curățare în mașină de spălat vase.",
+    "q4": "Poate fi folosit pe plită sau foc deschis?",
+    "a4": "Nu, nu este potrivit pentru contact direct cu plită sau foc deschis.",
+    "q5": "Ar trebui să fie plasat într-un cuptor preîncălzit?",
+    "a5": "Nu. Se recomandă plasarea vasului într-un cuptor rece pentru a evita șocul termic.",
+    "q6": "Cum să evitați crăparea vasului?",
+    "a6": "Evitați schimbările bruște de temperatură și nu plasați un vas fierbinte pe suprafețe reci sau umede.",
+    "q7": "Sunt vasele ceramice sigure pentru alimente?",
+    "a7": "Da, materialele folosite sunt potrivite pentru contact cu alimente.",
+    "q8": "Reține ceramica căldura?",
+    "a8": "Da, ceramica reține căldura mult timp și ajută la gătire uniformă.",
+    "q9": "Poate fi folosit pentru servire?",
+    "a9": "Da, vasele ceramice sunt potrivite atât pentru gătire, cât și pentru servire.",
+    "q10": "Există diferență între argilă și ceramică?",
+    "a10": "Argila este un material natural, în timp ce ceramica este argilă procesată și arsă, potrivită pentru uz casnic."
+  },
+  "contact": {
+    "sectionTitle": "Contactați-ne",
+    "header": "Suntem gata să răspundem la întrebările dumneavoastră",
+    "headerSub": "și să discutăm despre următorul proiect",
+    "email": "Email",
+    "phone": "Telefon",
+    "workshop": "Atelier",
+    "workshopAddress": "Troyan, Bulgaria",
+    "workshopNote": "Vizite cu programare",
+    "warehouse": "Depozit",
+    "warehouseAddress": "Str. \"Hristo Botev\" 231",
+    "warehouseAddress2": "Lagat, 5600 Troyan, Bulgaria",
+    "formName": "Nume",
+    "formNamePlaceholder": "Numele dumneavoastră",
+    "formPhone": "Telefon",
+    "formPhonePlaceholder": "+359 ...",
+    "formMessage": "Mesaj",
+    "formMessagePlaceholder": "Spuneți-ne despre proiectul dumneavoastră sau puneți o întrebare...",
+    "formSubmit": "Trimite Mesaj"
+  },
+  "awards": {
+    "sectionTitle": "Premii",
+    "header": "Designuri recunoscute",
+    "headerSub": "dincolo de granițe",
+    "description": "Sărbătorim premii și nominalizări care reflectă angajamentul nostru față de claritate, inovație și minimalism atemporal",
+    "award1Title": "Maestru al Meșteșugului Tradițional 2024",
+    "award1Desc": "Recunoaștere pentru 35 de ani de experiență în producția de ceramică făcută manual. Toate articolele sunt realizate pe roata olarului folosind materiale certificate, creând articole unice pentru uz casnic și suveniruri din ceramică troiană.",
+    "viewCollection": "Vizualizați colecția noastră",
+    "nationalExhibitions": "Prezentat în Expoziții Naționale",
+    "bestProducer": "Cel mai bun producător de ceramică făcută manual",
+    "qualityRecognition": "Recunoaștere pentru Calitate",
+    "yearsExperience35": "35 de ani de experiență în meșteșugul tradițional",
+    "certifiedMaterials": "Materiale certificate și muncă făcută manual",
+    "seeMore": "Vezi Mai Mult",
+    "qualityRecognition2024": "Recunoaștere pentru Calitate 2024/2025",
+    "traditionTitle": "Tradiție și meșteșug recunoscute dincolo de granițe",
+    "traditionDesc": "De încredere de clienți din țară și străinătate pentru calitate și autenticitate",
+    "tasteOfBulgaria": "Gustul Bulgariei",
+    "tasteOfBulgariaDesc": "Urmăriți participarea noastră în emisiunea BTV",
+    "watchOnBTV": "Urmăriți pe BTV"
+  },
+  "gallery": {
+    "title": "Creările Noastre",
+    "subtitle": "Artă în argilă și culoare. Răsfoiți galeria noastră de piese ceramice făcute manual, fiecare fiind o operă de artă unică."
+  },
+  "category": {
+    "notFound": "Categoria nu a fost găsită",
+    "viewCollection": "Răsfoiți colecția noastră de {name} - {count} produs{plural}, fiecare făcut manual cu atenție la detalii.",
+    "viewCollectionOne": "Răsfoiți colecția noastră de {name} - {count} produs, fiecare făcut manual cu atenție la detalii.",
+    "viewCollectionMany": "Răsfoiți colecția noastră de {name} - {count} produse, fiecare făcut manual cu atenție la detalii.",
+    "wholesale": "Lucrăm cu ridicata",
+    "wholesaleDesc": "Oferim prețuri speciale pentru comenzi mari. Contactați-ne pentru o ofertă individuală.",
+    "orderButton": "Contactați pentru Comandă"
+  },
+  "products": {
+    "allProducts": "Toate Produsele",
+    "viewCollection": "Răsfoiți întreaga noastră colecție",
+    "viewCollectionSub": "de ceramică făcută manual"
+  },
+  "footer": {
+    "followUs": "Urmăriți-ne",
+    "quickLinks": "Linkuri Rapide",
+    "location": "Troyan, Bulgaria"
+  },
+  "pageHero": {
+    "aboutTitle": "Tradiție, pasiune și meșteșug",
+    "aboutSubtitle": "Afacere de familie cu peste 46 de ani de experiență în producția de ceramică făcută manual din Troyan, Bulgaria. Fiecare piesă este creată cu dragoste și atenție la detalii.",
+    "aboutButton1": "Răsfoiți Produsele",
+    "aboutButton2": "Contactați-ne",
+    "contactTitle": "Contactați-ne",
+    "contactSubtitle": "Aveți întrebări sau doriți să plasați o comandă? Ne-ar plăcea să auzim de la dumneavoastră. Contactați-ne într-un mod convenabil pentru dumneavoastră."
+  },
+  "categories": {
+    "cupsAndMugs": "Căni și Halbe",
+    "plates": "Farfurii",
+    "bowls": "Boluri",
+    "pans": "Tigăi",
+    "pots": "Oale",
+    "fruitBowls": "Boluri pentru Fructe",
+    "oliveDishes": "Vase pentru Măsline",
+    "saltAndSugar": "Săruri și Zahăr",
+    "ashtrays": "Scrumiere",
+    "napkinHolders": "Suporturi pentru Șervețele",
+    "sets": "Servicii",
+    "servingDishes": "Vase de Servire",
+    "jars": "Borcanuri",
+    "bells": "Clopote",
+    "pans2": "Tigăi",
+    "jugsAndCans": "Ulcioare și Căni",
+    "andMore": "Și Multe Altele",
+    "guvech": "Oale și Cazane",
+    "kupi": "Boluri și Farfurioare",
+    "chinii": "Farfurii și Vase de Servire",
+    "tavi": "Tigăi",
+    "chashi-alkohol": "Căni pentru Alcool",
+    "chashi-kafe": "Căni pentru Cafea și Ceai",
+    "chashi-napitki": "Căni pentru Băuturi și Halbe",
+    "servizi": "Servicii",
+    "aksesori": "Accesorii Mici",
+    "neznayni": "Necunoscute"
+  }
+}

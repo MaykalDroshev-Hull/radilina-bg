@@ -1,0 +1,258 @@
+{
+  "common": {
+    "home": "Home",
+    "products": "Products",
+    "courses": "Courses",
+    "awards": "Awards",
+    "about": "About",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "menu": "MENU",
+    "code": "Code",
+    "price": "Price",
+    "contactUs": "Contact Us",
+    "backToHome": "Back to Home",
+    "viewCollection": "View Our Collection",
+    "orderNow": "Order Now",
+    "allRightsReserved": "All rights reserved",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "builtBy": "Built by"
+  },
+  "hero": {
+    "title": "Radilina Ceramics",
+    "subtitle": "Clay, water, hands and fire",
+    "productsButton": "Products",
+    "aboutButton": "About"
+  },
+  "courses": {
+    "sectionTitle": "Pottery Courses",
+    "header": "Immerse yourself in the world of traditional ceramics,",
+    "headerSub": "where centuries-old skills come to life in your hands",
+    "course1": {
+      "title": "Ceramic Throwing Demonstration",
+      "duration": "Demonstration",
+      "level": "For children and tourists",
+      "participants": "Suitable for all ages",
+      "description": "Welcome to an interesting and fun clay experience! You will see how on the potter's wheel, with the help of water and skilled hands, soft clay transforms into a real ceramic piece."
+    },
+    "course2": {
+      "title": "Throwing and Painting Package",
+      "duration": "Combined experience",
+      "level": "For children and tourists",
+      "participants": "Ideal for children, families and guests",
+      "description": "Come and immerse yourself in the world of Troyan ceramics with a combined experience that includes a demonstration of ceramic throwing on a potter's wheel with master Radina and decorating and painting a Troyan piece with master Ilina Ilieva.",
+      "featuredBadge": "Combined Package"
+    },
+    "course3": {
+      "title": "Troyan Ceramic Decoration and Painting Demonstration",
+      "duration": "Demonstration",
+      "level": "For children and tourists",
+      "participants": "Suitable for all ages",
+      "description": "Welcome to a colorful and interesting demonstration of traditional decoration and painting of Troyan ceramics. With the help of master Ilina Ilieva, you will see how the characteristic Troyan patterns and ornaments are created."
+    },
+    "signUp": "Sign Up",
+    "notSure": "Not sure which course to choose?",
+    "consultation": "Contact us for a free consultation. We will help you find the course that best suits your interests and skills.",
+    "contactButton": "Contact Us",
+    "rawProduct": "Raw Product",
+    "rawProductDesc": "For decoration only, cannot be wetted",
+    "bakedProduct": "Baked Product",
+    "bakedProductDesc": "Ready for full use in your home",
+    "materialsIncluded": "Materials Included",
+    "materialsIncludedDesc": "All necessary materials provided"
+  },
+  "about": {
+    "sectionTitle": "About Us",
+    "header": "Tradition, passion and craft,",
+    "headerSub": "passed down from generation to generation",
+    "historyTitle": "Radilina History",
+    "history1": "With over 46 years of experience in ceramic production, we create handmade Troyan ceramics with attention to every detail. We are a family business founded by Plamen and Tanya Ilievi, and today their daughters - Radina and Ilina - work side by side with them, continuing the family tradition and love for the craft. All products are created entirely by hand - from shaping on the potter's wheel to final details, without the use of machine production. We use only certified and high-quality materials.",
+    "history2": "Our ceramics are offered and valued by customers around the world, and our craftsmanship is featured in various television programs dedicated to Bulgarian traditions and crafts. We offer household and souvenir Troyan ceramics that bring comfort, tradition and authentic atmosphere to your home. Our rich assortment and proven quality are a guarantee of durability and satisfaction.",
+    "history3": "The production of our ceramics is an entirely manual process that has preserved the traditions of the Troyan craft through generations. Each piece is shaped on a potter's wheel with attention to detail, patience and craftsmanship accumulated over the years.",
+    "history4": "We use only certified and high-quality materials that guarantee strength, safety and durability of the products. All stages - from shaping and drying, through decoration and glazing, to firing - are done by hand, without the use of machine production.",
+    "history5": "Thanks to this approach, each piece is unique and carries its own character, warmth and authenticity. It is the handmade work that makes our ceramics not just an object, but part of Bulgarian tradition and home comfort.",
+    "yearsExperience": "Years of Experience",
+    "handmade": "Handmade",
+    "production": "Production",
+    "household": "Household Ceramics",
+    "souvenir": "Souvenir Ceramics",
+    "sets": "Sets",
+    "value1Title": "Handmade",
+    "value1Desc": "Each piece is created entirely by hand on a potter's wheel",
+    "value2Title": "Certified Materials",
+    "value2Desc": "We use only ready certified materials for quality",
+    "value3Title": "46 Years of Experience",
+    "value3Desc": "Rich assortment and proven quality of items"
+  },
+  "howItWorks": {
+    "sectionTitle": "Working Process",
+    "header": "Careful crafting from material selection",
+    "headerSub": "to the final product in your home",
+    "intro": "The process of making each piece is entirely manual and takes approximately 20 days - from initial preparation to the final finished stage.",
+    "step1": {
+      "title": "Clay Preparation",
+      "subtitle": "We select and prepare clay with appropriate density and elasticity for manual processing"
+    },
+    "step2": {
+      "title": "Shaping on Potter's Wheel",
+      "subtitle": "The piece is shaped by hand on a potter's wheel and acquires its basic form"
+    },
+    "step3": {
+      "title": "Finishing and Smoothing",
+      "subtitle": "Fine corrections and smoothing of details are performed"
+    },
+    "step4": {
+      "title": "Decoration (Painting)",
+      "subtitle": "Each piece is decorated by hand with traditional Troyan ornaments"
+    },
+    "step5": {
+      "title": "First Firing",
+      "subtitle": "After decoration, the piece is fired to become strong and durable"
+    },
+    "step6": {
+      "title": "Glazing",
+      "subtitle": "Glaze is applied, which gives a finished look, color and protection"
+    },
+    "step7": {
+      "title": "Second Firing",
+      "subtitle": "The glaze and decoration are fixed and the final result is achieved"
+    },
+    "step8": {
+      "title": "Quality Control and Packaging",
+      "subtitle": "Each piece is carefully checked and prepared for customers"
+    },
+    "ourCourses": "Our Courses",
+    "usageTitle": "Instructions for Using Clay Pottery",
+    "usage1": "The clay pot is suitable for cooking dishes in the oven. Place the pot in a cold oven, then heat it gradually.",
+    "usage2": "Avoid sudden temperature changes. Do not place a hot pot on a cold or wet surface to prevent thermal shock.",
+    "usage3": "The pot is suitable for use in a microwave oven. It can be cleaned in a dishwasher.",
+    "usage4": "Not suitable for direct contact with open fire or stovetop."
+  },
+  "faq": {
+    "sectionTitle": "Frequently Asked Questions",
+    "header": "Clear explanations of how we work,",
+    "headerSub": "what we use and what you can expect",
+    "q1": "Can the ceramic pot be used in the oven?",
+    "a1": "Yes, it is suitable for use in the oven. Place it in a cold oven and heat gradually.",
+    "q2": "Is it suitable for microwave oven?",
+    "a2": "Yes, the ceramic pot can be used in a microwave oven.",
+    "q3": "Can it be washed in a dishwasher?",
+    "a3": "Yes, the pot is suitable for cleaning in a dishwasher.",
+    "q4": "Can it be used on a stovetop or open fire?",
+    "a4": "No, it is not suitable for direct contact with a stovetop or open fire.",
+    "q5": "Should it be placed in a preheated oven?",
+    "a5": "No. It is recommended to place the pot in a cold oven to avoid thermal shock.",
+    "q6": "How to avoid cracking the pot?",
+    "a6": "Avoid sudden temperature changes and do not place a hot pot on cold or wet surfaces.",
+    "q7": "Are ceramic pots safe for food?",
+    "a7": "Yes, the materials used are suitable for contact with food.",
+    "q8": "Does ceramics retain heat?",
+    "a8": "Yes, ceramics retain heat for a long time and help with even cooking.",
+    "q9": "Can it be used for serving?",
+    "a9": "Yes, ceramic pots are suitable for both cooking and serving.",
+    "q10": "Is there a difference between clay and ceramics?",
+    "a10": "Clay is a natural material, while ceramics is processed and fired clay, suitable for household use."
+  },
+  "contact": {
+    "sectionTitle": "Contact Us",
+    "header": "We are ready to answer your questions",
+    "headerSub": "and discuss your next project",
+    "email": "Email",
+    "phone": "Phone",
+    "workshop": "Workshop",
+    "workshopAddress": "Troyan, Bulgaria",
+    "workshopNote": "Visits by appointment",
+    "warehouse": "Warehouse",
+    "warehouseAddress": "231 \"Hristo Botev\" St.",
+    "warehouseAddress2": "Lagat, 5600 Troyan, Bulgaria",
+    "formName": "Name",
+    "formNamePlaceholder": "Your name",
+    "formPhone": "Phone",
+    "formPhonePlaceholder": "+359 ...",
+    "formMessage": "Message",
+    "formMessagePlaceholder": "Tell us about your project or ask a question...",
+    "formSubmit": "Send Message"
+  },
+  "awards": {
+    "sectionTitle": "Awards",
+    "header": "Designs recognized",
+    "headerSub": "beyond borders",
+    "description": "We celebrate awards and nominations that reflect our commitment to clarity, innovation and timeless minimalism",
+    "award1Title": "Master of Traditional Craftsmanship 2024",
+    "award1Desc": "Recognition for 35 years of experience in handmade ceramic production. All items are made on a potter's wheel using certified materials, creating unique household and souvenir items from Troyan ceramics.",
+    "viewCollection": "View Our Collection",
+    "nationalExhibitions": "Featured in National Exhibitions",
+    "bestProducer": "Best Handmade Ceramics Producer",
+    "qualityRecognition": "Quality Recognition",
+    "yearsExperience35": "35 years of experience in traditional craftsmanship",
+    "certifiedMaterials": "Certified materials and handmade work",
+    "seeMore": "See More",
+    "qualityRecognition2024": "Quality Recognition 2024/2025",
+    "traditionTitle": "Tradition and craftsmanship recognized beyond borders",
+    "traditionDesc": "Trusted by customers at home and abroad for quality and authenticity",
+    "tasteOfBulgaria": "Taste of Bulgaria",
+    "tasteOfBulgariaDesc": "Watch our participation in the BTV show",
+    "watchOnBTV": "Watch on BTV"
+  },
+  "gallery": {
+    "title": "Our Creations",
+    "subtitle": "Art in clay and color. Browse our gallery of handmade ceramic pieces, each one a unique work of art."
+  },
+  "category": {
+    "notFound": "Category not found",
+    "viewCollection": "Browse our collection of {name} - {count} product{plural}, each handmade with attention to detail.",
+    "viewCollectionOne": "Browse our collection of {name} - {count} product, each handmade with attention to detail.",
+    "viewCollectionMany": "Browse our collection of {name} - {count} products, each handmade with attention to detail.",
+    "wholesale": "We work wholesale",
+    "wholesaleDesc": "We offer special prices for large orders. Contact us for an individual quote.",
+    "orderButton": "Contact for Order"
+  },
+  "products": {
+    "allProducts": "All Products",
+    "viewCollection": "Browse our entire collection",
+    "viewCollectionSub": "of handmade ceramics"
+  },
+  "footer": {
+    "followUs": "Follow Us",
+    "quickLinks": "Quick Links",
+    "location": "Troyan, Bulgaria"
+  },
+  "pageHero": {
+    "aboutTitle": "Tradition, passion and craft",
+    "aboutSubtitle": "Family business with over 46 years of experience in handmade ceramic production from Troyan, Bulgaria. Each piece is created with love and attention to detail.",
+    "aboutButton1": "Browse Products",
+    "aboutButton2": "Contact Us",
+    "contactTitle": "Contact Us",
+    "contactSubtitle": "Have questions or want to place an order? We'd love to hear from you. Contact us in a way that's convenient for you."
+  },
+  "categories": {
+    "cupsAndMugs": "Cups and Mugs",
+    "plates": "Plates",
+    "bowls": "Bowls",
+    "pans": "Pans",
+    "pots": "Pots",
+    "fruitBowls": "Fruit Bowls",
+    "oliveDishes": "Olive Dishes",
+    "saltAndSugar": "Salt and Sugar",
+    "ashtrays": "Ashtrays",
+    "napkinHolders": "Napkin Holders",
+    "sets": "Sets",
+    "servingDishes": "Serving Dishes",
+    "jars": "Jars",
+    "bells": "Bells",
+    "pans2": "Pans",
+    "jugsAndCans": "Jugs and Cans",
+    "andMore": "And More",
+    "guvech": "Pots and Casseroles",
+    "kupi": "Bowls and Saucers",
+    "chinii": "Plates and Serving Dishes",
+    "tavi": "Pans",
+    "chashi-alkohol": "Alcohol Cups",
+    "chashi-kafe": "Coffee and Tea Cups",
+    "chashi-napitki": "Drink Cups and Mugs",
+    "servizi": "Sets",
+    "aksesori": "Small Accessories",
+    "neznayni": "Unknown"
+  }
+}

@@ -2,9 +2,11 @@
 
 import Image from 'next/image';
 import { ExternalLink, ArrowRight, Trophy } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { AnimatedSection, AnimatedContainer, AnimatedItem } from '../lib/animations';
 
 export default function Awards() {
+  const t = useTranslations();
   return (
     <AnimatedSection id="awards" className="py-12 md:py-16 lg:py-20">
       <AnimatedContainer className="px-6 md:px-10 lg:px-12 mb-8 md:mb-10 lg:mb-12">
@@ -12,19 +14,19 @@ export default function Awards() {
           {/* Left side */}
           <AnimatedItem className="flex items-center gap-2 md:gap-3">
             <span className="w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full flex-shrink-0"></span>
-            <span className="text-base md:text-lg lg:text-xl text-gray-400 font-body">Награди</span>
+            <span className="text-base md:text-lg lg:text-xl text-gray-400 font-body">{t('awards.sectionTitle')}</span>
           </AnimatedItem>
           {/* Right side */}
           <AnimatedItem className="md:max-w-[55%] lg:max-w-[50%] text-left md:text-right text-xl md:text-2xl lg:text-4xl">
             <span className="font-semibold text-white font-headline leading-tight">
-              Дизайни, признати
+              {t('awards.header')}
             </span>
             <span className="text-gray-500 font-headline leading-tight">
-              {" "}извън границите
+              {" "}{t('awards.headerSub')}
             </span>
             <br />
             <span className="text-sm md:text-base lg:text-lg text-gray-400 font-body mt-2 md:mt-3 inline-block">
-              Честваме награди и номинации, които отразяват нашия ангажимент към яснота, иновации и вечен минимализъм
+              {t('awards.description')}
             </span>
           </AnimatedItem>
         </div>
@@ -37,19 +39,17 @@ export default function Awards() {
           <AnimatedItem className="md:col-span-2 lg:col-span-2 lg:row-span-1 rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl bg-[#1a1614] shadow-sm hover:shadow-md transition-shadow p-5 md:p-7 lg:p-8 flex flex-col gap-3 md:gap-4 lg:gap-5 border border-gray-800">
             <div className="flex flex-col gap-2 md:gap-3">
               <Trophy className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-yellow-500" />
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold font-headline text-white mt-2">Мастер на традиционното занаятчийство 2024</h2>
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold font-headline text-white mt-2">{t('awards.award1Title')}</h2>
             </div>
             <p className="text-sm md:text-base lg:text-lg text-gray-400 leading-relaxed font-body">
-              Признание за 35 години опит в ръчното керамично производство. Всички артикули се изработват
-              на грънчарско колело с използване на сертифицирани материали, създавайки уникални битови
-              и сувенирни изделия от Троянска керамика.
+              {t('awards.award1Desc')}
             </p>
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 mt-2">
               <button className="flex items-center justify-center gap-2 px-5 md:px-6 py-2.5 md:py-3 rounded-full bg-white text-black text-xs md:text-sm lg:text-base font-body hover:bg-gray-200 active:scale-95 transition-all">
-                Вижте нашата колекция <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
+                {t('awards.viewCollection')} <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
               </button>
               <button className="flex items-center justify-center gap-2 px-5 md:px-6 py-2.5 md:py-3 rounded-full bg-[#1a1614] border border-gray-800 text-gray-300 text-xs md:text-sm lg:text-base font-body hover:bg-[#2a2520] active:scale-95 transition-all">
-                Представени в национални изложби <ExternalLink className="w-4 h-4 md:w-5 md:h-5" />
+                {t('awards.nationalExhibitions')} <ExternalLink className="w-4 h-4 md:w-5 md:h-5" />
               </button>
             </div>
           </AnimatedItem>
@@ -66,28 +66,28 @@ export default function Awards() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-transparent"></div>
             <div className="absolute top-0 left-0 p-4 md:p-6 lg:p-8">
               <h3 className="text-white text-base md:text-lg lg:text-xl font-semibold drop-shadow-lg font-headline leading-tight">
-                Традиция и майсторство, признати отвъд границите
+                {t('awards.traditionTitle')}
               </h3>
               <p className="text-white text-xs md:text-sm lg:text-base opacity-90 drop-shadow-md mt-2 md:mt-3 font-body leading-relaxed">
-                Доверени от клиенти в страната и чужбина за качество и автентичност
+                {t('awards.traditionDesc')}
               </p>
             </div>
           </AnimatedItem>
 
           {/* Element 3 — Best UX Nominee */}
           <AnimatedItem className="md:col-span-1 lg:col-span-1 lg:row-span-1 rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl bg-[#1a1614] shadow-sm hover:shadow-md transition-shadow p-5 md:p-6 lg:p-7 flex flex-col justify-center gap-3 md:gap-3 lg:gap-4 border border-gray-800">
-            <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-white font-headline leading-tight">Най-добър производител на ръчна керамика</p>
-            <h4 className="text-base md:text-lg lg:text-xl font-semibold text-gray-300 font-headline mt-2">Признание за качество</h4>
-            <p className="text-base md:text-lg lg:text-xl font-medium text-white font-body mt-2">35 години опит в традиционното занаятчийство</p>
-            <p className="text-sm md:text-base lg:text-lg text-gray-400 font-body mt-2 leading-relaxed">Сертифицирани материали и ръчна изработка</p>
+            <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-white font-headline leading-tight">{t('awards.bestProducer')}</p>
+            <h4 className="text-base md:text-lg lg:text-xl font-semibold text-gray-300 font-headline mt-2">{t('awards.qualityRecognition')}</h4>
+            <p className="text-base md:text-lg lg:text-xl font-medium text-white font-body mt-2">{t('awards.yearsExperience35')}</p>
+            <p className="text-sm md:text-base lg:text-lg text-gray-400 font-body mt-2 leading-relaxed">{t('awards.certifiedMaterials')}</p>
             <a href="#" className="text-xs md:text-sm lg:text-base text-white font-medium hover:text-gray-300 transition-colors inline-flex items-center gap-1 md:gap-1.5 mt-2 font-body">
-              Вижте повече <span className="text-red-500 text-base md:text-lg">↗</span>
+              {t('awards.seeMore')} <span className="text-red-500 text-base md:text-lg">↗</span>
             </a>
           </AnimatedItem>
 
           {/* Element 4 — FWA Recognition */}
           <AnimatedItem className="md:col-span-1 lg:col-span-1 lg:row-span-1 rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl bg-[#0a0a0a] shadow-sm hover:shadow-md transition-shadow p-5 md:p-6 lg:p-7 flex flex-col justify-center gap-3 md:gap-4 group border border-gray-800">
-            <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-white font-headline leading-tight">Признание за качество 2024/2025</p>
+            <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-white font-headline leading-tight">{t('awards.qualityRecognition2024')}</p>
             {/* Placeholder image */}
             <div className="overflow-hidden rounded-2xl md:rounded-[1.5rem]">
               <div className="relative h-48 md:h-52 lg:h-64">
@@ -139,10 +139,10 @@ export default function Awards() {
             {/* BTV Article Button */}
             <AnimatedItem className="rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl bg-gradient-to-br from-[#1a1614] to-[#1a1614] border border-gray-800 p-6 md:p-8 lg:p-10 flex flex-col items-center justify-center gap-4 md:gap-5 hover:shadow-lg transition-all">
               <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-white font-headline text-center">
-                Вкусът на България
+                {t('awards.tasteOfBulgaria')}
               </h3>
               <p className="text-sm md:text-base text-gray-400 font-body text-center leading-relaxed">
-                Гледайте нашето участие в предаването на БТВ
+                {t('awards.tasteOfBulgariaDesc')}
               </p>
               <a
                 href="https://www.btv.bg/shows/vkusat-na-bulgaria/videos/vkusat-na-balgarija-v-trojanskija-balkan-01-11-2025-1-chast.html"
@@ -150,7 +150,7 @@ export default function Awards() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 rounded-full bg-white text-black text-sm md:text-base font-semibold hover:bg-gray-200 active:scale-95 transition-all font-body w-full md:w-auto"
               >
-                Гледайте в БТВ
+                {t('awards.watchOnBTV')}
                 <ExternalLink className="w-4 h-4 md:w-5 md:h-5" />
               </a>
             </AnimatedItem>

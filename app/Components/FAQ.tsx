@@ -1,49 +1,53 @@
-import Image from 'next/image';
+"use client";
 
-const faqData = [
-  {
-    question: "Може ли керамичният съд да се използва във фурна?",
-    answer: "Да, подходящ е за използване във фурна. Поставя се в студена фурна и се загрява постепенно."
-  },
-  {
-    question: "Подходящ ли е за микровълнова фурна?",
-    answer: "Да, керамичният съд може да се използва в микровълнова фурна."
-  },
-  {
-    question: "Може ли да се мие в съдомиялна машина?",
-    answer: "Да, съдът е подходящ за почистване в съдомиялна машина."
-  },
-  {
-    question: "Може ли да се използва върху котлон или открит огън?",
-    answer: "Не, не е подходящ за директен контакт с котлон или открит огън."
-  },
-  {
-    question: "Трябва ли да се поставя в предварително загрята фурна?",
-    answer: "Не. Препоръчва се съдът да се поставя в студена фурна, за да се избегне термичен шок."
-  },
-  {
-    question: "Как да се избегне напукване на съда?",
-    answer: "Избягвайте резки температурни промени и не поставяйте горещ съд върху студени или мокри повърхности."
-  },
-  {
-    question: "Безопасни ли са керамичните съдове за храна?",
-    answer: "Да, използваните материали са подходящи за контакт с храни."
-  },
-  {
-    question: "Задържа ли керамиката топлината?",
-    answer: "Да, керамиката задържа топлината дълго време и спомага за равномерно готвене."
-  },
-  {
-    question: "Може ли да се използва за сервиране?",
-    answer: "Да, керамичните съдове са подходящи както за готвене, така и за сервиране."
-  },
-  {
-    question: "Има ли разлика между глина и керамика?",
-    answer: "Глината е естествен материал, а керамиката е обработена и изпечена глина, подходяща за домакинска употреба."
-  }
-];
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 export default function FAQ() {
+  const t = useTranslations();
+  
+  const faqData = [
+    {
+      question: t('faq.q1'),
+      answer: t('faq.a1')
+    },
+    {
+      question: t('faq.q2'),
+      answer: t('faq.a2')
+    },
+    {
+      question: t('faq.q3'),
+      answer: t('faq.a3')
+    },
+    {
+      question: t('faq.q4'),
+      answer: t('faq.a4')
+    },
+    {
+      question: t('faq.q5'),
+      answer: t('faq.a5')
+    },
+    {
+      question: t('faq.q6'),
+      answer: t('faq.a6')
+    },
+    {
+      question: t('faq.q7'),
+      answer: t('faq.a7')
+    },
+    {
+      question: t('faq.q8'),
+      answer: t('faq.a8')
+    },
+    {
+      question: t('faq.q9'),
+      answer: t('faq.a9')
+    },
+    {
+      question: t('faq.q10'),
+      answer: t('faq.a10')
+    }
+  ];
   return (
     <section id="faq">
       {/* 50/50 Grid Section */}
@@ -53,15 +57,15 @@ export default function FAQ() {
           <div className="flex flex-col gap-4 md:gap-5 lg:gap-6">
             <div className="flex items-center gap-2 md:gap-3">
               <span className="w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full flex-shrink-0"></span>
-              <span className="text-base md:text-lg lg:text-xl text-gray-400 font-body">Често задавани въпроси</span>
+              <span className="text-base md:text-lg lg:text-xl text-gray-400 font-body">{t('faq.sectionTitle')}</span>
             </div>
             
             <h3 className="text-xl md:text-2xl lg:text-4xl leading-tight">
               <span className="font-semibold text-white font-headline">
-                Ясни обяснения как работим,
+                {t('faq.header')}
               </span>
               <span className="text-gray-500 font-headline">
-                {" "}какво използваме и какво можете да очаквате
+                {" "}{t('faq.headerSub')}
               </span>
             </h3>
 

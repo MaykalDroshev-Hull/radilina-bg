@@ -1,71 +1,48 @@
+"use client";
+
 import Image from 'next/image';
 import { Clock, Users, Award, BookOpen, ArrowRight, Sparkles } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { AnimatedSection, AnimatedContainer, AnimatedItem } from '../lib/animations';
 
-const courses = [
-  {
-    title: "Демонстрация на източване на керамика",
-    duration: "Демонстрация",
-    level: "За деца и туристи",
-    participants: "Подходящо за всички възрасти",
-    description: "Заповядайте на интересно и забавно преживяване с глина! Ще видите как на грънчарското колело, с помощта на вода и сръчни ръце, меката глина се превръща в истинско керамично изделие.",
-    image: "/branding/Radilina branding_AP-191.avif",
-    highlights: [
-      "Децата ще се докоснат до традиционен български занаят",
-      "Туристите ще открият магията на троянската керамика",
-      "Създадена от глина, вода, ръце и огън"
-    ],
-    price: "15 €",
-    priceBgn: "29.34 лв",
-    priceNote: "",
-    priceAlt: "",
-    priceAltNote: "",
-    upsell: "",
-    featured: false,
-  },
-  {
-    title: "Пакет \"Точене и шарене\"",
-    duration: "Комбинирано преживяване",
-    level: "За деца и туристи",
-    participants: "Идеално за деца, семейства и гости",
-    description: "Елате и се потопете в света на троянската керамика с едно комбинирано преживяване, което включва демонстрация на източване на керамика на грънчарско колело с майстор Радина и декориране и шарене на троянска капка с майстор Илина Илиева.",
-    image: "/branding/Radilina branding_AP-81.avif",
-    highlights: [
-      "Демонстрация на източване с майстор Радина",
-      "Декориране и шарене с майстор Илина Илиева",
-      "Ще се докоснете до магията на глина, вода, ръце и огън"
-    ],
-    price: "20 €",
-    priceBgn: "39.12 лв",
-    priceNote: "",
-    priceAlt: "",
-    priceAltNote: "",
-    upsell: "",
-    featured: true,
-  },
-  {
-    title: "Демонстрация на декориране и шарене на троянска капка",
-    duration: "Демонстрация",
-    level: "За деца и туристи",
-    participants: "Подходящо за всички възрасти",
-    description: "Заповядайте на цветна и интересна демонстрация на традиционно декориране и шарене на троянска капка. С помощта на майстор Илина Илиева ще видите как се създават характерните троянски шарки и орнаменти.",
-    image: "/branding/Radilina branding_AP-120.avif",
-    highlights: [
-      "Децата ще се забавляват",
-      "Туристите ще се докоснат до магията на троянската керамика",
-      "Български занаятчийски традиции"
-    ],
-    price: "15 €",
-    priceBgn: "29.34 лв",
-    priceNote: "",
-    priceAlt: "",
-    priceAltNote: "",
-    upsell: "",
-    featured: false,
-  },
-];
-
 export default function Courses() {
+  const t = useTranslations();
+  
+  const courses = [
+    {
+      title: t('courses.course1.title'),
+      duration: t('courses.course1.duration'),
+      level: t('courses.course1.level'),
+      participants: t('courses.course1.participants'),
+      description: t('courses.course1.description'),
+      image: "/branding/Radilina branding_AP-191.avif",
+      price: "15 €",
+      priceBgn: "29.34 лв",
+      featured: false,
+    },
+    {
+      title: t('courses.course2.title'),
+      duration: t('courses.course2.duration'),
+      level: t('courses.course2.level'),
+      participants: t('courses.course2.participants'),
+      description: t('courses.course2.description'),
+      image: "/branding/Radilina branding_AP-81.avif",
+      price: "20 €",
+      priceBgn: "39.12 лв",
+      featured: true,
+    },
+    {
+      title: t('courses.course3.title'),
+      duration: t('courses.course3.duration'),
+      level: t('courses.course3.level'),
+      participants: t('courses.course3.participants'),
+      description: t('courses.course3.description'),
+      image: "/branding/Radilina branding_AP-120.avif",
+      price: "15 €",
+      priceBgn: "29.34 лв",
+      featured: false,
+    },
+  ];
   return (
     <AnimatedSection id="courses" className="py-12 md:py-16 lg:py-20">
       <AnimatedContainer className="px-6 md:px-10 lg:px-12">
@@ -74,16 +51,16 @@ export default function Courses() {
           {/* Left side */}
           <AnimatedItem className="flex items-center gap-2 md:gap-3">
             <span className="w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full flex-shrink-0"></span>
-            <span className="text-base md:text-lg lg:text-xl text-gray-400 font-body">Курсове по грънчарство</span>
+            <span className="text-base md:text-lg lg:text-xl text-gray-400 font-body">{t('courses.sectionTitle')}</span>
           </AnimatedItem>
           
           {/* Right side */}
           <AnimatedItem className="md:max-w-[55%] lg:max-w-[50%] text-left md:text-right text-xl md:text-2xl lg:text-4xl">
             <span className="font-semibold text-white font-headline leading-tight">
-              Потопете се в света на традиционната керамика,
+              {t('courses.header')}
             </span>
             <span className="text-gray-500 font-headline leading-tight">
-              {" "}където вековни умения оживяват под вашите ръце
+              {" "}{t('courses.headerSub')}
             </span>
           </AnimatedItem>
         </div>
@@ -104,7 +81,7 @@ export default function Courses() {
                 {course.featured && (
                   <div className="absolute top-4 md:top-5 right-4 md:right-5 z-10 bg-[#F4A7A7] text-white px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-semibold flex items-center gap-1 md:gap-1.5 font-body">
                     <Sparkles className="w-3 h-3 md:w-4 md:h-4" />
-                    Комбиниран пакет
+                    {t('courses.course2.featuredBadge')}
                   </div>
                 )}
 
@@ -153,27 +130,13 @@ export default function Courses() {
                   {/* Price and CTA */}
                   <div className="pt-4 md:pt-5 border-t border-gray-800">
                     <div className="mb-4">
-                      <div className="text-sm md:text-base text-gray-500 font-body mb-3">Цена</div>
+                      <div className="text-sm md:text-base text-gray-500 font-body mb-3">{t('common.price')}</div>
                       <div className="flex items-baseline gap-2">
                         <div className="text-2xl md:text-3xl font-bold text-white font-headline">{course.price}</div>
                         {course.priceBgn && (
                           <div className="text-sm md:text-base text-gray-500 font-body">{course.priceBgn}</div>
                         )}
-                        {course.priceNote && (
-                          <div className="text-sm md:text-base text-gray-500 font-body">({course.priceNote})</div>
-                        )}
                       </div>
-                      {course.priceAlt && (
-                        <div className="flex items-baseline gap-2 mt-2">
-                          <div className="text-2xl md:text-3xl font-bold text-white font-headline">{course.priceAlt}</div>
-                          {course.priceAltNote && (
-                            <div className="text-sm md:text-base text-gray-500 font-body">({course.priceAltNote})</div>
-                          )}
-                        </div>
-                      )}
-                      {course.upsell && (
-                        <div className="text-sm text-[#F4A7A7] font-semibold font-body mt-2">{course.upsell}</div>
-                      )}
                     </div>
                     <button className={`
                       w-full px-4 md:px-5 lg:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-semibold
@@ -184,7 +147,7 @@ export default function Courses() {
                         : 'bg-white text-black hover:bg-gray-200'
                       }
                     `}>
-                      Запиши се
+                      {t('courses.signUp')}
                       <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
                     </button>
                   </div>
@@ -202,17 +165,16 @@ export default function Courses() {
                 <div className="flex items-center gap-2 md:gap-3 mb-3 md:mb-4">
                   <Award className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-[#F4A7A7]" />
                   <h3 className="text-xl md:text-xl lg:text-2xl font-semibold text-white font-headline">
-                    Не сте сигурни кой курс да изберете?
+                    {t('courses.notSure')}
                   </h3>
                 </div>
                 <p className="text-base md:text-base lg:text-lg text-gray-400 font-body leading-relaxed">
-                  Свържете се с нас за безплатна консултация. Ще ви помогнем да намерите 
-                  курса, който най-добре отговаря на вашите интереси и умения.
+                  {t('courses.consultation')}
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 md:flex-shrink-0">
                 <button className="px-6 md:px-7 py-3 md:py-3.5 bg-white text-black rounded-full text-sm md:text-base font-semibold hover:bg-gray-200 active:scale-95 transition-all flex items-center justify-center gap-2 font-body whitespace-nowrap">
-                  Свържете се с нас
+                  {t('courses.contactButton')}
                   <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
                 </button>
               </div>
@@ -228,8 +190,8 @@ export default function Courses() {
                 <Award className="w-5 h-5 md:w-6 md:h-6 text-[#F4A7A7]" />
               </div>
               <div>
-                <h4 className="font-semibold text-white mb-1 md:mb-1.5 font-headline text-sm md:text-base lg:text-lg">Суров продукт</h4>
-                <p className="text-xs md:text-sm lg:text-base text-gray-400 font-body leading-relaxed">Само за декорация, не може да се мокри</p>
+                <h4 className="font-semibold text-white mb-1 md:mb-1.5 font-headline text-sm md:text-base lg:text-lg">{t('courses.rawProduct')}</h4>
+                <p className="text-xs md:text-sm lg:text-base text-gray-400 font-body leading-relaxed">{t('courses.rawProductDesc')}</p>
               </div>
             </div>
 
@@ -238,8 +200,8 @@ export default function Courses() {
                 <Users className="w-5 h-5 md:w-6 md:h-6 text-[#F4A7A7]" />
               </div>
               <div>
-                <h4 className="font-semibold text-white mb-1 md:mb-1.5 font-headline text-sm md:text-base lg:text-lg">Изпечен продукт</h4>
-                <p className="text-xs md:text-sm lg:text-base text-gray-400 font-body leading-relaxed">Готов за пълна употреба във вашия дом</p>
+                <h4 className="font-semibold text-white mb-1 md:mb-1.5 font-headline text-sm md:text-base lg:text-lg">{t('courses.bakedProduct')}</h4>
+                <p className="text-xs md:text-sm lg:text-base text-gray-400 font-body leading-relaxed">{t('courses.bakedProductDesc')}</p>
               </div>
             </div>
 
@@ -248,8 +210,8 @@ export default function Courses() {
                 <BookOpen className="w-5 h-5 md:w-6 md:h-6 text-[#F4A7A7]" />
               </div>
               <div>
-                <h4 className="font-semibold text-white mb-1 md:mb-1.5 font-headline text-sm md:text-base lg:text-lg">Материали включени</h4>
-                <p className="text-xs md:text-sm lg:text-base text-gray-400 font-body leading-relaxed">Всички необходими материали осигурени</p>
+                <h4 className="font-semibold text-white mb-1 md:mb-1.5 font-headline text-sm md:text-base lg:text-lg">{t('courses.materialsIncluded')}</h4>
+                <p className="text-xs md:text-sm lg:text-base text-gray-400 font-body leading-relaxed">{t('courses.materialsIncludedDesc')}</p>
               </div>
             </div>
           </div>

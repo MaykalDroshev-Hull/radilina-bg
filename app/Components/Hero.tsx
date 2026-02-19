@@ -1,8 +1,10 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '../../i18n/routing';
 import { AnimatedSection, AnimatedContainer, AnimatedItem } from '../lib/animations';
 
 export default function Hero() {
+  const t = useTranslations();
   return (
     <div className="px-3 md:px-5 lg:px-6">
       <AnimatedSection
@@ -39,13 +41,13 @@ export default function Hero() {
           <AnimatedContainer className="text-center pt-2 md:pt-4 lg:pt-0 lg:-mt-6 xl:-mt-10">
             <AnimatedItem>
               <h1 className="font-headline font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-gray-900 leading-tight">
-                Керамика Радилина
+                {t('hero.title')}
               </h1>
             </AnimatedItem>
 
             <AnimatedItem>
               <p className="font-body text-base sm:text-lg md:text-xl lg:text-3xl xl:text-4xl text-gray-700 mt-3 md:mt-4 lg:mt-5 tracking-wide">
-              Глина, вода, ръце и огън
+              {t('hero.subtitle')}
               </p>
             </AnimatedItem>
           </AnimatedContainer>
@@ -62,7 +64,7 @@ export default function Hero() {
                   shadow-lg hover:bg-[#222] hover:shadow-xl
                   active:scale-95 transition-all"
               >
-                Продукти
+                {t('hero.productsButton')}
               </Link>
             </AnimatedItem>
 
@@ -76,7 +78,7 @@ export default function Hero() {
                   shadow-lg hover:bg-[#222] hover:shadow-xl
                   active:scale-95 transition-all"
               >
-                За нас
+                {t('hero.aboutButton')}
               </Link>
             </AnimatedItem>
           </AnimatedContainer>
@@ -98,39 +100,39 @@ export default function Hero() {
           }}
         >
           {[
-            "Чаши и халби",
-            "чинии",
-            "купи",
-            "тави",
-            "гювечи",
-            "фруктиери",
-            "Оливерници",
-            "солници и захарници",
-            "пепелници",
-            "салфетници",
-            "сервизи",
-            "пахари",
-            "буркани",
-            "камбанки",
-            "Тигани",
-            "Стомни и кани",
-            "Чаши и халби",
-            "чинии",
-            "купи",
-            "тави",
-            "гювечи",
-            "фруктиери",
-            "Оливерници",
-            "солници и захарници",
-            "пепелници",
-            "салфетници",
-            "сервизи",
-            "пахари",
-            "буркани",
-            "камбанки",
-            "Тигани",
-            "Стомни и кани",
-            "И още много",
+            t('categories.cupsAndMugs'),
+            t('categories.plates'),
+            t('categories.bowls'),
+            t('categories.pans'),
+            t('categories.pots'),
+            t('categories.fruitBowls'),
+            t('categories.oliveDishes'),
+            t('categories.saltAndSugar'),
+            t('categories.ashtrays'),
+            t('categories.napkinHolders'),
+            t('categories.sets'),
+            t('categories.servingDishes'),
+            t('categories.jars'),
+            t('categories.bells'),
+            t('categories.pans2'),
+            t('categories.jugsAndCans'),
+            t('categories.cupsAndMugs'),
+            t('categories.plates'),
+            t('categories.bowls'),
+            t('categories.pans'),
+            t('categories.pots'),
+            t('categories.fruitBowls'),
+            t('categories.oliveDishes'),
+            t('categories.saltAndSugar'),
+            t('categories.ashtrays'),
+            t('categories.napkinHolders'),
+            t('categories.sets'),
+            t('categories.servingDishes'),
+            t('categories.jars'),
+            t('categories.bells'),
+            t('categories.pans2'),
+            t('categories.jugsAndCans'),
+            t('categories.andMore'),
           ].map((name, index) => {
             return (
               <div key={index} className="bg-[#1a1614]/80 backdrop-blur-sm rounded-lg md:rounded-xl px-4 md:px-5 lg:px-6 py-3 md:py-3.5 lg:py-4 shadow-sm hover:shadow-md border border-gray-800 flex-shrink-0 transition-all">

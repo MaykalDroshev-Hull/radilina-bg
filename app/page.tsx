@@ -1,13 +1,6 @@
-import Hero from './Components/Hero';
-import Courses from './Components/Courses';
-import Awards from './Components/Awards';
+import { redirect } from 'next/navigation';
+import { routing } from '../i18n/routing';
 
-export default function HomePage() {
-  return (
-      <div className="w-full max-w-[1620px] mx-auto">
-        <Hero />
-        <Courses />
-        <Awards />
-      </div>
-  );
+export default function RootPage() {
+  redirect(`/${routing.defaultLocale}`);
 }
