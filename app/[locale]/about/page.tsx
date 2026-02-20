@@ -25,8 +25,9 @@ export default async function AboutPage() {
           "/branding/Radilina branding_AP-79.avif",
           "/branding/Radilina branding_AP-74.avif",
         ]}
+        imageAspectRatio="2/3"
         ctaButtons={[
-          { label: t('pageHero.aboutButton1'), href: "/#courses" },
+          { label: t('pageHero.aboutButton1'), href: "/#products" },
           { label: t('pageHero.aboutButton2'), href: "/contact", variant: "secondary" },
         ]}
       />

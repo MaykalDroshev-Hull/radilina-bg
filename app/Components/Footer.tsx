@@ -22,11 +22,11 @@ export default function Footer() {
         <div className="px-4 md:px-8 lg:px-10 xl:px-[10%] pb-8 md:pb-10 lg:pb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-12 mb-8 md:mb-10 lg:mb-12">
             {/* Left Column - Socials & Newsletter */}
-            <div className="space-y-8 md:space-y-10 lg:space-y-12">
+            <div className="space-y-8 md:space-y-10 lg:space-y-12 text-center md:text-left">
               {/* Social Links & Contact */}
               <div>
                 <h4 className="font-headline font-semibold mb-4 md:mb-5 lg:mb-6 text-base md:text-lg lg:text-xl">{t('footer.followUs')}</h4>
-                <div className="flex gap-3 md:gap-4 mb-4 md:mb-5 lg:mb-6">
+                <div className="flex justify-center md:justify-start gap-3 md:gap-4 mb-4 md:mb-5 lg:mb-6">
                   <a 
                     href="https://www.facebook.com/share/1Q1EAaXXHZ/" 
                     target="_blank"
@@ -57,13 +57,12 @@ export default function Footer() {
             </div>
 
             {/* Right Column - Quick Links */}
-            <div>
+            <div className="text-center md:text-left">
               <h4 className="font-headline font-semibold mb-4 md:mb-5 lg:mb-6 text-base md:text-lg lg:text-xl">{t('footer.quickLinks')}</h4>
               <ul className="space-y-2.5 md:space-y-3 lg:space-y-3.5 font-body text-white/70 text-sm md:text-base lg:text-base">
                 <li><Link href="/" className="hover:text-white transition-colors inline-block">{t('common.home')}</Link></li>
-                <li><Link href="/#courses" className="hover:text-white transition-colors inline-block">{t('common.courses')}</Link></li>
+                <li><Link href="/courses" className="hover:text-white transition-colors inline-block">{t('common.courses')}</Link></li>
                 <li><Link href="/#products" className="hover:text-white transition-colors inline-block">{t('common.products')}</Link></li>
-                <li><Link href="/#awards" className="hover:text-white transition-colors inline-block">{t('common.awards')}</Link></li>
                 <li><Link href="/about" className="hover:text-white transition-colors inline-block">{t('common.about')}</Link></li>
                 <li><Link href="/gallery" className="hover:text-white transition-colors inline-block">{t('common.gallery')}</Link></li>
                 <li><Link href="/contact" className="hover:text-white transition-colors inline-block">{t('common.contact')}</Link></li>

@@ -34,8 +34,21 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   }
 
   // Collect unique images from subcategories for the hero
-  const heroImages = [...new Set(category.subcategories.map(s => s.image))].slice(0, 3);
-  // Ensure at least one image
+// 1. Ensure subcategories exists (fallback to empty array)
+const subcats = category.subcategories || [];
+
+// 2. Filter out any subcategories that might be missing an image string
+const validImages = subcats
+  .map(s => s.image)
+  .filter((img): img is string => !!img); // Removes null/undefined/empty strings
+
+// 3. Create the unique set
+const heroImages = [...new Set(validImages)].slice(0, 3);
+
+// 4. Final fallback to the main category image if no subcategory images exist
+if (heroImages.length === 0 && category.image) {
+  heroImages.push(category.image);
+}  // Ensure at least one image
   if (heroImages.length === 0) heroImages.push(category.image);
 
   return (

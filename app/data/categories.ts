@@ -26,7 +26,7 @@ export const categories: Category[] = [
       { name: "Гювече", subtitle: "0.500 л", image: "/products/more/1001(2).jpeg", code: "1001", price: "" },
       { name: "Гювеч", subtitle: "1 л", image: "/products/12_2025_-15.avif", code: "1002", price: "" },
       { name: "Гювеч", subtitle: "3 л", image: "/products/12_2025_-6.avif", code: "1003", price: "" },
-      { name: "Гювеч", subtitle: "6 л", image: "/products/more/1004гювеч 6л.jpeg", code: "1004", price: "" },
+      { name: "Гювеч", subtitle: "6 л", image: "/products/more/1004guvech-6l.jpeg", code: "1004", price: "" },
       { name: "Гърне за боб", subtitle: "3 л", image: "/images/slide-3.jpg", code: "1005", price: "" },
       { name: "Гърне за боб", subtitle: "5 л", image: "/images/slide-3.jpg", code: "1006", price: "" },
     ]

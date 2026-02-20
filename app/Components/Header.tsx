@@ -89,12 +89,9 @@ export default function Header() {
               <Link href="/" className={`font-body text-sm xl:text-base transition-colors duration-300 ${
                 isScrolled ? 'text-gray-300 hover:text-[var(--soft-rose)]' : 'text-gray-800 hover:text-[var(--soft-rose)]'
               }`}>{t('common.home')}</Link>
-              <Link href="/#courses" className={`font-body text-sm xl:text-base transition-colors duration-300 ${
+              <Link href="/courses" className={`font-body text-sm xl:text-base transition-colors duration-300 ${
                 isScrolled ? 'text-gray-300 hover:text-[var(--soft-rose)]' : 'text-gray-800 hover:text-[var(--soft-rose)]'
               }`}>{t('common.courses')}</Link>
-              <Link href="/#awards" className={`font-body text-sm xl:text-base transition-colors duration-300 ${
-                isScrolled ? 'text-gray-300 hover:text-[var(--soft-rose)]' : 'text-gray-800 hover:text-[var(--soft-rose)]'
-              }`}>{t('common.awards')}</Link>
 
               {/* Products Dropdown */}
               <div
@@ -305,8 +302,7 @@ export default function Header() {
             <nav className="flex flex-col h-full">
               <div className="flex-1 overflow-y-auto">
                 <Link href="/" onClick={() => setMobileMenuOpen(false)} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.home')}</Link>
-                <Link href="/#courses" onClick={() => setMobileMenuOpen(false)} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.courses')}</Link>
-                <Link href="/#awards" onClick={() => setMobileMenuOpen(false)} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.awards')}</Link>
+                <Link href="/courses" onClick={() => setMobileMenuOpen(false)} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.courses')}</Link>
 
                 {/* Mobile Products Accordion */}
                 <div className="border-b border-gray-800">

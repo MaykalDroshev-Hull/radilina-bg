@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import { Link } from '../../i18n/routing';
-import { motion } from 'framer-motion';
 
 interface CTAButton {
   label: string;
@@ -15,39 +14,34 @@ interface PageHeroProps {
   subtitle: string;
   images: string[];
   ctaButtons?: CTAButton[];
+  imageAspectRatio?: '3/2' | '2/3';
 }
 
-export default function PageHero({ title, subtitle, images, ctaButtons }: PageHeroProps) {
+export default function PageHero({ title, subtitle, images, ctaButtons, imageAspectRatio = '3/2' }: PageHeroProps) {
+  // Ensure images array is valid and not empty
+  const validImages = images && images.length > 0 ? images.filter(img => img && img.trim() !== '') : ['/images/Hero Image.png'];
+  
   return (
     <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column — Content */}
           <div>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <h1
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight text-white mb-5 md:mb-6 font-headline"
             >
               {title}
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+            <p
               className="text-base sm:text-lg lg:text-xl leading-relaxed text-gray-400 mb-8 max-w-2xl font-body"
             >
               {subtitle}
-            </motion.p>
+            </p>
 
             {/* CTA Buttons */}
             {ctaButtons && ctaButtons.length > 0 && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+              <div
                 className="flex flex-col sm:flex-row gap-4"
               >
                 {ctaButtons.map((btn, index) => (
@@ -63,54 +57,54 @@ export default function PageHero({ title, subtitle, images, ctaButtons }: PageHe
                     {btn.label}
                   </Link>
                 ))}
-              </motion.div>
+              </div>
             )}
           </div>
 
           {/* Right Column — Image(s) */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="relative"
+          <div
+            className="relative group"
           >
-            {images.length === 1 ? (
+            {validImages.length === 1 ? (
               /* Single image */
               <div className="relative h-[320px] sm:h-[400px] lg:h-[500px] rounded-2xl md:rounded-3xl overflow-hidden border border-gray-800">
                 <Image
-                  src={images[0]}
+                  src={validImages[0]}
                   alt=""
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  unoptimized
                 />
               </div>
-            ) : images.length === 2 ? (
+            ) : validImages.length === 2 ? (
               /* Two images — diagonal overlap (3:2 aspect ratio) */
               <div className="relative" style={{ paddingBottom: '95%' }}>
                 <div className="absolute top-0 left-0 w-[75%] aspect-[3/2] rounded-2xl md:rounded-3xl overflow-hidden border border-gray-800 z-10 shadow-xl">
                   <Image
-                    src={images[0]}
+                    src={validImages[0]}
                     alt=""
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 75vw, 38vw"
+                    unoptimized
                   />
                 </div>
                 <div className="absolute bottom-0 right-0 w-[75%] aspect-[3/2] rounded-2xl md:rounded-3xl overflow-hidden border border-gray-800 shadow-xl">
                   <Image
-                    src={images[1]}
+                    src={validImages[1]}
                     alt=""
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 75vw, 38vw"
+                    unoptimized
                   />
                 </div>
               </div>
-            ) : (
-              /* Three+ images — portrait columns (1:1.5 ratio) */
+            ) : imageAspectRatio === '2/3' ? (
+              /* Three+ images — portrait layout (2:3 aspect ratio) */
               <div className="grid grid-cols-3 gap-3 md:gap-4">
-                {images.slice(0, 3).map((img, i) => (
+                {validImages.slice(0, 3).map((img, i) => (
                   <div key={i} className="relative aspect-[2/3] rounded-2xl md:rounded-3xl overflow-hidden border border-gray-800">
                     <Image
                       src={img}
@@ -118,12 +112,42 @@ export default function PageHero({ title, subtitle, images, ctaButtons }: PageHe
                       fill
                       className="object-cover"
                       sizes="(max-width: 1024px) 33vw, 17vw"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = '/branding/Radilina branding_AP-58.avif';
+                      }}
                     />
                   </div>
                 ))}
               </div>
+            ) : (
+              /* Three+ images — show only images 2 and 3 (index 1 and 2) with 3:2 aspect ratio, smaller and closer together */
+              <div className="relative" style={{ paddingBottom: '95%' }}>
+                {/* Top Left Image (images[1]) */}
+                <div className="absolute top-0 left-0 w-[75%] aspect-[3/2] rounded-2xl md:rounded-3xl overflow-hidden border border-gray-800 z-10 shadow-xl">
+                  <Image
+                    src={validImages[1] || validImages[0]}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 75vw, 38vw"
+                    unoptimized
+                  />
+                </div>
+                {/* Bottom Right Image (images[2]) */}
+                <div className="absolute bottom-0 right-0 w-[75%] aspect-[3/2] rounded-2xl md:rounded-3xl overflow-hidden border border-gray-800 shadow-xl">
+                  <Image
+                    src={validImages[2] || validImages[0]}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 75vw, 38vw"
+                    unoptimized
+                  />
+                </div>
+              </div>
             )}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

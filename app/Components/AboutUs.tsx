@@ -36,7 +36,7 @@ export default function AboutUs() {
             <div className="relative aspect-[3/2] sm:aspect-[4/5] lg:aspect-auto lg:h-[600px] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden shadow-lg group">
               <Image
                 src="/branding/Radilina branding_AP-71.avif"
-                alt="Радилина керамика - семейна традиция"
+                alt={t('about.imageAlt')}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
@@ -50,23 +50,23 @@ export default function AboutUs() {
             <div className="flex flex-col justify-center h-full space-y-6 md:space-y-8">
               <div>
                 <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-4 md:mb-5 font-headline leading-tight">
-                  История на Радилина
+                  {t('about.historyTitle')}
                 </h3>
                 <div className="space-y-4 md:space-y-5 text-base md:text-lg text-gray-400 font-body leading-relaxed">
                   <p>
-                    С над 46 години опит в керамичното производство, ние създаваме ръчно изработена троянска керамика с внимание към всеки детайл. Ние сме семейна фирма, основана от Пламен и Таня Илиеви, а днес дъщерите им – Радина и Илина – работят рамо до рамо с тях, продължавайки семейната традиция и любовта към занаята. Всички изделия се създават изцяло ръчно – от оформянето на грънчарското колело до финалните детайли, без използване на машинно производство. Използваме само сертифицирани и висококачествени материали.
+                    {t('about.history1')}
                   </p>
                   <p>
-                    Нашата керамика се предлага и цени от клиенти по целия свят, а майсторството ни е представяно в различни телевизионни предавания, посветени на българските традиции и занаяти. Предлагаме битова и сувенирна троянска керамика, която носи уют, традиция и автентична атмосфера във Вашия дом. Богатият ни асортимент и доказаното качество са гаранция за дълготрайност и удовлетворение.
+                    {t('about.history2')}
                   </p>
                   <p>
-                    Производството на нашата керамика е изцяло ръчен процес, съхранил традициите на троянския занаят през поколенията. Всяко изделие се оформя на грънчарско колело с внимание към детайла, търпение и майсторство, натрупано през годините.
+                    {t('about.history3')}
                   </p>
                   <p>
-                    Използваме само сертифицирани и висококачествени материали, които гарантират здравина, безопасност и дълготрайност на изделията. Всички етапи – от оформянето и сушенето, през декорацията и глазурата, до изпичането – се извършват ръчно, без използване на машинно производство.
+                    {t('about.history4')}
                   </p>
                   <p>
-                    Благодарение на този подход всяко изделие е уникално и носи своя характер, топлина и автентичност. Именно ръчната изработка прави нашата керамика не просто предмет, а част от българската традиция и домашния уют.
+                    {t('about.history5')}
                   </p>
                 </div>
               </div>
@@ -103,19 +103,19 @@ export default function AboutUs() {
                   <h4 className="text-lg md:text-xl font-semibold text-white font-headline">{t('about.household')}</h4>
                 </div>
                 <ul className="space-y-2 text-sm md:text-base text-gray-400 font-body">
-                  <li>• Бурканчета</li>
-                  <li>• Чайници</li>
-                  <li>• Чаши</li>
-                  <li>• Чинии</li>
-                  <li>• Гювечета</li>
-                  <li>• Халби</li>
-                  <li>• Купи</li>
-                  <li>• Пахари</li>
-                  <li>• Панички</li>
-                  <li>• Солнички на дърво</li>
-                  <li>• Тави</li>
-                  <li>• Средна тава</li>
-                  <li>• Тава с капак</li>
+                  <li>• {t('about.householdItems.item1')}</li>
+                  <li>• {t('about.householdItems.item2')}</li>
+                  <li>• {t('about.householdItems.item3')}</li>
+                  <li>• {t('about.householdItems.item4')}</li>
+                  <li>• {t('about.householdItems.item5')}</li>
+                  <li>• {t('about.householdItems.item6')}</li>
+                  <li>• {t('about.householdItems.item7')}</li>
+                  <li>• {t('about.householdItems.item8')}</li>
+                  <li>• {t('about.householdItems.item9')}</li>
+                  <li>• {t('about.householdItems.item10')}</li>
+                  <li>• {t('about.householdItems.item11')}</li>
+                  <li>• {t('about.householdItems.item12')}</li>
+                  <li>• {t('about.householdItems.item13')}</li>
                 </ul>
               </div>
 
@@ -128,18 +128,18 @@ export default function AboutUs() {
                   <h4 className="text-lg md:text-xl font-semibold text-white font-headline">{t('about.souvenir')}</h4>
                 </div>
                 <ul className="space-y-2 text-sm md:text-base text-gray-400 font-body">
-                  <li>• Часовници</li>
-                  <li>• Панички</li>
-                  <li>• Свещници</li>
-                  <li>• Пепелници</li>
-                  <li>• Градински пепелници</li>
-                  <li>• Пепелник къщичка</li>
-                  <li>• Висулки</li>
-                  <li>• Камбанки</li>
-                  <li>• Магнитки</li>
-                  <li>• Салфетници</li>
-                  <li>• Пахари</li>
-                  <li>• Солнички</li>
+                  <li>• {t('about.souvenirItems.item1')}</li>
+                  <li>• {t('about.souvenirItems.item2')}</li>
+                  <li>• {t('about.souvenirItems.item3')}</li>
+                  <li>• {t('about.souvenirItems.item4')}</li>
+                  <li>• {t('about.souvenirItems.item5')}</li>
+                  <li>• {t('about.souvenirItems.item6')}</li>
+                  <li>• {t('about.souvenirItems.item7')}</li>
+                  <li>• {t('about.souvenirItems.item8')}</li>
+                  <li>• {t('about.souvenirItems.item9')}</li>
+                  <li>• {t('about.souvenirItems.item10')}</li>
+                  <li>• {t('about.souvenirItems.item11')}</li>
+                  <li>• {t('about.souvenirItems.item12')}</li>
                 </ul>
               </div>
 
@@ -152,10 +152,10 @@ export default function AboutUs() {
                   <h4 className="text-lg md:text-xl font-semibold text-white font-headline">{t('about.sets')}</h4>
                 </div>
                 <ul className="space-y-2 text-sm md:text-base text-gray-400 font-body">
-                  <li>• Сервиз за вино</li>
-                  <li>• Сервиз за ракия</li>
-                  <li>• Кратуни</li>
-                  <li>• Оливарник и менче</li>
+                  <li>• {t('about.setsItems.item1')}</li>
+                  <li>• {t('about.setsItems.item2')}</li>
+                  <li>• {t('about.setsItems.item3')}</li>
+                  <li>• {t('about.setsItems.item4')}</li>
                 </ul>
               </div>
             </div>

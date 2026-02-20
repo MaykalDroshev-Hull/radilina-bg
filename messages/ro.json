@@ -17,13 +17,22 @@
     "allRightsReserved": "Toate drepturile rezervate",
     "privacyPolicy": "Politica de confidențialitate",
     "termsOfService": "Termeni și condiții",
-    "builtBy": "Construit de"
+    "builtBy": "Construit de",
+    "loading": "Se încarcă..."
   },
   "hero": {
     "title": "Ceramică Radilina",
     "subtitle": "Argilă, apă, mâini și foc",
     "productsButton": "Produse",
     "aboutButton": "Despre noi"
+  },
+  "home": {
+    "aboutCTA": {
+      "title": "Vreți să Aflați Mai Multe Despre Noi?",
+      "description": "Descoperiți povestea din spatele Radilina - o afacere de familie cu peste 46 de ani de experiență în producția de ceramică făcută manual din Troyan, Bulgaria.",
+      "button": "Aflați Mai Multe",
+      "imageAlt": "Ceramică Radilina"
+    }
   },
   "courses": {
     "sectionTitle": "Cursuri de ceramică",
@@ -60,7 +69,11 @@
     "bakedProduct": "Produs Coctat",
     "bakedProductDesc": "Gata pentru utilizare completă în casa dumneavoastră",
     "materialsIncluded": "Materiale Incluse",
-    "materialsIncludedDesc": "Toate materialele necesare sunt furnizate"
+    "materialsIncludedDesc": "Toate materialele necesare sunt furnizate",
+    "ctaTitle": "Sunteți Gata să Începeți?",
+    "ctaDescription": "Alăturați-vă cursurilor noastre și învățați arta străveche a ceramicii. Contactați-ne astăzi pentru a vă rezerva locul sau pentru a afla mai multe despre programele noastre.",
+    "ctaButton": "Înscrieți-vă Acum",
+    "ctaButtonSecondary": "Răsfoiți Produsele"
   },
   "about": {
     "sectionTitle": "Despre noi",
@@ -83,7 +96,43 @@
     "value2Title": "Materiale Certificate",
     "value2Desc": "Folosim doar materiale certificate gata pentru calitate",
     "value3Title": "46 de Ani de Experiență",
-    "value3Desc": "Sortiment bogat și calitate dovedită a articolelor"
+    "value3Desc": "Sortiment bogat și calitate dovedită a articolelor",
+    "imageAlt": "Ceramică Radilina - Tradiție de Familie",
+    "householdItems": {
+      "item1": "Borcanuri Mici",
+      "item2": "Ceainice",
+      "item3": "Căni",
+      "item4": "Farfurii",
+      "item5": "Oale Mici",
+      "item6": "Halbe",
+      "item7": "Boluri",
+      "item8": "Vase de Servire",
+      "item9": "Tigăi Mici",
+      "item10": "Săruri pe Lemn",
+      "item11": "Tigăi",
+      "item12": "Tigaie Medie",
+      "item13": "Tigaie cu Capac"
+    },
+    "souvenirItems": {
+      "item1": "Ceasuri",
+      "item2": "Tigăi Mici",
+      "item3": "Sfeșnice",
+      "item4": "Scrumiere",
+      "item5": "Scrumiere de Grădină",
+      "item6": "Scrumieră Casă",
+      "item7": "Pandantive",
+      "item8": "Clopote",
+      "item9": "Magneți",
+      "item10": "Suporturi pentru Șervețele",
+      "item11": "Vase de Servire",
+      "item12": "Săruri"
+    },
+    "setsItems": {
+      "item1": "Serviciu pentru Vin",
+      "item2": "Serviciu pentru Rakia",
+      "item3": "Carafe",
+      "item4": "Vas pentru Măsline și Farfurioară"
+    }
   },
   "howItWorks": {
     "sectionTitle": "Proces de Lucru",
@@ -172,7 +221,10 @@
     "formPhonePlaceholder": "+359 ...",
     "formMessage": "Mesaj",
     "formMessagePlaceholder": "Spuneți-ne despre proiectul dumneavoastră sau puneți o întrebare...",
-    "formSubmit": "Trimite Mesaj"
+    "formSubmit": "Trimite Mesaj",
+    "formSubmitting": "Se trimite...",
+    "formSuccess": "Mesajul a fost trimis cu succes!",
+    "formError": "A apărut o eroare la trimitere. Vă rugăm să încercați din nou."
   },
   "awards": {
     "sectionTitle": "Premii",
@@ -197,7 +249,11 @@
   },
   "gallery": {
     "title": "Creările Noastre",
-    "subtitle": "Artă în argilă și culoare. Răsfoiți galeria noastră de piese ceramice făcute manual, fiecare fiind o operă de artă unică."
+    "subtitle": "Artă în argilă și culoare. Răsfoiți galeria noastră de piese ceramice făcute manual, fiecare fiind o operă de artă unică.",
+    "imageAlt": "Ceramică Radilina",
+    "finalSectionTitle": "Vă place ce vedeți?",
+    "finalSectionDescription": "Fiecare piesă poate fi personalizată în funcție de preferințele dumneavoastră. Contactați-ne pentru o comandă personalizată.",
+    "finalSectionButton": "Contactați-ne"
   },
   "category": {
     "notFound": "Categoria nu a fost găsită",
@@ -206,12 +262,35 @@
     "viewCollectionMany": "Răsfoiți colecția noastră de {name} - {count} produse, fiecare făcut manual cu atenție la detalii.",
     "wholesale": "Lucrăm cu ridicata",
     "wholesaleDesc": "Oferim prețuri speciale pentru comenzi mari. Contactați-ne pentru o ofertă individuală.",
-    "orderButton": "Contactați pentru Comandă"
+    "orderButton": "Contactați pentru Comandă",
+    "ctaTitle": "Explorați Mai Mult",
+    "ctaDescription": "Descoperiți mai mult din colecția noastră sau contactați-ne",
+    "ctaViewAll": "Toate Produsele",
+    "ctaViewAllDesc": "Răsfoiți întreaga noastră colecție",
+    "ctaExploreCategory": "Explorați Categoria",
+    "ctaCourses": "Cursurile Noastre",
+    "ctaCoursesDesc": "Învățați să faceți ceramică",
+    "ctaContact": "Contactați-ne",
+    "ctaContactDesc": "Plasați o comandă sau puneți o întrebare"
+  },
+  "categoryDescriptions": {
+    "guvech": "Oale și cazane tradiționale pentru gătit și servire. Perfecte pentru gătit în cuptor și reținere pe termen lung a căldurii.",
+    "kupi": "Diverse boluri și farfurioare în diferite dimensiuni. Perfecte pentru servirea supelor, salatelor și diferitelor feluri de mâncare.",
+    "chinii": "Farfurii elegante și vase de servire pentru uz zilnic și ocazii speciale. Diferite dimensiuni pentru fiecare nevoie.",
+    "tavi": "Tigăi, tigăi și vase de servire pentru gătit și servire. Potrivite pentru cuptor și cuptor cu microunde.",
+    "chashi-alkohol": "Căni tradiționale pentru rakia, vin și alte băuturi alcoolice. Design unic cu ornamente troiene.",
+    "chashi-kafe": "Căni speciale pentru cafea și ceai în diferite stiluri. De la designuri clasice la moderne.",
+    "chashi-napitki": "Căni pentru băuturi, lapte și halbe. Practice și frumoase pentru uz zilnic.",
+    "servizi": "Servicii pentru vin, rakia și alte băuturi. Perfecte pentru cadouri și ocazii speciale.",
+    "aksesori": "Accesorii mici precum borcanuri, zaharnițe, scrumiere și alte articole utile pentru casă.",
+    "neznayni": "Produse speciale și unice din colecția noastră."
   },
   "products": {
     "allProducts": "Toate Produsele",
     "viewCollection": "Răsfoiți întreaga noastră colecție",
-    "viewCollectionSub": "de ceramică făcută manual"
+    "viewCollectionSub": "de ceramică făcută manual",
+    "selectedProductsHeader1": "Fiecare produs este un dialog între design și scop,",
+    "selectedProductsHeader2": "transformând viziunea în experiențe digitale semnificative"
   },
   "footer": {
     "followUs": "Urmăriți-ne",
@@ -224,7 +303,11 @@
     "aboutButton1": "Răsfoiți Produsele",
     "aboutButton2": "Contactați-ne",
     "contactTitle": "Contactați-ne",
-    "contactSubtitle": "Aveți întrebări sau doriți să plasați o comandă? Ne-ar plăcea să auzim de la dumneavoastră. Contactați-ne într-un mod convenabil pentru dumneavoastră."
+    "contactSubtitle": "Aveți întrebări sau doriți să plasați o comandă? Ne-ar plăcea să auzim de la dumneavoastră. Contactați-ne într-un mod convenabil pentru dumneavoastră.",
+    "coursesTitle": "Cursuri de Ceramică",
+    "coursesSubtitle": "Scufundați-vă în lumea ceramicii tradiționale, unde abilitățile seculare prind viață în mâinile voastre. Învățați să creați ceramică făcută manual cu maștrii noștri experimentați.",
+    "coursesButton1": "Înscrieți-vă Acum",
+    "coursesButton2": "Înapoi Acasă"
   },
   "categories": {
     "cupsAndMugs": "Căni și Halbe",
@@ -254,5 +337,91 @@
     "servizi": "Servicii",
     "aksesori": "Accesorii Mici",
     "neznayni": "Necunoscute"
+  },
+  "products": {
+    "1001": { "name": "Oală Mică", "subtitle": "0.500 L" },
+    "1002": { "name": "Oală", "subtitle": "1 L" },
+    "1003": { "name": "Oală", "subtitle": "3 L" },
+    "1004": { "name": "Oală", "subtitle": "6 L" },
+    "1005": { "name": "Oală pentru Fasole", "subtitle": "3 L" },
+    "1006": { "name": "Oală pentru Fasole", "subtitle": "5 L" },
+    "2001": { "name": "Bol Mic", "subtitle": "Ø 12 cm" },
+    "2001А": { "name": "Bol Mic", "subtitle": "Ø 12 cm" },
+    "2002": { "name": "Bol Mediu", "subtitle": "Ø 14 cm" },
+    "2003": { "name": "Bol Mare", "subtitle": "Ø 16 cm" },
+    "2003А": { "name": "Bol Mare", "subtitle": "Ø 16 cm" },
+    "2004": { "name": "Bol Nr. 3", "subtitle": "Ø 18 cm" },
+    "2005": { "name": "Bol Nr. 5", "subtitle": "Ø 20 cm" },
+    "2006": { "name": "Bol Nr. 7", "subtitle": "Ø 24 cm" },
+    "2007": { "name": "Bol Nr. 13", "subtitle": "Ø 28 cm" },
+    "2008": { "name": "Bol cu Mâner", "subtitle": "400 ml" },
+    "2009": { "name": "Bol pentru Spaghete", "subtitle": "" },
+    "2010": { "name": "Farfurioară", "subtitle": "" },
+    "3001": { "name": "Farfurie", "subtitle": "Ø 15 cm" },
+    "3002": { "name": "Farfurie", "subtitle": "Ø 18 cm" },
+    "3003": { "name": "Farfurie", "subtitle": "Ø 22 cm" },
+    "3004": { "name": "Farfurie", "subtitle": "Ø 26 cm" },
+    "3005": { "name": "Farfurie", "subtitle": "Ø 30 cm" },
+    "4001": { "name": "Tigaie Nr. 5", "subtitle": "Ø 20 cm" },
+    "4002": { "name": "Tigaie Nr. 7", "subtitle": "Ø 24 cm" },
+    "4003": { "name": "Tigaie Nr. 13", "subtitle": "Ø 28 cm" },
+    "4004": { "name": "Tigaie pentru Pui", "subtitle": "Ø 28 cm" },
+    "4005": { "name": "Tigaie", "subtitle": "" },
+    "4006": { "name": "Tigaie cu Capac", "subtitle": "" },
+    "4007": { "name": "Vas de Servire", "subtitle": "Ø 17 cm" },
+    "4007А": { "name": "Vas de Servire Nou Mic", "subtitle": "" },
+    "4007Б": { "name": "Vas de Servire", "subtitle": "Ø 17 cm" },
+    "5001": { "name": "Ceașcă pentru Rakia", "subtitle": "100 ml" },
+    "5002": { "name": "Păhărel", "subtitle": "100 ml" },
+    "5003": { "name": "Halba Mini", "subtitle": "100 ml" },
+    "5004": { "name": "Ceașcă Mică", "subtitle": "100 ml" },
+    "5005": { "name": "Pahar pentru Vin", "subtitle": "200 ml" },
+    "6001": { "name": "Ceașcă pentru Cafea \"Scaun\"", "subtitle": "" },
+    "6002": { "name": "Ceașcă pentru Latte", "subtitle": "" },
+    "6003": { "name": "Ceașcă pentru Cafea \"Cană\"", "subtitle": "" },
+    "6004": { "name": "Ceașcă pentru Cafea \"Bonbon\"", "subtitle": "" },
+    "6005": { "name": "Ceașcă pentru Cafea \"Lalea\"", "subtitle": "" },
+    "6006": { "name": "Ceașcă pentru Cafea \"Butoi\"", "subtitle": "" },
+    "6007": { "name": "Ceașcă pentru Ristretto", "subtitle": "" },
+    "6008": { "name": "Ceașcă pentru Cafea cu Farfurioară \"Lavazza\"", "subtitle": "" },
+    "6009": { "name": "Ceașcă pentru Cafea cu Farfurioară", "subtitle": "" },
+    "6010": { "name": "Ceașcă pentru Ceai cu Farfurioară", "subtitle": "" },
+    "7001": { "name": "Ceașcă pentru Lapte", "subtitle": "400 ml" },
+    "7002": { "name": "Ceașcă pentru Băuturi Răcoritoare", "subtitle": "400 ml" },
+    "7003": { "name": "Halba", "subtitle": "500 ml" },
+    "7004": { "name": "Ceașcă pentru Supă", "subtitle": "" },
+    "8001": { "name": "Serviciu pentru Măsline", "subtitle": "" },
+    "8002": { "name": "Serviciu pentru Măsline \"Căruță\"", "subtitle": "" },
+    "8003": { "name": "Serviciu pentru Vin", "subtitle": "" },
+    "8004": { "name": "Serviciu pentru Rakia", "subtitle": "" },
+    "9001": { "name": "Suport pentru Ouă", "subtitle": "" },
+    "9002": { "name": "Clopot", "subtitle": "" },
+    "9003": { "name": "Storcător pentru Lămâie", "subtitle": "" },
+    "9004": { "name": "Presă pentru Usturoi", "subtitle": "" },
+    "9005": { "name": "Borcan Mic", "subtitle": "60 ml" },
+    "9006": { "name": "Borcan Mediu", "subtitle": "150 ml" },
+    "9007": { "name": "Borcan Mare", "subtitle": "350 ml" },
+    "9008": { "name": "Zaharniță Mică", "subtitle": "150 ml" },
+    "9009": { "name": "Zaharniță Mare", "subtitle": "350 ml" },
+    "9010": { "name": "Scrumieră pentru o Țigară", "subtitle": "" },
+    "9011": { "name": "Scrumieră pentru Două Țigări", "subtitle": "" },
+    "9012": { "name": "Scrumieră pentru Trei Țigări", "subtitle": "" },
+    "9013": { "name": "Scrumieră de Grădină", "subtitle": "" },
+    "9014": { "name": "Farfurioară Magnetică", "subtitle": "" },
+    "9015": { "name": "Vază", "subtitle": "20 cm" },
+    "9016": { "name": "Oală Mică", "subtitle": "" },
+    "9017": { "name": "Ulcior", "subtitle": "1.500 ml" },
+    "9018": { "name": "Săruri", "subtitle": "" },
+    "9019": { "name": "Săruri Duble", "subtitle": "" },
+    "9020": { "name": "Serviciu Săruri", "subtitle": "" },
+    "9021": { "name": "Bază pentru Nargile", "subtitle": "" },
+    "U-01": { "name": "Produs Necunoscut", "subtitle": "01_2026 (12)" },
+    "U-02": { "name": "Produs Necunoscut", "subtitle": "01_2026 (17)" }
+  },
+  "selectedProducts": {
+    "olivernikKaruca": { "title": "Serviciu Măsline Căruță", "category": "Vase pentru Măsline" },
+    "rakiaCup": { "title": "Ceașcă pentru Rakia", "category": "Căni și Halbe" },
+    "sredenBurkan": { "title": "Borcan Mediu", "category": "Borcanuri" },
+    "tiganSKapak": { "title": "Tigaie cu Capac", "category": "Tigăi" }
   }
 }

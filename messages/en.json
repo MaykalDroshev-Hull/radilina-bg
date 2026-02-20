@@ -17,13 +17,22 @@
     "allRightsReserved": "All rights reserved",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
-    "builtBy": "Built by"
+    "builtBy": "Built by",
+    "loading": "Loading..."
   },
   "hero": {
     "title": "Radilina Ceramics",
     "subtitle": "Clay, water, hands and fire",
     "productsButton": "Products",
     "aboutButton": "About"
+  },
+  "home": {
+    "aboutCTA": {
+      "title": "Want to Know More About Us?",
+      "description": "Discover the story behind Radilina - a family business with over 46 years of experience in handmade ceramic production from Troyan, Bulgaria.",
+      "button": "Learn More",
+      "imageAlt": "Radilina ceramics"
+    }
   },
   "courses": {
     "sectionTitle": "Pottery Courses",
@@ -60,7 +69,11 @@
     "bakedProduct": "Baked Product",
     "bakedProductDesc": "Ready for full use in your home",
     "materialsIncluded": "Materials Included",
-    "materialsIncludedDesc": "All necessary materials provided"
+    "materialsIncludedDesc": "All necessary materials provided",
+    "ctaTitle": "Ready to Get Started?",
+    "ctaDescription": "Join our courses and learn the ancient art of pottery. Contact us today to reserve your spot or learn more about our programs.",
+    "ctaButton": "Sign Up Now",
+    "ctaButtonSecondary": "Browse Products"
   },
   "about": {
     "sectionTitle": "About Us",
@@ -83,7 +96,43 @@
     "value2Title": "Certified Materials",
     "value2Desc": "We use only ready certified materials for quality",
     "value3Title": "46 Years of Experience",
-    "value3Desc": "Rich assortment and proven quality of items"
+    "value3Desc": "Rich assortment and proven quality of items",
+    "imageAlt": "Radilina Ceramics - Family Tradition",
+    "householdItems": {
+      "item1": "Small Jars",
+      "item2": "Tea Pots",
+      "item3": "Cups",
+      "item4": "Plates",
+      "item5": "Small Pots",
+      "item6": "Mugs",
+      "item7": "Bowls",
+      "item8": "Serving Dishes",
+      "item9": "Small Pans",
+      "item10": "Wooden Salt Shakers",
+      "item11": "Pans",
+      "item12": "Medium Pan",
+      "item13": "Pan with Lid"
+    },
+    "souvenirItems": {
+      "item1": "Clocks",
+      "item2": "Small Pans",
+      "item3": "Candle Holders",
+      "item4": "Ashtrays",
+      "item5": "Garden Ashtrays",
+      "item6": "House Ashtray",
+      "item7": "Pendants",
+      "item8": "Bells",
+      "item9": "Magnets",
+      "item10": "Napkin Holders",
+      "item11": "Serving Dishes",
+      "item12": "Salt Shakers"
+    },
+    "setsItems": {
+      "item1": "Wine Set",
+      "item2": "Rakia Set",
+      "item3": "Decanters",
+      "item4": "Olive Dish and Tray"
+    }
   },
   "howItWorks": {
     "sectionTitle": "Working Process",
@@ -172,7 +221,10 @@
     "formPhonePlaceholder": "+359 ...",
     "formMessage": "Message",
     "formMessagePlaceholder": "Tell us about your project or ask a question...",
-    "formSubmit": "Send Message"
+    "formSubmit": "Send Message",
+    "formSubmitting": "Sending...",
+    "formSuccess": "Message sent successfully!",
+    "formError": "An error occurred while sending. Please try again."
   },
   "awards": {
     "sectionTitle": "Awards",
@@ -197,7 +249,11 @@
   },
   "gallery": {
     "title": "Our Creations",
-    "subtitle": "Art in clay and color. Browse our gallery of handmade ceramic pieces, each one a unique work of art."
+    "subtitle": "Art in clay and color. Browse our gallery of handmade ceramic pieces, each one a unique work of art.",
+    "imageAlt": "Radilina Ceramics",
+    "finalSectionTitle": "Do you like what you see?",
+    "finalSectionDescription": "Each piece can be personalized according to your preferences. Contact us for a custom order.",
+    "finalSectionButton": "Contact Us"
   },
   "category": {
     "notFound": "Category not found",
@@ -206,12 +262,35 @@
     "viewCollectionMany": "Browse our collection of {name} - {count} products, each handmade with attention to detail.",
     "wholesale": "We work wholesale",
     "wholesaleDesc": "We offer special prices for large orders. Contact us for an individual quote.",
-    "orderButton": "Contact for Order"
+    "orderButton": "Contact for Order",
+    "ctaTitle": "Explore More",
+    "ctaDescription": "Discover more from our collection or get in touch with us",
+    "ctaViewAll": "All Products",
+    "ctaViewAllDesc": "Browse our entire collection",
+    "ctaExploreCategory": "Explore Category",
+    "ctaCourses": "Our Courses",
+    "ctaCoursesDesc": "Learn to make ceramics",
+    "ctaContact": "Contact Us",
+    "ctaContactDesc": "Place an order or ask a question"
+  },
+  "categoryDescriptions": {
+    "guvech": "Traditional pots and casseroles for cooking and serving. Perfect for oven cooking and long heat retention.",
+    "kupi": "Various bowls and saucers in different sizes. Perfect for serving soups, salads and various dishes.",
+    "chinii": "Elegant plates and serving dishes for everyday use and special occasions. Different sizes for every need.",
+    "tavi": "Pans, frying pans and serving dishes for cooking and serving. Suitable for oven and microwave.",
+    "chashi-alkohol": "Traditional cups for rakia, wine and other alcoholic beverages. Unique design with Troyan ornaments.",
+    "chashi-kafe": "Special cups for coffee and tea in various styles. From classic to modern designs.",
+    "chashi-napitki": "Cups for drinks, milk and mugs. Practical and beautiful for everyday use.",
+    "servizi": "Sets for wine, rakia and other beverages. Perfect for gifts and special occasions.",
+    "aksesori": "Small accessories such as jars, sugar bowls, ashtrays and other useful items for the home.",
+    "neznayni": "Special and unique products from our collection."
   },
   "products": {
     "allProducts": "All Products",
     "viewCollection": "Browse our entire collection",
-    "viewCollectionSub": "of handmade ceramics"
+    "viewCollectionSub": "of handmade ceramics",
+    "selectedProductsHeader1": "Every product is a dialogue between design and purpose,",
+    "selectedProductsHeader2": "transforming vision into meaningful digital experiences"
   },
   "footer": {
     "followUs": "Follow Us",
@@ -224,7 +303,11 @@
     "aboutButton1": "Browse Products",
     "aboutButton2": "Contact Us",
     "contactTitle": "Contact Us",
-    "contactSubtitle": "Have questions or want to place an order? We'd love to hear from you. Contact us in a way that's convenient for you."
+    "contactSubtitle": "Have questions or want to place an order? We'd love to hear from you. Contact us in a way that's convenient for you.",
+    "coursesTitle": "Pottery Courses",
+    "coursesSubtitle": "Immerse yourself in the world of traditional ceramics, where centuries-old skills come to life in your hands. Learn to create handmade ceramics with our experienced masters.",
+    "coursesButton1": "Sign Up Now",
+    "coursesButton2": "Back to Home"
   },
   "categories": {
     "cupsAndMugs": "Cups and Mugs",
@@ -254,5 +337,91 @@
     "servizi": "Sets",
     "aksesori": "Small Accessories",
     "neznayni": "Unknown"
+  },
+  "products": {
+    "1001": { "name": "Small Pot", "subtitle": "0.500 L" },
+    "1002": { "name": "Pot", "subtitle": "1 L" },
+    "1003": { "name": "Pot", "subtitle": "3 L" },
+    "1004": { "name": "Pot", "subtitle": "6 L" },
+    "1005": { "name": "Bean Pot", "subtitle": "3 L" },
+    "1006": { "name": "Bean Pot", "subtitle": "5 L" },
+    "2001": { "name": "Small Bowl", "subtitle": "Ø 12 cm" },
+    "2001А": { "name": "Small Bowl", "subtitle": "Ø 12 cm" },
+    "2002": { "name": "Medium Bowl", "subtitle": "Ø 14 cm" },
+    "2003": { "name": "Large Bowl", "subtitle": "Ø 16 cm" },
+    "2003А": { "name": "Large Bowl", "subtitle": "Ø 16 cm" },
+    "2004": { "name": "Bowl No. 3", "subtitle": "Ø 18 cm" },
+    "2005": { "name": "Bowl No. 5", "subtitle": "Ø 20 cm" },
+    "2006": { "name": "Bowl No. 7", "subtitle": "Ø 24 cm" },
+    "2007": { "name": "Bowl No. 13", "subtitle": "Ø 28 cm" },
+    "2008": { "name": "Bowl with Handle", "subtitle": "400 ml" },
+    "2009": { "name": "Spaghetti Bowl", "subtitle": "" },
+    "2010": { "name": "Saucer", "subtitle": "" },
+    "3001": { "name": "Plate", "subtitle": "Ø 15 cm" },
+    "3002": { "name": "Plate", "subtitle": "Ø 18 cm" },
+    "3003": { "name": "Plate", "subtitle": "Ø 22 cm" },
+    "3004": { "name": "Plate", "subtitle": "Ø 26 cm" },
+    "3005": { "name": "Plate", "subtitle": "Ø 30 cm" },
+    "4001": { "name": "Pan No. 5", "subtitle": "Ø 20 cm" },
+    "4002": { "name": "Pan No. 7", "subtitle": "Ø 24 cm" },
+    "4003": { "name": "Pan No. 13", "subtitle": "Ø 28 cm" },
+    "4004": { "name": "Chicken Pan", "subtitle": "Ø 28 cm" },
+    "4005": { "name": "Frying Pan", "subtitle": "" },
+    "4006": { "name": "Frying Pan with Lid", "subtitle": "" },
+    "4007": { "name": "Serving Dish", "subtitle": "Ø 17 cm" },
+    "4007А": { "name": "New Small Serving Dish", "subtitle": "" },
+    "4007Б": { "name": "Serving Dish", "subtitle": "Ø 17 cm" },
+    "5001": { "name": "Rakia Cup", "subtitle": "100 ml" },
+    "5002": { "name": "Shot Glass", "subtitle": "100 ml" },
+    "5003": { "name": "Mini Mug", "subtitle": "100 ml" },
+    "5004": { "name": "Small Cup", "subtitle": "100 ml" },
+    "5005": { "name": "Wine Glass", "subtitle": "200 ml" },
+    "6001": { "name": "Coffee Cup \"Stool\"", "subtitle": "" },
+    "6002": { "name": "Latte Cup", "subtitle": "" },
+    "6003": { "name": "Coffee Cup \"Can\"", "subtitle": "" },
+    "6004": { "name": "Coffee Cup \"Bonbon\"", "subtitle": "" },
+    "6005": { "name": "Coffee Cup \"Tulip\"", "subtitle": "" },
+    "6006": { "name": "Coffee Cup \"Barrel\"", "subtitle": "" },
+    "6007": { "name": "Ristretto Cup", "subtitle": "" },
+    "6008": { "name": "Coffee Cup with Saucer \"Lavazza\"", "subtitle": "" },
+    "6009": { "name": "Coffee Cup with Saucer", "subtitle": "" },
+    "6010": { "name": "Tea Cup with Saucer", "subtitle": "" },
+    "7001": { "name": "Milk Cup", "subtitle": "400 ml" },
+    "7002": { "name": "Soft Drink Cup", "subtitle": "400 ml" },
+    "7003": { "name": "Mug", "subtitle": "500 ml" },
+    "7004": { "name": "Soup Cup", "subtitle": "" },
+    "8001": { "name": "Olive Set", "subtitle": "" },
+    "8002": { "name": "Olive Set \"Cart\"", "subtitle": "" },
+    "8003": { "name": "Wine Set", "subtitle": "" },
+    "8004": { "name": "Rakia Set", "subtitle": "" },
+    "9001": { "name": "Egg Cup", "subtitle": "" },
+    "9002": { "name": "Bell", "subtitle": "" },
+    "9003": { "name": "Lemon Squeezer", "subtitle": "" },
+    "9004": { "name": "Garlic Press", "subtitle": "" },
+    "9005": { "name": "Small Jar", "subtitle": "60 ml" },
+    "9006": { "name": "Medium Jar", "subtitle": "150 ml" },
+    "9007": { "name": "Large Jar", "subtitle": "350 ml" },
+    "9008": { "name": "Small Sugar Bowl", "subtitle": "150 ml" },
+    "9009": { "name": "Large Sugar Bowl", "subtitle": "350 ml" },
+    "9010": { "name": "Single Cigarette Ashtray", "subtitle": "" },
+    "9011": { "name": "Two Cigarette Ashtray", "subtitle": "" },
+    "9012": { "name": "Three Cigarette Ashtray", "subtitle": "" },
+    "9013": { "name": "Garden Ashtray", "subtitle": "" },
+    "9014": { "name": "Magnetic Saucer", "subtitle": "" },
+    "9015": { "name": "Vase", "subtitle": "20 cm" },
+    "9016": { "name": "Small Pot", "subtitle": "" },
+    "9017": { "name": "Jug", "subtitle": "1.500 ml" },
+    "9018": { "name": "Salt Shakers", "subtitle": "" },
+    "9019": { "name": "Double Salt Shaker", "subtitle": "" },
+    "9020": { "name": "Salt Shaker Set", "subtitle": "" },
+    "9021": { "name": "Hookah Base", "subtitle": "" },
+    "U-01": { "name": "Unknown Product", "subtitle": "01_2026 (12)" },
+    "U-02": { "name": "Unknown Product", "subtitle": "01_2026 (17)" }
+  },
+  "selectedProducts": {
+    "olivernikKaruca": { "title": "Olive Set Cart", "category": "Olive Dishes" },
+    "rakiaCup": { "title": "Rakia Cup", "category": "Cups and Mugs" },
+    "sredenBurkan": { "title": "Medium Jar", "category": "Jars" },
+    "tiganSKapak": { "title": "Frying Pan with Lid", "category": "Pans" }
   }
 }

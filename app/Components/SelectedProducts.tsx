@@ -1,30 +1,32 @@
-const projects = [
-  {
-    title: "Оливеник каруца",
-    category: "Оливерници",
-    image: "/images/Olivernik karuca.jpg",
-  },
-  {
-    title: "Чаша за ракия",
-    category: "Чаши и халби",
-    image: "/images/rakia cup.jpg",
-  },
-  {
-    title: "Среден буркан",
-    category: "Буркани",
-    image: "/images/Sreden Burkan.jpg",
-  },
-  {
-    title: "Тиган с капак",
-    category: "Тигани",
-    image: "/images/Tigan s kapak.jpg",
-  },
-];
-
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { AnimatedSection, AnimatedContainer, AnimatedItem } from '../lib/animations';
 
 export default function SelectedProducts() {
+  const t = useTranslations();
+  
+  const projects = [
+    {
+      title: t('selectedProducts.olivernikKaruca.title'),
+      category: t('selectedProducts.olivernikKaruca.category'),
+      image: "/images/Olivernik karuca.jpg",
+    },
+    {
+      title: t('selectedProducts.rakiaCup.title'),
+      category: t('selectedProducts.rakiaCup.category'),
+      image: "/images/rakia cup.jpg",
+    },
+    {
+      title: t('selectedProducts.sredenBurkan.title'),
+      category: t('selectedProducts.sredenBurkan.category'),
+      image: "/images/Sreden Burkan.jpg",
+    },
+    {
+      title: t('selectedProducts.tiganSKapak.title'),
+      category: t('selectedProducts.tiganSKapak.category'),
+      image: "/images/Tigan s kapak.jpg",
+    },
+  ];
   return (
     <AnimatedSection id="selected-products" className="py-12 md:py-16 lg:py-20">
       <AnimatedContainer className="px-6 md:px-10 lg:px-12">
@@ -36,10 +38,10 @@ export default function SelectedProducts() {
           {/* Right side */}
           <AnimatedItem className="md:max-w-[55%] lg:max-w-[50%] text-left md:text-right text-xl md:text-2xl lg:text-4xl">
             <span className="font-semibold text-white font-headline leading-tight">
-              Всеки продукт е диалог между дизайн и цел,
+              {t('products.selectedProductsHeader1')}
             </span>
             <span className="text-gray-500 font-headline leading-tight">
-              {" "}превръщайки видение в значими цифрови преживявания
+              {" "}{t('products.selectedProductsHeader2')}
             </span>
           </AnimatedItem>
         </div>

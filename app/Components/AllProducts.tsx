@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { categories } from '../data/categories';
 
 export default function AllProducts() {
+  const t = useTranslations();
   return (
     <section id="products">
       {/* Header Section */}
@@ -10,16 +12,16 @@ export default function AllProducts() {
         {/* Left side */}
         <div className="flex items-center gap-2 md:gap-3">
           <span className="w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full flex-shrink-0"></span>
-          <span className="text-base md:text-lg lg:text-xl text-gray-400 font-body">Всички продукти</span>
+          <span className="text-base md:text-lg lg:text-xl text-gray-400 font-body">{t('products.allProducts')}</span>
         </div>
         {/* Right side */}
         <div className="md:max-w-[55%] lg:max-w-[50%] text-left md:text-right">
           <p className="text-xl md:text-2xl lg:text-4xl mb-3 md:mb-4">
             <span className="font-semibold text-white font-headline leading-tight">
-              Разгледайте цялата ни колекция
+              {t('products.viewCollection')}
             </span>
             <span className="text-gray-500 font-headline leading-tight">
-              {" "}от ръчно изработена керамика
+              {" "}{t('products.viewCollectionSub')}
             </span>
           </p>
         </div>
@@ -45,7 +47,7 @@ export default function AllProducts() {
                   />
                 </div>
                 <h3 className="text-white text-center font-body text-sm md:text-base lg:text-lg">
-                  {category.name}
+                  {t(`categories.${category.slug}`)}
                 </h3>
               </Link>
             ))}
