@@ -12,26 +12,89 @@ export default function Hero() {
   const [isVideoReady, setIsVideoReady] = useState(false);
 
   useEffect(() => {
-    const isMobile = window.innerWidth < 1024;
-    const video = isMobile ? mobileVideoRef.current : desktopVideoRef.current;
-    if (!video) return;
-
-    const handleCanPlay = () => {
+    // Check if we're in the browser
+    if (typeof window === 'undefined') {
+      // On server, show content immediately
       setIsVideoReady(true);
-      // Ensure video plays
-      video.play().catch(() => {
-        // Autoplay was prevented, but video is loaded
-        setIsVideoReady(true);
-      });
+      return;
+    }
+
+    let mounted = true;
+
+    const setupVideos = () => {
+      const mobileVideo = mobileVideoRef.current;
+      const desktopVideo = desktopVideoRef.current;
+
+      const handleVideoReady = () => {
+        if (mounted) {
+          setIsVideoReady(true);
+        }
+      };
+
+      const handleVideoError = () => {
+        // If video fails to load, show content anyway
+        if (mounted) {
+          setIsVideoReady(true);
+        }
+      };
+
+      // Setup mobile video
+      if (mobileVideo) {
+        mobileVideo.addEventListener('canplay', handleVideoReady);
+        mobileVideo.addEventListener('loadeddata', handleVideoReady);
+        mobileVideo.addEventListener('error', handleVideoError);
+        
+        // Try to play mobile video if on mobile
+        if (window.innerWidth < 1024) {
+          mobileVideo.play().catch(() => {
+            // Autoplay prevented, but mark as ready
+            handleVideoReady();
+          });
+        }
+      }
+
+      // Setup desktop video
+      if (desktopVideo) {
+        desktopVideo.addEventListener('canplay', handleVideoReady);
+        desktopVideo.addEventListener('loadeddata', handleVideoReady);
+        desktopVideo.addEventListener('error', handleVideoError);
+        
+        // Try to play desktop video if on desktop
+        if (window.innerWidth >= 1024) {
+          desktopVideo.play().catch(() => {
+            // Autoplay prevented, but mark as ready
+            handleVideoReady();
+          });
+        }
+      }
+
+      // Fallback: if videos don't load within 3 seconds, show content anyway
+      const timeout = setTimeout(() => {
+        if (mounted) {
+          setIsVideoReady(true);
+        }
+      }, 3000);
+
+      return () => {
+        clearTimeout(timeout);
+        if (mobileVideo) {
+          mobileVideo.removeEventListener('canplay', handleVideoReady);
+          mobileVideo.removeEventListener('loadeddata', handleVideoReady);
+          mobileVideo.removeEventListener('error', handleVideoError);
+        }
+        if (desktopVideo) {
+          desktopVideo.removeEventListener('canplay', handleVideoReady);
+          desktopVideo.removeEventListener('loadeddata', handleVideoReady);
+          desktopVideo.removeEventListener('error', handleVideoError);
+        }
+      };
     };
 
-    video.addEventListener('canplay', handleCanPlay);
-    
-    // Try to load the video
-    video.load();
+    const cleanup = setupVideos();
 
     return () => {
-      video.removeEventListener('canplay', handleCanPlay);
+      mounted = false;
+      cleanup?.();
     };
   }, []);
 
