@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Link } from '../../i18n/routing';
+import Link from 'next/link';
 
 interface CTAButton {
   label: string;
@@ -19,7 +19,9 @@ interface PageHeroProps {
 
 export default function PageHero({ title, subtitle, images, ctaButtons, imageAspectRatio = '3/2' }: PageHeroProps) {
   // Ensure images array is valid and not empty
-  const validImages = images && images.length > 0 ? images.filter(img => img && img.trim() !== '') : ['/images/Hero Image.png'];
+  const validImages = images && Array.isArray(images) && images.length > 0 
+    ? images.filter(img => img && typeof img === 'string' && img.trim() !== '') 
+    : ['/images/Hero Image.png'];
   
   return (
     <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">

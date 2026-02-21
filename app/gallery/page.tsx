@@ -52,22 +52,68 @@ const column3: GalleryImage[] = [
 const allColumns = [column1, column2, column3];
 
 export default function GalleryPage() {
-  return (
-    <div className="w-full max-w-[1620px] mx-auto">
-      <PageHero
-        title="Нашите творения"
-        subtitle="Изкуство в глина и цвят. Разгледайте нашата галерия от ръчно изработени керамични изделия, всяко от което е уникално произведение."
-        images={[
-          "/branding/Radilina branding_AP-43.avif",
-          "/branding/Radilina branding_AP-76.avif",
-          "/branding/Radilina branding_AP-88.avif",
-        ]}
-        ctaButtons={[
-          { label: "Поръчайте сега", href: "/contact" },
-        ]}
-      />
+  try {
+    // Ensure allColumns is valid
+    const validColumns = Array.isArray(allColumns) && allColumns.length > 0
+      ? allColumns.filter(col => Array.isArray(col) && col.length > 0)
+      : [];
 
-      <GalleryGrid columns={allColumns} />
-    </div>
-  );
+    // Ensure we have at least one column
+    if (validColumns.length === 0) {
+      console.error('No valid gallery columns found');
+    }
+
+    const heroImages = [
+      "/branding/Radilina branding_AP-43.avif",
+      "/branding/Radilina branding_AP-76.avif",
+      "/branding/Radilina branding_AP-88.avif",
+    ].filter(img => img && typeof img === 'string' && img.trim() !== '');
+
+    // Ensure heroImages is never empty
+    const finalHeroImages = heroImages.length > 0 
+      ? heroImages 
+      : ['/branding/Radilina branding_AP-58.avif'];
+
+    return (
+      <div className="w-full max-w-[1620px] mx-auto">
+        <PageHero
+          title="Нашите творения"
+          subtitle="Изкуство в глина и цвят. Разгледайте нашата галерия от ръчно изработени керамични изделия, всяко от което е уникално произведение."
+          images={finalHeroImages}
+          ctaButtons={[
+            { label: "Поръчайте сега", href: "/contact" },
+          ]}
+        />
+
+        {validColumns.length > 0 ? (
+          <GalleryGrid columns={validColumns} />
+        ) : (
+          <section className="py-12 md:py-16 lg:py-20">
+            <div className="px-6 md:px-10 lg:px-12 text-center">
+              <p className="text-gray-400">Галерията е временно недостъпна.</p>
+            </div>
+          </section>
+        )}
+      </div>
+    );
+  } catch (error) {
+    console.error('Error rendering gallery page:', error);
+    return (
+      <div className="w-full max-w-[1620px] mx-auto">
+        <PageHero
+          title="Нашите творения"
+          subtitle="Изкуство в глина и цвят."
+          images={['/branding/Radilina branding_AP-58.avif']}
+          ctaButtons={[
+            { label: "Поръчайте сега", href: "/contact" },
+          ]}
+        />
+        <section className="py-12 md:py-16 lg:py-20">
+          <div className="px-6 md:px-10 lg:px-12 text-center">
+            <p className="text-gray-400">Галерията е временно недостъпна.</p>
+          </div>
+        </section>
+      </div>
+    );
+  }
 }
