@@ -27,8 +27,8 @@ export const categories: Category[] = [
       { name: "Гювеч", subtitle: "1 л", image: "/products/12_2025_-15.avif", code: "1002", price: "" },
       { name: "Гювеч", subtitle: "3 л", image: "/products/12_2025_-6.avif", code: "1003", price: "" },
       { name: "Гювеч", subtitle: "6 л", image: "/products/more/1004guvech-6l.jpeg", code: "1004", price: "" },
-      { name: "Гърне за боб", subtitle: "3 л", image: "/images/slide-3.jpg", code: "1005", price: "" },
-      { name: "Гърне за боб", subtitle: "5 л", image: "/images/slide-3.jpg", code: "1006", price: "" },
+      { name: "Гърне за боб", subtitle: "3 л", image: "/images/Radilina - Logo - White.png", code: "1005", price: "" },
+      { name: "Гърне за боб", subtitle: "5 л", image: "/images/Radilina - Logo - White.png", code: "1006", price: "" },
     ]
   },
   { 
@@ -59,8 +59,8 @@ export const categories: Category[] = [
       { name: "Купа №13", subtitle: "Ø 28 см", image: "/products/01_2026 (2).avif", code: "2007", price: "" },
       { name: "Купа №13", subtitle: "Ø 28 см", image: "/products/01_2026 (27).avif", code: "2007", price: "" },
       { name: "Купа №13", subtitle: "Ø 28 см", image: "/products/12_2025_1.avif", code: "2007", price: "" },
-      { name: "Купа с дръжка", subtitle: "400 мл", image: "/images/slide-3.jpg", code: "2008", price: "" },
-      { name: "Купа за спагети", subtitle: "", image: "/images/slide-3.jpg", code: "2009", price: "" },
+      { name: "Купа с дръжка", subtitle: "400 мл", image: "/images/Radilina - Logo - White.png", code: "2008", price: "" },
+      { name: "Купа за спагети", subtitle: "", image: "/images/Radilina - Logo - White.png", code: "2009", price: "" },
       { name: "Сосиерка", subtitle: "", image: "/products/01_2026 (56).avif", code: "2010", price: "" },
       { name: "Сосиерка", subtitle: "", image: "/products/01_2026 (55).avif", code: "2010", price: "" },
       { name: "Сосиерка", subtitle: "", image: "/products/01_2026(23).avif", code: "2010", price: "" },
@@ -84,7 +84,7 @@ export const categories: Category[] = [
     name: "Тави", 
     image: "/products/01_2026 (3).avif",
     subcategories: [
-      { name: "Тава №5", subtitle: "Ø 20 см", image: "/images/slide-3.jpg", code: "4001", price: "" },
+      { name: "Тава №5", subtitle: "Ø 20 см", image: "/images/Radilina - Logo - White.png", code: "4001", price: "" },
       { name: "Тава №7", subtitle: "Ø 24 см", image: "/products/12_2025_-2-1.avif", code: "4002", price: "" },
       { name: "Тава №13", subtitle: "Ø 28 см", image: "/products/01_2026 (3).avif", code: "4003", price: "" },
       { name: "Тава за пиле", subtitle: "Ø 28 см", image: "/products/01_2026 (1).avif", code: "4004", price: "" },
@@ -162,7 +162,7 @@ export const categories: Category[] = [
       { name: "Сервиз оливерник", subtitle: "", image: "/products/01_2026 (14).avif", code: "8001", price: "" },
       { name: "Сервиз оливерник", subtitle: "", image: "/products/more/8001.jpeg", code: "8001", price: "" },
       { name: "Сервиз оливерник \"Каручка\"", subtitle: "", image: "/images/Olivernik karuca.jpg", code: "8002", price: "" },
-      { name: "Сервиз за вино", subtitle: "", image: "/images/slide-3.jpg", code: "8003", price: "" },
+      { name: "Сервиз за вино", subtitle: "", image: "/images/Radilina - Logo - White.png", code: "8003", price: "" },
       { name: "Сервиз за ракия", subtitle: "", image: "/images/rakia cup.jpg", code: "8004", price: "" },
     ]
   },
@@ -194,7 +194,7 @@ export const categories: Category[] = [
       { name: "Пепелник за три цигари", subtitle: "", image: "/products/01_2026 (22).avif", code: "9012", price: "" },
       { name: "Градински пепелник", subtitle: "", image: "/products/01_2026 (10).avif", code: "9013", price: "" },
       { name: "Магнит чинийка", subtitle: "", image: "/products/01_2026(24).avif", code: "9014", price: "" },
-      { name: "Ваза", subtitle: "20 см", image: "/images/slide-3.jpg", code: "9015", price: "" },
+      { name: "Ваза", subtitle: "20 см", image: "/images/Radilina - Logo - White.png", code: "9015", price: "" },
       { name: "Бърдуче", subtitle: "", image: "/products/more/9016.jpeg", code: "9016", price: "" },
       { name: "Ръсачки", subtitle: "", image: "/products/01_2026 (15).avif", code: "9018", price: "" },
       { name: "Ръсачки", subtitle: "", image: "/products/01_2026 (16).avif", code: "9018", price: "" },
