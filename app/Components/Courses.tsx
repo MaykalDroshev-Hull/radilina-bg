@@ -27,8 +27,8 @@ export default function Courses() {
       participants: t('courses.course2.participants'),
       description: t('courses.course2.description'),
       image: "/branding/Radilina branding_AP-81.avif",
-      price: "20 €",
-      priceBgn: "39.12 лв",
+      price: "25 €",
+      priceBgn: "48.90 лв",
       featured: true,
     },
     {
@@ -56,10 +56,10 @@ export default function Courses() {
           
           {/* Right side */}
           <AnimatedItem className="md:max-w-[55%] lg:max-w-[50%] text-left md:text-right text-xl md:text-2xl lg:text-4xl">
-            <span className="font-semibold text-white font-headline leading-tight">
+            <span className="text-white font-headline leading-tight">
               {t('courses.header')}
             </span>
-            <span className="text-gray-500 font-headline leading-tight">
+            <span className="text-white font-headline leading-tight">
               {" "}{t('courses.headerSub')}
             </span>
           </AnimatedItem>

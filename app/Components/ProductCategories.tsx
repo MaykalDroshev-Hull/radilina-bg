@@ -29,9 +29,26 @@ export default function ProductCategories() {
   // Get unique images from subcategories for each category (1-3 images)
   const getCategoryImages = (category: typeof categories[0]) => {
     const uniqueImages = [...new Set(category.subcategories.map(s => s.image))];
-    // Filter out placeholder images
-    const validImages = uniqueImages.filter(img => !img.includes('slide-3.jpg'));
-    // Return 1-3 images
+    // Filter out placeholder images and Radilina logos
+    let validImages = uniqueImages.filter(img => 
+      !img.includes('slide-3.jpg') && 
+      !img.includes('Radilina - Logo')
+    );
+    
+    // Special handling for pans category - prioritize frying pan with lid
+    if (category.slug === 'tavi') {
+      const fryingPanWithLid = '/products/more/4006 Тиган с капак.jpeg';
+      // If the frying pan with lid is in the images, move it to the front
+      if (validImages.includes(fryingPanWithLid)) {
+        validImages = validImages.filter(img => img !== fryingPanWithLid);
+        validImages = [fryingPanWithLid, ...validImages];
+      } else {
+        // If not found, add it as the first image
+        validImages = [fryingPanWithLid, ...validImages];
+      }
+    }
+    
+    // Return 1-3 images, or fallback to category.image
     return validImages.slice(0, 3).length > 0 ? validImages.slice(0, 3) : [category.image];
   };
 

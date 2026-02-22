@@ -64,9 +64,9 @@ export default async function GalleryPage() {
         title={t('gallery.title')}
         subtitle={t('gallery.subtitle')}
         images={[
-          "/branding/Radilina branding_AP-43.avif",
-          "/branding/Radilina branding_AP-76.avif",
-          "/branding/Radilina branding_AP-88.avif",
+          "/branding/Radilina branding_AP-34.avif",
+          "/branding/Radilina branding_AP-60.avif",
+          "/branding/Radilina branding_AP-2.avif",
         ]}
         ctaButtons={[
           { label: t('common.orderNow'), href: "/contact" },

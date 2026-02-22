@@ -61,10 +61,10 @@ export default function FAQ() {
             </div>
             
             <h3 className="text-xl md:text-2xl lg:text-4xl leading-tight">
-              <span className="font-semibold text-white font-headline">
+              <span className="text-white font-headline">
                 {t('faq.header')}
               </span>
-              <span className="text-gray-500 font-headline">
+              <span className="text-white font-headline">
                 {" "}{t('faq.headerSub')}
               </span>
             </h3>

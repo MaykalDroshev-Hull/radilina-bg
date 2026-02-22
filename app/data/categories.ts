@@ -82,7 +82,7 @@ export const categories: Category[] = [
   { 
     slug: "tavi",
     name: "Тави", 
-    image: "/products/01_2026 (3).avif",
+    image: "/products/more/4006 Тиган с капак.jpeg",
     subcategories: [
       { name: "Тава №5", subtitle: "Ø 20 см", image: "/images/Radilina - Logo - White.png", code: "4001", price: "" },
       { name: "Тава №7", subtitle: "Ø 24 см", image: "/products/12_2025_-2-1.avif", code: "4002", price: "" },

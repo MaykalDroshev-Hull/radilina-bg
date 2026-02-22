@@ -32,6 +32,39 @@ export default function Header() {
     setLanguageMenuOpen(false);
   };
 
+  // Scroll to top handler for page navigation
+  const handlePageNavigation = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = e.currentTarget.getAttribute('href');
+    // Only scroll to top if it's a page link (not a hash link)
+    if (href && !href.startsWith('#') && !href.startsWith('/#')) {
+      // Check if navigating to a different page
+      const targetPath = href.split('#')[0]; // Remove hash if present
+      const currentPath = pathname.split('#')[0]; // Remove hash if present
+      
+      // Only scroll if navigating to a different page
+      if (targetPath !== currentPath) {
+        // Use Lenis if available, otherwise use window.scrollTo
+        const lenisWindow = window as typeof window & { lenis?: { scrollTo: (value: number | { top: number; left: number }) => void } };
+        if (lenisWindow.lenis) {
+          lenisWindow.lenis.scrollTo({ top: 0, left: 0 });
+        } else {
+          window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        }
+      }
+    }
+  };
+
+  // Scroll to top when pathname changes
+  useEffect(() => {
+    // Use Lenis if available, otherwise use window.scrollTo
+    const lenisWindow = window as typeof window & { lenis?: { scrollTo: (value: number | { top: number; left: number }) => void } };
+    if (lenisWindow.lenis) {
+      lenisWindow.lenis.scrollTo({ top: 0, left: 0 });
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }
+  }, [pathname]);
+
   // Scroll detection
   useEffect(() => {
     const handleScroll = () => {
@@ -86,10 +119,10 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-              <Link href="/" className={`font-body text-sm xl:text-base transition-colors duration-300 ${
+              <Link href="/" onClick={handlePageNavigation} className={`font-body text-sm xl:text-base transition-colors duration-300 ${
                 isScrolled ? 'text-gray-300 hover:text-[var(--soft-rose)]' : 'text-gray-800 hover:text-[var(--soft-rose)]'
               }`}>{t('common.home')}</Link>
-              <Link href="/courses" className={`font-body text-sm xl:text-base transition-colors duration-300 ${
+              <Link href="/courses" onClick={handlePageNavigation} className={`font-body text-sm xl:text-base transition-colors duration-300 ${
                 isScrolled ? 'text-gray-300 hover:text-[var(--soft-rose)]' : 'text-gray-800 hover:text-[var(--soft-rose)]'
               }`}>{t('common.courses')}</Link>
 
@@ -126,7 +159,10 @@ export default function Header() {
                           <Link
                             key={category.slug}
                             href={`/category/${category.slug}`}
-                            onClick={() => setProductsDropdownOpen(false)}
+                            onClick={(e) => {
+                              setProductsDropdownOpen(false);
+                              handlePageNavigation(e);
+                            }}
                             className="flex items-center gap-3 px-4 py-2.5 hover:bg-white/10 transition-colors group"
                           >
                             <div className="w-8 h-8 rounded-lg overflow-hidden bg-gray-800 flex-shrink-0 relative">
@@ -149,13 +185,13 @@ export default function Header() {
                 </AnimatePresence>
               </div>
 
-              <Link href="/about" className={`font-body text-sm xl:text-base transition-colors duration-300 ${
+              <Link href="/about" onClick={handlePageNavigation} className={`font-body text-sm xl:text-base transition-colors duration-300 ${
                 isScrolled ? 'text-gray-300 hover:text-[var(--soft-rose)]' : 'text-gray-800 hover:text-[var(--soft-rose)]'
               }`}>{t('common.about')}</Link>
-              <Link href="/gallery" className={`font-body text-sm xl:text-base transition-colors duration-300 ${
+              <Link href="/gallery" onClick={handlePageNavigation} className={`font-body text-sm xl:text-base transition-colors duration-300 ${
                 isScrolled ? 'text-gray-300 hover:text-[var(--soft-rose)]' : 'text-gray-800 hover:text-[var(--soft-rose)]'
               }`}>{t('common.gallery')}</Link>
-              <Link href="/contact" className={`font-body text-sm xl:text-base transition-colors duration-300 ${
+              <Link href="/contact" onClick={handlePageNavigation} className={`font-body text-sm xl:text-base transition-colors duration-300 ${
                 isScrolled ? 'text-gray-300 hover:text-[var(--soft-rose)]' : 'text-gray-800 hover:text-[var(--soft-rose)]'
               }`}>{t('common.contact')}</Link>
             </nav>
@@ -164,6 +200,7 @@ export default function Header() {
             <div className="hidden lg:flex items-center gap-3">
               <Link
                 href="/contact"
+                onClick={handlePageNavigation}
                 className="bg-white text-black px-5 xl:px-6 py-2 xl:py-2.5 rounded-full font-body font-medium text-sm xl:text-base hover:bg-gray-200 transition-colors"
               >
                 {t('common.contact')}
@@ -301,8 +338,8 @@ export default function Header() {
 
             <nav className="flex flex-col h-full">
               <div className="flex-1 overflow-y-auto">
-                <Link href="/" onClick={() => setMobileMenuOpen(false)} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.home')}</Link>
-                <Link href="/courses" onClick={() => setMobileMenuOpen(false)} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.courses')}</Link>
+                <Link href="/" onClick={(e) => { setMobileMenuOpen(false); handlePageNavigation(e); }} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.home')}</Link>
+                <Link href="/courses" onClick={(e) => { setMobileMenuOpen(false); handlePageNavigation(e); }} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.courses')}</Link>
 
                 {/* Mobile Products Accordion */}
                 <div className="border-b border-gray-800">
@@ -327,7 +364,7 @@ export default function Header() {
                           <Link
                             key={category.slug}
                             href={`/category/${category.slug}`}
-                            onClick={() => { setMobileMenuOpen(false); setMobileProductsOpen(false); }}
+                            onClick={(e) => { setMobileMenuOpen(false); setMobileProductsOpen(false); handlePageNavigation(e); }}
                             className="py-3 md:py-3.5 px-10 md:px-12 font-body text-sm md:text-base text-gray-400 text-left border-b border-gray-800/50 hover:bg-white/5 active:bg-white/10 transition-colors w-full flex items-center gap-3"
                           >
                             <div className="w-6 h-6 rounded overflow-hidden bg-gray-800 flex-shrink-0 relative">
@@ -347,15 +384,15 @@ export default function Header() {
                   </AnimatePresence>
                 </div>
 
-                <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.about')}</Link>
-                <Link href="/gallery" onClick={() => setMobileMenuOpen(false)} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.gallery')}</Link>
-                <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.contact')}</Link>
+                <Link href="/about" onClick={(e) => { setMobileMenuOpen(false); handlePageNavigation(e); }} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.about')}</Link>
+                <Link href="/gallery" onClick={(e) => { setMobileMenuOpen(false); handlePageNavigation(e); }} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.gallery')}</Link>
+                <Link href="/contact" onClick={(e) => { setMobileMenuOpen(false); handlePageNavigation(e); }} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.contact')}</Link>
               </div>
               
               <div className="p-6 md:p-8 border-t border-gray-800 bg-[#1a1614]/50">
                 <Link
                   href="/contact"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={(e) => { setMobileMenuOpen(false); handlePageNavigation(e); }}
                   className="w-full bg-white text-black px-6 py-3 md:py-4 rounded-full font-body font-medium text-base md:text-lg hover:bg-gray-200 active:scale-98 transition-all block text-center"
                 >
                   {t('common.contactUs')}
