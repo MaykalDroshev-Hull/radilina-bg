@@ -1,189 +1,64 @@
 "use client";
 
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '../../i18n/routing';
 import { AnimatedSection, AnimatedContainer, AnimatedItem } from '../lib/animations';
-import { useEffect, useRef, useState } from 'react';
 
 export default function Hero() {
   const t = useTranslations();
-  const mobileVideoRef = useRef<HTMLVideoElement>(null);
-  const desktopVideoRef = useRef<HTMLVideoElement>(null);
-  const [isVideoReady, setIsVideoReady] = useState(false);
-
-  useEffect(() => {
-    // Check if we're in the browser
-    if (typeof window === 'undefined') {
-      // On server, show content immediately
-      setIsVideoReady(true);
-      return;
-    }
-
-    let mounted = true;
-
-    const setupVideos = () => {
-      const mobileVideo = mobileVideoRef.current;
-      const desktopVideo = desktopVideoRef.current;
-
-      const handleVideoReady = () => {
-        if (mounted) {
-          setIsVideoReady(true);
-        }
-      };
-
-      const handleVideoError = () => {
-        // If video fails to load, show content anyway
-        if (mounted) {
-          setIsVideoReady(true);
-        }
-      };
-
-      // Setup mobile video
-      if (mobileVideo) {
-        mobileVideo.addEventListener('canplay', handleVideoReady);
-        mobileVideo.addEventListener('loadeddata', handleVideoReady);
-        mobileVideo.addEventListener('error', handleVideoError);
-        
-        // Try to play mobile video if on mobile
-        if (window.innerWidth < 1024) {
-          mobileVideo.play().catch(() => {
-            // Autoplay prevented, but mark as ready
-            handleVideoReady();
-          });
-        }
-      }
-
-      // Setup desktop video
-      if (desktopVideo) {
-        desktopVideo.addEventListener('canplay', handleVideoReady);
-        desktopVideo.addEventListener('loadeddata', handleVideoReady);
-        desktopVideo.addEventListener('error', handleVideoError);
-        
-        // Try to play desktop video if on desktop
-        if (window.innerWidth >= 1024) {
-          desktopVideo.play().catch(() => {
-            // Autoplay prevented, but mark as ready
-            handleVideoReady();
-          });
-        }
-      }
-
-      // Fallback: if videos don't load within 3 seconds, show content anyway
-      const timeout = setTimeout(() => {
-        if (mounted) {
-          setIsVideoReady(true);
-        }
-      }, 3000);
-
-      return () => {
-        clearTimeout(timeout);
-        if (mobileVideo) {
-          mobileVideo.removeEventListener('canplay', handleVideoReady);
-          mobileVideo.removeEventListener('loadeddata', handleVideoReady);
-          mobileVideo.removeEventListener('error', handleVideoError);
-        }
-        if (desktopVideo) {
-          desktopVideo.removeEventListener('canplay', handleVideoReady);
-          desktopVideo.removeEventListener('loadeddata', handleVideoReady);
-          desktopVideo.removeEventListener('error', handleVideoError);
-        }
-      };
-    };
-
-    const cleanup = setupVideos();
-
-    return () => {
-      mounted = false;
-      cleanup?.();
-    };
-  }, []);
 
   return (
     <div className="px-3 md:px-5 lg:px-6">
       <AnimatedSection
         id="home"
-        className="relative h-[75vh] md:h-[80vh] lg:h-[85vh] overflow-hidden rounded-3xl md:rounded-[2rem] lg:rounded-4xl"
+        className="relative h-[75vh] md:h-[85vh] lg:h-[90vh] overflow-hidden rounded-3xl md:rounded-[2rem] lg:rounded-4xl"
       >
-        {/* Background Video — Mobile */}
-        <video
-          ref={mobileVideoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover lg:hidden"
-          preload="auto"
-        >
-          <source src="/images/hero mobile.mp4" type="video/mp4" />
-        </video>
-        
-        {/* Background Video — Desktop */}
-        <video
-          ref={desktopVideoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover hidden lg:block"
-          preload="auto"
-        >
-          <source src="/images/Hero.mp4" type="video/mp4" />
-        </video>
-        
-        {/* Fallback image in case video doesn't load */}
-        {!isVideoReady && (
-          <div className="absolute inset-0 bg-[#1a1614] flex items-center justify-center">
-            <div className="w-12 h-12 border-4 border-[#F4A7A7] border-t-transparent rounded-full animate-spin"></div>
-          </div>
-        )}
+        {/* Background Image - Warm scene with fireplace */}
+        <div className="absolute inset-0">
+          <Image
+            src="/products/more/2302/Collection 1.jpeg"
+            alt="Radilina Handmade Ceramics"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+            quality={90}
+          />
+          {/* Subtle overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
+        </div>
 
-        {/* Subtle gradient overlay — darken bottom for button readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
-
-        {/* Content — positioned upper area like reference */}
+        {/* Content */}
         <div className="absolute inset-0 flex flex-col justify-between px-6 md:px-10 lg:px-16 py-10 md:py-14 lg:py-20">
-          {/* Top — Title & Subtitle (high contrast text) */}
-          <AnimatedContainer className="text-center pt-2 md:pt-4 lg:pt-0 lg:-mt-6 xl:-mt-10">
+          {/* Top — Branding */}
+          <AnimatedContainer className="text-center pt-2 md:pt-4 lg:pt-8">
             <AnimatedItem>
-              <h1 className="font-headline font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] [text-shadow:_2px_2px_8px_rgba(0,0,0,0.9)]">
-                {t('hero.title')}
+              <h1 className="font-subheadline font-normal text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] [text-shadow:_2px_2px_8px_rgba(0,0,0,0.9)]">
+                Radilina
               </h1>
             </AnimatedItem>
 
             <AnimatedItem>
-              <p className="font-body text-base sm:text-lg md:text-xl lg:text-3xl xl:text-4xl text-white mt-3 md:mt-4 lg:mt-5 tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] [text-shadow:_1px_1px_6px_rgba(0,0,0,0.9)]">
-              {t('hero.subtitle')}
+              <p className="font-body text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white mt-2 md:mt-3 lg:mt-4 tracking-[0.2em] uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] [text-shadow:_1px_1px_6px_rgba(0,0,0,0.9)]">
+                {t('hero.subtitle')}
               </p>
             </AnimatedItem>
           </AnimatedContainer>
 
-          {/* Bottom — CTA Buttons (dark theme) */}
-          <AnimatedContainer className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-4 md:gap-6 pb-2 md:pb-4">
+          {/* Bottom — CTA Button */}
+          <AnimatedContainer className="flex items-center justify-center pb-2 md:pb-4 lg:pb-6">
             <AnimatedItem>
               <Link
-                href="/#courses"
-                className="min-w-[180px] md:min-w-[200px] text-center px-8 md:px-10 py-3 md:py-3.5
-                  bg-[#1a1614] backdrop-blur-sm text-white
-                  border border-gray-700
-                  rounded-lg font-headline text-sm md:text-base tracking-[0.15em] uppercase
-                  shadow-lg hover:bg-[#222] hover:shadow-xl
-                  active:scale-95 transition-all"
+                href="/#product-categories"
+                className="inline-block min-w-[200px] md:min-w-[240px] lg:min-w-[280px] text-center px-8 md:px-10 lg:px-12 py-3 md:py-3.5 lg:py-4
+                  bg-gradient-to-br from-[#2d5016] to-[#1a3d0e] text-white
+                  border border-[#3a6a1f]
+                  rounded-lg md:rounded-xl font-headline text-sm md:text-base lg:text-lg tracking-wide
+                  shadow-lg hover:shadow-xl hover:from-[#3a6a1f] hover:to-[#2d5016]
+                  active:scale-95 transition-all duration-300"
               >
                 {t('hero.productsButton')}
-              </Link>
-            </AnimatedItem>
-
-            <AnimatedItem>
-              <Link
-                href="/about"
-                className="min-w-[180px] md:min-w-[200px] text-center px-8 md:px-10 py-3 md:py-3.5
-                  bg-[#1a1614] backdrop-blur-sm text-white
-                  border border-gray-700
-                  rounded-lg font-headline text-sm md:text-base tracking-[0.15em] uppercase
-                  shadow-lg hover:bg-[#222] hover:shadow-xl
-                  active:scale-95 transition-all"
-              >
-                {t('hero.aboutButton')}
               </Link>
             </AnimatedItem>
           </AnimatedContainer>

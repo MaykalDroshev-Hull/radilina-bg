@@ -22,9 +22,25 @@
   },
   "hero": {
     "title": "Ceramică Radilina",
-    "subtitle": "Argilă, apă, mâini și foc",
-    "productsButton": "Produse",
+    "subtitle": "CERAMICĂ FĂCUTĂ MANUAL",
+    "productsButton": "Răsfoiește colecția",
     "aboutButton": "Despre noi"
+  },
+  "collections": {
+    "title": "Colecțiile Noastre",
+    "subtitle": "Estetică tradițională bulgară cu un aspect modern.",
+    "classicCream": {
+      "title": "Seria Clasică Creme",
+      "description": "Estetică tradițională bulgară cu un aspect modern."
+    },
+    "ornamental": {
+      "title": "Seria Ornamentală",
+      "description": "Ornamente pictate manual cu caracter și suflet"
+    },
+    "rose": {
+      "title": "Seria Roz",
+      "description": "Paletă roz delicată cu flori pictate manual"
+    }
   },
   "home": {
     "aboutCTA": {

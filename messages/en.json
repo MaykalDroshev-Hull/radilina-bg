@@ -22,9 +22,25 @@
   },
   "hero": {
     "title": "Radilina Ceramics",
-    "subtitle": "Clay, water, hands and fire",
-    "productsButton": "Products",
+    "subtitle": "HANDMADE CERAMICS",
+    "productsButton": "Browse the collection",
     "aboutButton": "About"
+  },
+  "collections": {
+    "title": "Our Collections",
+    "subtitle": "Traditional Bulgarian aesthetics with a modern touch.",
+    "classicCream": {
+      "title": "Classic Cream Series",
+      "description": "Traditional Bulgarian aesthetics with a modern touch."
+    },
+    "ornamental": {
+      "title": "Ornamental Series",
+      "description": "Hand-painted ornaments with character and soul"
+    },
+    "rose": {
+      "title": "Rose Series",
+      "description": "Gentle pink palette with hand-painted flowers"
+    }
   },
   "home": {
     "aboutCTA": {
