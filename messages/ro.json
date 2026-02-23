@@ -23,27 +23,31 @@
   "hero": {
     "title": "Ceramică Radilina",
     "subtitle": "CERAMICĂ FĂCUTĂ MANUAL",
-    "productsButton": "Răsfoiește colecția",
+    "productsButton": "Produse",
     "aboutButton": "Despre noi"
+  },
+  "productCategories": {
+    "title": "Produsele Noastre",
+    "subtitle": "Explorați categoriile noastre de ceramică făcută manual, fiecare cu un stil și funcționalitate unice."
   },
   "collections": {
     "title": "Colecțiile Noastre",
     "subtitle": "Estetică tradițională bulgară cu un aspect modern.",
     "collection1": {
-      "title": "Colecția 1",
-      "description": "O selecție aleasă din cele mai bune ceramici făcute manual"
+      "title": "Colecția Clasică Creme",
+      "description": "Piese elegante în glazură crem moale, întruchipând tradiția atemporală a ceramicii bulgare"
     },
     "classicCream": {
-      "title": "Seria Clasică Creme",
-      "description": "Estetică tradițională bulgară cu un aspect modern."
+      "title": "Colecția Orientală",
+      "description": "Inspirată din estetica orientală cu modele intricate și moștenire culturală bogată"
     },
     "ornamental": {
-      "title": "Seria Ornamentală",
-      "description": "Ornamente pictate manual cu caracter și suflet"
+      "title": "Colecția Roz",
+      "description": "Tonuri roz delicate cu motive florale pictate manual și eleganță feminină"
     },
     "rose": {
-      "title": "Seria Roz",
-      "description": "Paletă roz delicată cu flori pictate manual"
+      "title": "Colecția Verde",
+      "description": "Glazuri verzi proaspete cu motive naturale, aducând liniștea naturii în casa ta"
     }
   },
   "collection": {

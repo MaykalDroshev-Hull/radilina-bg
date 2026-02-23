@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname, useRouter } from '../../i18n/routing';
 import { categories } from '../data/categories';
+import { collections } from '../data/collections';
 
 export default function Header() {
   const t = useTranslations();
@@ -16,10 +17,14 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
+  const [collectionsDropdownOpen, setCollectionsDropdownOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+  const [mobileCollectionsOpen, setMobileCollectionsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const productsDropdownRef = useRef<HTMLDivElement>(null);
+  const collectionsDropdownRef = useRef<HTMLDivElement>(null);
   const productsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const collectionsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const languages = [
     { code: 'bg', name: 'Български', flag: '🇧🇬' },
@@ -80,6 +85,9 @@ export default function Header() {
       if (productsDropdownRef.current && !productsDropdownRef.current.contains(event.target as Node)) {
         setProductsDropdownOpen(false);
       }
+      if (collectionsDropdownRef.current && !collectionsDropdownRef.current.contains(event.target as Node)) {
+        setCollectionsDropdownOpen(false);
+      }
     }
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
@@ -93,6 +101,17 @@ export default function Header() {
   const handleProductsMouseLeave = () => {
     productsTimeoutRef.current = setTimeout(() => {
       setProductsDropdownOpen(false);
+    }, 200);
+  };
+
+  const handleCollectionsMouseEnter = () => {
+    if (collectionsTimeoutRef.current) clearTimeout(collectionsTimeoutRef.current);
+    setCollectionsDropdownOpen(true);
+  };
+
+  const handleCollectionsMouseLeave = () => {
+    collectionsTimeoutRef.current = setTimeout(() => {
+      setCollectionsDropdownOpen(false);
     }, 200);
   };
 
@@ -179,6 +198,74 @@ export default function Header() {
                             </span>
                           </Link>
                         ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* Collections Dropdown */}
+              <div
+                ref={collectionsDropdownRef}
+                className="relative"
+                onMouseEnter={handleCollectionsMouseEnter}
+                onMouseLeave={handleCollectionsMouseLeave}
+              >
+                <button
+                  onClick={() => setCollectionsDropdownOpen(!collectionsDropdownOpen)}
+                  className={`font-body text-sm xl:text-base transition-colors duration-300 flex items-center gap-1 ${
+                    isScrolled ? 'text-gray-300 hover:text-[var(--soft-rose)]' : 'text-gray-800 hover:text-[var(--soft-rose)]'
+                  }`}
+                >
+                  {t('collections.title')}
+                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${collectionsDropdownOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                <AnimatePresence>
+                  {collectionsDropdownOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute left-1/2 -translate-x-1/2 mt-4 w-64 bg-[#1a1614] rounded-xl shadow-2xl border border-gray-800 overflow-hidden z-50"
+                      onMouseEnter={handleCollectionsMouseEnter}
+                      onMouseLeave={handleCollectionsMouseLeave}
+                    >
+                      <div className="py-2">
+                        {collections.map((collection) => {
+                          // Map slug to translation key
+                          const getTranslationKey = (slug: string) => {
+                            if (slug === 'collection-1') return 'collection1';
+                            if (slug === 'classic-cream') return 'classicCream';
+                            return slug;
+                          };
+                          const translationKey = getTranslationKey(collection.slug);
+                          return (
+                            <Link
+                              key={collection.slug}
+                              href={`/collection/${collection.slug}`}
+                              onClick={(e) => {
+                                setCollectionsDropdownOpen(false);
+                                handlePageNavigation(e);
+                              }}
+                              className="flex items-center gap-3 px-4 py-2.5 hover:bg-white/10 transition-colors group"
+                            >
+                              <div className="w-8 h-8 rounded-lg overflow-hidden bg-gray-800 flex-shrink-0 relative">
+                                <Image
+                                  src={collection.heroImages[0] || collection.galleryImages[0]?.src || '/images/Radilina - Logo - White.png'}
+                                  alt={t(`collections.${translationKey}.title`)}
+                                  fill
+                                  sizes="32px"
+                                  className="object-cover"
+                                />
+                              </div>
+                              <span className="font-body text-sm text-gray-300 group-hover:text-white transition-colors">
+                                {t(`collections.${translationKey}.title`)}
+                              </span>
+                            </Link>
+                          );
+                        })}
                       </div>
                     </motion.div>
                   )}
@@ -379,6 +466,58 @@ export default function Header() {
                             {t(`categories.${category.slug}`)}
                           </Link>
                         ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                {/* Mobile Collections Accordion */}
+                <div className="border-b border-gray-800">
+                  <button
+                    onClick={() => setMobileCollectionsOpen(!mobileCollectionsOpen)}
+                    className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left hover:bg-white/5 active:bg-white/10 transition-colors w-full flex items-center justify-between"
+                  >
+                    {t('collections.title')}
+                    <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform duration-200 ${mobileCollectionsOpen ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  <AnimatePresence>
+                    {mobileCollectionsOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.25 }}
+                        className="overflow-hidden bg-[#1a1614]/30"
+                      >
+                        {collections.map((collection) => {
+                          // Map slug to translation key
+                          const getTranslationKey = (slug: string) => {
+                            if (slug === 'collection-1') return 'collection1';
+                            if (slug === 'classic-cream') return 'classicCream';
+                            return slug;
+                          };
+                          const translationKey = getTranslationKey(collection.slug);
+                          return (
+                            <Link
+                              key={collection.slug}
+                              href={`/collection/${collection.slug}`}
+                              onClick={(e) => { setMobileMenuOpen(false); setMobileCollectionsOpen(false); handlePageNavigation(e); }}
+                              className="py-3 md:py-3.5 px-10 md:px-12 font-body text-sm md:text-base text-gray-400 text-left border-b border-gray-800/50 hover:bg-white/5 active:bg-white/10 transition-colors w-full flex items-center gap-3"
+                            >
+                              <div className="w-6 h-6 rounded overflow-hidden bg-gray-800 flex-shrink-0 relative">
+                                <Image
+                                  src={collection.heroImages[0] || collection.galleryImages[0]?.src || '/images/Radilina - Logo - White.png'}
+                                  alt={t(`collections.${translationKey}.title`)}
+                                  fill
+                                  sizes="24px"
+                                  className="object-cover"
+                                />
+                              </div>
+                              {t(`collections.${translationKey}.title`)}
+                            </Link>
+                          );
+                        })}
                       </motion.div>
                     )}
                   </AnimatePresence>

@@ -300,13 +300,12 @@ interface AnimatedSectionProps {
 
 export function AnimatedSection({ id, className = "", children }: AnimatedSectionProps) {
   return (
-    <motion.section
+    <section
       id={id}
       className={className}
-      {...sectionMotionProps}
     >
       {children}
-    </motion.section>
+    </section>
   )
 }
 
@@ -320,15 +319,11 @@ interface AnimatedContainerProps {
 
 export function AnimatedContainer({ className = "", children }: AnimatedContainerProps) {
   return (
-    <motion.div
+    <div
       className={className}
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.1, margin: "0px" }}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }
 
@@ -343,13 +338,11 @@ interface AnimatedItemProps {
 
 export function AnimatedItem({ className = "", children, delay = 0 }: AnimatedItemProps) {
   return (
-    <motion.div
+    <div
       className={className}
-      variants={childVariants}
-      custom={delay}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }
 

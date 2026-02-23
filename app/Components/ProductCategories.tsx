@@ -37,7 +37,7 @@ export default function ProductCategories() {
     
     // Special handling for pans category - prioritize frying pan with lid
     if (category.slug === 'tavi') {
-      const fryingPanWithLid = '/products/more/4006 Тиган с капак.jpeg';
+      const fryingPanWithLid = '/products/4006 Тиган с капак.jpeg';
       // If the frying pan with lid is in the images, move it to the front
       if (validImages.includes(fryingPanWithLid)) {
         validImages = validImages.filter(img => img !== fryingPanWithLid);
@@ -55,6 +55,20 @@ export default function ProductCategories() {
   return (
     <AnimatedSection id="product-categories" className="py-12 md:py-16 lg:py-20">
       <AnimatedContainer className="px-6 md:px-10 lg:px-12">
+        {/* Header */}
+        <div className="text-center mb-8 md:mb-10 lg:mb-12">
+          <AnimatedItem>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-3 md:mb-4 font-headline">
+              {t('productCategories.title')}
+            </h2>
+          </AnimatedItem>
+          <AnimatedItem>
+            <p className="text-base md:text-lg lg:text-xl text-gray-400 font-body max-w-3xl mx-auto">
+              {t('productCategories.subtitle')}
+            </p>
+          </AnimatedItem>
+        </div>
+
         {visibleCategories.map((category, index) => {
           const images = getCategoryImages(category);
           const colorScheme = categoryColors[index % categoryColors.length];

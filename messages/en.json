@@ -23,27 +23,31 @@
   "hero": {
     "title": "Radilina Ceramics",
     "subtitle": "HANDMADE CERAMICS",
-    "productsButton": "Browse the collection",
+    "productsButton": "Products",
     "aboutButton": "About"
+  },
+  "productCategories": {
+    "title": "Our Products",
+    "subtitle": "Explore our categories of handmade ceramics, each with unique style and functionality."
   },
   "collections": {
     "title": "Our Collections",
     "subtitle": "Traditional Bulgarian aesthetics with a modern touch.",
     "collection1": {
-      "title": "Collection 1",
-      "description": "A curated selection of our finest handmade ceramics"
+      "title": "Classic Cream Collection",
+      "description": "Elegant pieces in soft cream glaze, embodying timeless Bulgarian ceramic tradition"
     },
     "classicCream": {
-      "title": "Classic Cream Series",
-      "description": "Traditional Bulgarian aesthetics with a modern touch."
+      "title": "Oriental Collection",
+      "description": "Inspired by oriental aesthetics with intricate patterns and rich cultural heritage"
     },
     "ornamental": {
-      "title": "Ornamental Series",
-      "description": "Hand-painted ornaments with character and soul"
+      "title": "Pink Collection",
+      "description": "Delicate pink tones with hand-painted floral motifs and feminine elegance"
     },
     "rose": {
-      "title": "Rose Series",
-      "description": "Gentle pink palette with hand-painted flowers"
+      "title": "Green Collection",
+      "description": "Fresh green glazes with natural motifs, bringing nature's tranquility to your home"
     }
   },
   "collection": {

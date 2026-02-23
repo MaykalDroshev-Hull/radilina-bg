@@ -69,7 +69,7 @@ export default function PageHero({ title, subtitle, images, ctaButtons, imageAsp
           >
             {validImages.length === 1 ? (
               /* Single image */
-              <div className="relative h-[320px] sm:h-[400px] lg:h-[500px] rounded-2xl md:rounded-3xl overflow-hidden border border-gray-800">
+              <div className="relative aspect-[3/2] rounded-2xl md:rounded-3xl overflow-hidden border border-gray-800">
                 <Image
                   src={validImages[0]}
                   alt=""

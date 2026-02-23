@@ -53,10 +53,18 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
     }
   };
 
+  // Map slug to translation key
+  const getTranslationKey = (slug: string) => {
+    if (slug === 'collection-1') return 'collection1';
+    if (slug === 'classic-cream') return 'classicCream';
+    return slug;
+  };
+
   // Get collection title
   let collectionTitle: string;
+  const translationKey = getTranslationKey(collection.slug);
   try {
-    collectionTitle = t(`collections.${collection.slug}.title`);
+    collectionTitle = t(`collections.${translationKey}.title`);
     if (collectionTitle.startsWith('collections.')) {
       collectionTitle = collection.name;
     }
@@ -67,7 +75,7 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
   // Get collection description
   let collectionDescription: string;
   try {
-    collectionDescription = t(`collections.${collection.slug}.description`);
+    collectionDescription = t(`collections.${translationKey}.description`);
     if (collectionDescription.startsWith('collections.')) {
       collectionDescription = collection.description;
     }
@@ -75,12 +83,31 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
     collectionDescription = collection.description;
   }
 
+  // Get collection image based on slug (matching the Collections component on index page)
+  const getCollectionImage = (slug: string): string => {
+    switch (slug) {
+      case 'collection-1':
+        return '/products/Collection 1.jpeg';
+      case 'classic-cream':
+        return '/products/Colletion 2.jpeg';
+      case 'ornamental':
+        return '/products/Colletion 3.jpeg';
+      case 'rose':
+        return '/products/collection 4.jpeg';
+      default:
+        return collection.heroImages[0] || '';
+    }
+  };
+
+  const collectionImage = getCollectionImage(collection.slug);
+
   return (
     <div className="w-full max-w-[1620px] mx-auto">
       <PageHero
         title={collectionTitle}
         subtitle={collectionDescription}
-        images={collection.heroImages}
+        images={[collectionImage]}
+        imageAspectRatio="3/2"
         ctaButtons={[
           { label: t('collection.orderButton'), href: "/contact" },
           { label: t('common.backToHome'), href: "/", variant: "secondary" },

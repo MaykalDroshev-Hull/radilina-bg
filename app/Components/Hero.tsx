@@ -16,12 +16,23 @@ export default function Hero() {
       >
         {/* Background Image - Warm scene with fireplace */}
         <div className="absolute inset-0">
+          {/* Mobile & Tablet Hero Image */}
           <Image
-            src="/products/more/2302/Collection 1.jpeg"
+            src="/products/hero mobile.png"
             alt="Radilina Handmade Ceramics"
             fill
             sizes="100vw"
-            className="object-cover"
+            className="object-cover lg:hidden"
+            priority
+            quality={90}
+          />
+          {/* Desktop Hero Image */}
+          <Image
+            src="/products/Collection 1.jpeg"
+            alt="Radilina Handmade Ceramics"
+            fill
+            sizes="100vw"
+            className="hidden lg:block object-cover"
             priority
             quality={90}
           />
@@ -46,12 +57,12 @@ export default function Hero() {
             </AnimatedItem>
           </AnimatedContainer>
 
-          {/* Bottom — CTA Button */}
-          <AnimatedContainer className="flex items-center justify-center pb-2 md:pb-4 lg:pb-6">
+          {/* Bottom — CTA Buttons */}
+          <AnimatedContainer className="flex items-center justify-center gap-4 md:gap-6 pb-2 md:pb-4 lg:pb-6">
             <AnimatedItem>
               <Link
                 href="/#product-categories"
-                className="inline-block min-w-[200px] md:min-w-[240px] lg:min-w-[280px] text-center px-8 md:px-10 lg:px-12 py-3 md:py-3.5 lg:py-4
+                className="inline-block min-w-[160px] md:min-w-[180px] lg:min-w-[200px] text-center px-6 md:px-8 lg:px-10 py-3 md:py-3.5 lg:py-4
                   bg-gradient-to-br from-[#2d5016] to-[#1a3d0e] text-white
                   border border-[#3a6a1f]
                   rounded-lg md:rounded-xl font-headline text-sm md:text-base lg:text-lg tracking-wide
@@ -59,6 +70,19 @@ export default function Hero() {
                   active:scale-95 transition-all duration-300"
               >
                 {t('hero.productsButton')}
+              </Link>
+            </AnimatedItem>
+            <AnimatedItem>
+              <Link
+                href="/about"
+                className="inline-block min-w-[160px] md:min-w-[180px] lg:min-w-[200px] text-center px-6 md:px-8 lg:px-10 py-3 md:py-3.5 lg:py-4
+                  bg-gradient-to-br from-[#2d5016] to-[#1a3d0e] text-white
+                  border border-[#3a6a1f]
+                  rounded-lg md:rounded-xl font-headline text-sm md:text-base lg:text-lg tracking-wide
+                  shadow-lg hover:shadow-xl hover:from-[#3a6a1f] hover:to-[#2d5016]
+                  active:scale-95 transition-all duration-300"
+              >
+                {t('hero.aboutButton')}
               </Link>
             </AnimatedItem>
           </AnimatedContainer>

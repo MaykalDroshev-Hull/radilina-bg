@@ -99,6 +99,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           count: productCount
         })}
         images={heroImages}
+        imageAspectRatio={category.slug === 'chashi-alkohol' || category.slug === 'chashi-kafe' || category.slug === 'chashi-napitki' || category.slug === 'servizi' || category.slug === 'aksesori' ? '2/3' : '3/2'}
         ctaButtons={[
           { label: t('category.orderButton'), href: "/contact" },
           { label: t('common.backToHome'), href: "/", variant: "secondary" },

@@ -14,25 +14,25 @@ export default function Collections() {
       slug: 'collection-1',
       title: t('collections.collection1.title'),
       description: t('collections.collection1.description'),
-      image: '/products/more/2302/Collection 1.jpeg',
+      image: '/products/Collection 1.jpeg',
     },
     {
       slug: 'classic-cream',
       title: t('collections.classicCream.title'),
       description: t('collections.classicCream.description'),
-      image: '/products/more/2302/Colletion 2.jpeg',
+      image: '/products/Colletion 2.jpeg',
     },
     {
       slug: 'ornamental',
       title: t('collections.ornamental.title'),
       description: t('collections.ornamental.description'),
-      image: '/products/more/2302/Colletion 3.jpeg',
+      image: '/products/Colletion 3.jpeg',
     },
     {
       slug: 'rose',
       title: t('collections.rose.title'),
       description: t('collections.rose.description'),
-      image: '/products/more/2302/collection 4.jpeg',
+      image: '/products/collection 4.jpeg',
     },
   ];
 
