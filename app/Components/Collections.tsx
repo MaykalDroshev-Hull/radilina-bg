@@ -11,16 +11,25 @@ export default function Collections() {
 
   const collections = [
     {
+      slug: 'collection-1',
+      title: t('collections.collection1.title'),
+      description: t('collections.collection1.description'),
+      image: '/products/more/2302/Collection 1.jpeg',
+    },
+    {
+      slug: 'classic-cream',
       title: t('collections.classicCream.title'),
       description: t('collections.classicCream.description'),
       image: '/products/more/2302/Colletion 2.jpeg',
     },
     {
+      slug: 'ornamental',
       title: t('collections.ornamental.title'),
       description: t('collections.ornamental.description'),
       image: '/products/more/2302/Colletion 3.jpeg',
     },
     {
+      slug: 'rose',
       title: t('collections.rose.title'),
       description: t('collections.rose.description'),
       image: '/products/more/2302/collection 4.jpeg',
@@ -45,11 +54,11 @@ export default function Collections() {
         </div>
 
         {/* Collections Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
           {collections.map((collection, index) => (
             <AnimatedItem key={index} delay={index * 0.1}>
               <Link
-                href="/#product-categories"
+                href={`/collection/${collection.slug}`}
                 className="block group"
               >
                 <div className="bg-[#1a1614] rounded-xl md:rounded-2xl lg:rounded-3xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300 hover:shadow-xl">

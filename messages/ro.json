@@ -29,6 +29,10 @@
   "collections": {
     "title": "Colecțiile Noastre",
     "subtitle": "Estetică tradițională bulgară cu un aspect modern.",
+    "collection1": {
+      "title": "Colecția 1",
+      "description": "O selecție aleasă din cele mai bune ceramici făcute manual"
+    },
     "classicCream": {
       "title": "Seria Clasică Creme",
       "description": "Estetică tradițională bulgară cu un aspect modern."
@@ -41,6 +45,15 @@
       "title": "Seria Roz",
       "description": "Paletă roz delicată cu flori pictate manual"
     }
+  },
+  "collection": {
+    "notFound": "Colecția nu a fost găsită",
+    "products": "Produse din această colecție",
+    "gallery": "Galerie",
+    "orderButton": "Comandă acum",
+    "viewAllCollections": "Vezi toate colecțiile",
+    "ctaTitle": "Interesat de această colecție?",
+    "ctaDescription": "Contactați-ne pentru a plasa o comandă sau pentru a afla mai multe despre ceramica noastră făcută manual. Suntem aici pentru a vă ajuta să găsiți piesele perfecte pentru casa dvs."
   },
   "home": {
     "aboutCTA": {

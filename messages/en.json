@@ -29,6 +29,10 @@
   "collections": {
     "title": "Our Collections",
     "subtitle": "Traditional Bulgarian aesthetics with a modern touch.",
+    "collection1": {
+      "title": "Collection 1",
+      "description": "A curated selection of our finest handmade ceramics"
+    },
     "classicCream": {
       "title": "Classic Cream Series",
       "description": "Traditional Bulgarian aesthetics with a modern touch."
@@ -41,6 +45,15 @@
       "title": "Rose Series",
       "description": "Gentle pink palette with hand-painted flowers"
     }
+  },
+  "collection": {
+    "notFound": "Collection not found",
+    "products": "Products in this Collection",
+    "gallery": "Gallery",
+    "orderButton": "Order Now",
+    "viewAllCollections": "View All Collections",
+    "ctaTitle": "Interested in This Collection?",
+    "ctaDescription": "Contact us to place an order or learn more about our handmade ceramics. We're here to help you find the perfect pieces for your home."
   },
   "home": {
     "aboutCTA": {
