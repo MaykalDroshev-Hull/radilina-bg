@@ -3,12 +3,13 @@
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useState, Suspense } from 'react';
+import { useEffect, useState, Suspense, useRef } from 'react';
 
 function ContactForm() {
   const t = useTranslations();
   const locale = useLocale();
   const searchParams = useSearchParams();
+  const messageTextareaRef = useRef<HTMLTextAreaElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -17,22 +18,93 @@ function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({ type: null, message: '' });
 
-  // Check if this is a course inquiry and prefill the message
+  // Check if this is a course or collection inquiry and prefill the message
   useEffect(() => {
     const inquiry = searchParams.get('inquiry');
+    const collectionSlug = searchParams.get('collection');
+    const courseId = searchParams.get('course');
+    let hasPrefilledMessage = false;
+    
     if (inquiry === 'course') {
-      const courseMessage = locale === 'bg'
-        ? 'Здравейте,\n\nИскам да се запиша за курс по грънчарство. Моля, свържете се с мен за повече информация.\n\nБлагодаря!'
-        : locale === 'en'
-        ? 'Hello,\n\nI would like to sign up for a pottery course. Please contact me for more information.\n\nThank you!'
-        : 'Bună ziua,\n\nAș dori să mă înscriu la un curs de ceramică. Vă rog să mă contactați pentru mai multe informații.\n\nMulțumesc!';
+      let courseName: string = '';
+      
+      // Get course name if course ID is provided
+      if (courseId) {
+        try {
+          courseName = t(`courses.${courseId}.title`);
+          if (courseName.startsWith('courses.')) {
+            courseName = '';
+          }
+        } catch {
+          courseName = '';
+        }
+      }
+      
+      const courseMessage = courseName
+        ? (locale === 'bg'
+          ? `Здравейте,\n\nИскам да се запиша за курс "${courseName}". Моля, свържете се с мен за повече информация.\n\nБлагодаря!`
+          : locale === 'en'
+          ? `Hello,\n\nI would like to sign up for the course "${courseName}". Please contact me for more information.\n\nThank you!`
+          : `Bună ziua,\n\nAș dori să mă înscriu la cursul "${courseName}". Vă rog să mă contactați pentru mai multe informații.\n\nMulțumesc!`)
+        : (locale === 'bg'
+          ? 'Здравейте,\n\nИскам да се запиша за курс по грънчарство. Моля, свържете се с мен за повече информация.\n\nБлагодаря!'
+          : locale === 'en'
+          ? 'Hello,\n\nI would like to sign up for a pottery course. Please contact me for more information.\n\nThank you!'
+          : 'Bună ziua,\n\nAș dori să mă înscriu la un curs de ceramică. Vă rog să mă contactați pentru mai multe informații.\n\nMulțumesc!');
       
       setFormData(prev => ({
         ...prev,
         message: courseMessage,
       }));
+      hasPrefilledMessage = true;
+    } else if (inquiry === 'collection' && collectionSlug) {
+      // Map slug to translation key
+      const getTranslationKey = (slug: string) => {
+        if (slug === 'collection-1') return 'collection1';
+        if (slug === 'classic-cream') return 'classicCream';
+        return slug;
+      };
+      
+      const translationKey = getTranslationKey(collectionSlug);
+      let collectionName: string;
+      
+      try {
+        collectionName = t(`collections.${translationKey}.title`);
+        if (collectionName.startsWith('collections.')) {
+          collectionName = collectionSlug;
+        }
+      } catch {
+        collectionName = collectionSlug;
+      }
+      
+      const collectionMessage = locale === 'bg'
+        ? `Здравейте,\n\nИскам да направя поръчка за колекция "${collectionName}". Моля, свържете се с мен за повече информация относно наличността и условията за поръчка.\n\nБлагодаря!`
+        : locale === 'en'
+        ? `Hello,\n\nI would like to place an order for the "${collectionName}" collection. Please contact me for more information about availability and ordering conditions.\n\nThank you!`
+        : `Bună ziua,\n\nAș dori să plasez o comandă pentru colecția "${collectionName}". Vă rog să mă contactați pentru mai multe informații despre disponibilitate și condițiile de comandă.\n\nMulțumesc!`;
+      
+      setFormData(prev => ({
+        ...prev,
+        message: collectionMessage,
+      }));
+      hasPrefilledMessage = true;
     }
-  }, [searchParams, locale]);
+
+    // Smooth scroll to message field if message was prefilled
+    if (hasPrefilledMessage && messageTextareaRef.current) {
+      // Small delay to ensure the form is rendered
+      setTimeout(() => {
+        messageTextareaRef.current?.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'center' 
+        });
+        // Focus the textarea after scrolling
+        setTimeout(() => {
+          messageTextareaRef.current?.focus();
+        }, 500);
+      }, 100);
+    }
+  }, [searchParams, locale, t]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -252,6 +324,7 @@ function ContactForm() {
                   {t('contact.formMessage')}
                 </label>
                 <textarea
+                  ref={messageTextareaRef}
                   id="message"
                   name="message"
                   rows={5}

@@ -109,7 +109,7 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
         images={[collectionImage]}
         imageAspectRatio="3/2"
         ctaButtons={[
-          { label: t('collection.orderButton'), href: "/contact" },
+          { label: t('collection.orderButton'), href: `/contact?inquiry=collection&collection=${collection.slug}` },
           { label: t('common.backToHome'), href: "/", variant: "secondary" },
         ]}
       />
@@ -176,33 +176,6 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
         </section>
       )}
 
-      {/* Gallery Images */}
-      {collection.galleryImages.length > 0 && (
-        <section className="w-full px-6 md:px-10 lg:px-12 pb-12 md:pb-16 lg:pb-20">
-          <div className="mb-8 md:mb-10 lg:mb-12">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-4 md:mb-5 font-headline">
-              {t('collection.gallery')}
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6">
-            {collection.galleryImages.map((img, index) => (
-              <div
-                key={index}
-                className="relative aspect-square rounded-xl md:rounded-2xl overflow-hidden bg-[#1a1614] border border-gray-800 hover:border-gray-700 transition-all group cursor-pointer"
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
       {/* Call to Action Section */}
       <section className="w-full px-6 md:px-10 lg:px-12 pb-12 md:pb-16 lg:pb-20">
         <div className="bg-gradient-to-br from-[#1a1614] to-[#1a1614] rounded-xl md:rounded-2xl lg:rounded-3xl p-6 md:p-8 lg:p-10 border border-gray-800">
@@ -216,7 +189,7 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href={`/contact?inquiry=collection&collection=${collection.slug}`}
               className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-[#F4A7A7] text-white rounded-full font-body text-sm md:text-base font-semibold hover:bg-[#E89696] transition-colors"
             >
               {t('collection.orderButton')}

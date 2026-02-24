@@ -182,17 +182,8 @@ export default function Header() {
                               setProductsDropdownOpen(false);
                               handlePageNavigation(e);
                             }}
-                            className="flex items-center gap-3 px-4 py-2.5 hover:bg-white/10 transition-colors group"
+                            className="flex items-center px-4 py-2.5 hover:bg-white/10 transition-colors group"
                           >
-                            <div className="w-8 h-8 rounded-lg overflow-hidden bg-gray-800 flex-shrink-0 relative">
-                              <Image
-                                src={category.image}
-                                alt={t(`categories.${category.slug}`)}
-                                fill
-                                sizes="32px"
-                                className="object-cover"
-                              />
-                            </div>
                             <span className="font-body text-sm text-gray-300 group-hover:text-white transition-colors">
                               {t(`categories.${category.slug}`)}
                             </span>
@@ -249,17 +240,8 @@ export default function Header() {
                                 setCollectionsDropdownOpen(false);
                                 handlePageNavigation(e);
                               }}
-                              className="flex items-center gap-3 px-4 py-2.5 hover:bg-white/10 transition-colors group"
+                              className="flex items-center px-4 py-2.5 hover:bg-white/10 transition-colors group"
                             >
-                              <div className="w-8 h-8 rounded-lg overflow-hidden bg-gray-800 flex-shrink-0 relative">
-                                <Image
-                                  src={collection.heroImages[0] || collection.galleryImages[0]?.src || '/images/Radilina - Logo - White.png'}
-                                  alt={t(`collections.${translationKey}.title`)}
-                                  fill
-                                  sizes="32px"
-                                  className="object-cover"
-                                />
-                              </div>
                               <span className="font-body text-sm text-gray-300 group-hover:text-white transition-colors">
                                 {t(`collections.${translationKey}.title`)}
                               </span>
@@ -452,17 +434,8 @@ export default function Header() {
                             key={category.slug}
                             href={`/category/${category.slug}`}
                             onClick={(e) => { setMobileMenuOpen(false); setMobileProductsOpen(false); handlePageNavigation(e); }}
-                            className="py-3 md:py-3.5 px-10 md:px-12 font-body text-sm md:text-base text-gray-400 text-left border-b border-gray-800/50 hover:bg-white/5 active:bg-white/10 transition-colors w-full flex items-center gap-3"
+                            className="py-3 md:py-3.5 px-10 md:px-12 font-body text-sm md:text-base text-gray-400 text-left border-b border-gray-800/50 hover:bg-white/5 active:bg-white/10 transition-colors w-full flex items-center"
                           >
-                            <div className="w-6 h-6 rounded overflow-hidden bg-gray-800 flex-shrink-0 relative">
-                              <Image
-                                src={category.image}
-                                alt={t(`categories.${category.slug}`)}
-                                fill
-                                sizes="24px"
-                                className="object-cover"
-                              />
-                            </div>
                             {t(`categories.${category.slug}`)}
                           </Link>
                         ))}
@@ -503,17 +476,8 @@ export default function Header() {
                               key={collection.slug}
                               href={`/collection/${collection.slug}`}
                               onClick={(e) => { setMobileMenuOpen(false); setMobileCollectionsOpen(false); handlePageNavigation(e); }}
-                              className="py-3 md:py-3.5 px-10 md:px-12 font-body text-sm md:text-base text-gray-400 text-left border-b border-gray-800/50 hover:bg-white/5 active:bg-white/10 transition-colors w-full flex items-center gap-3"
+                              className="py-3 md:py-3.5 px-10 md:px-12 font-body text-sm md:text-base text-gray-400 text-left border-b border-gray-800/50 hover:bg-white/5 active:bg-white/10 transition-colors w-full flex items-center"
                             >
-                              <div className="w-6 h-6 rounded overflow-hidden bg-gray-800 flex-shrink-0 relative">
-                                <Image
-                                  src={collection.heroImages[0] || collection.galleryImages[0]?.src || '/images/Radilina - Logo - White.png'}
-                                  alt={t(`collections.${translationKey}.title`)}
-                                  fill
-                                  sizes="24px"
-                                  className="object-cover"
-                                />
-                              </div>
                               {t(`collections.${translationKey}.title`)}
                             </Link>
                           );

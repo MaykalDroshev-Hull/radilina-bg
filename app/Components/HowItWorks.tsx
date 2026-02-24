@@ -118,7 +118,7 @@ export default function HowItWorks() {
 
         {/* Learn More Button */}
         <div className="mt-6 md:mt-8 lg:mt-10">
-          <Link href="/#courses" className="flex items-center justify-center gap-2 md:gap-2.5 px-6 md:px-7 lg:px-8 py-3 md:py-3.5 rounded-full bg-white text-black text-sm md:text-base hover:bg-gray-200 active:scale-95 transition-all w-full md:w-auto font-body">
+          <Link href="/courses" className="flex items-center justify-center gap-2 md:gap-2.5 px-6 md:px-7 lg:px-8 py-3 md:py-3.5 rounded-full bg-white text-black text-sm md:text-base hover:bg-gray-200 active:scale-95 transition-all w-full md:w-auto font-body">
             {t('howItWorks.ourCourses')}
             <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
           </Link>

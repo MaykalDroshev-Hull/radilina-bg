@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { Clock, Users, Award, BookOpen, ArrowRight, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Link } from '../../i18n/routing';
 import { AnimatedSection, AnimatedContainer, AnimatedItem } from '../lib/animations';
 
 export default function Courses() {
@@ -10,6 +11,7 @@ export default function Courses() {
   
   const courses = [
     {
+      id: 'course1',
       title: t('courses.course1.title'),
       duration: t('courses.course1.duration'),
       level: t('courses.course1.level'),
@@ -21,6 +23,7 @@ export default function Courses() {
       featured: false,
     },
     {
+      id: 'course2',
       title: t('courses.course2.title'),
       duration: t('courses.course2.duration'),
       level: t('courses.course2.level'),
@@ -32,6 +35,7 @@ export default function Courses() {
       featured: true,
     },
     {
+      id: 'course3',
       title: t('courses.course3.title'),
       duration: t('courses.course3.duration'),
       level: t('courses.course3.level'),
@@ -138,18 +142,21 @@ export default function Courses() {
                         )}
                       </div>
                     </div>
-                    <button className={`
-                      w-full px-4 md:px-5 lg:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-semibold
-                      transition-all duration-300 flex items-center justify-center gap-2 font-body
-                      active:scale-95
-                      ${course.featured
-                        ? 'bg-[#F4A7A7] text-white hover:bg-[#E89696] shadow-md'
-                        : 'bg-white text-black hover:bg-gray-200'
-                      }
-                    `}>
+                    <Link
+                      href={`/contact?inquiry=course&course=${course.id}`}
+                      className={`
+                        w-full px-4 md:px-5 lg:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-semibold
+                        transition-all duration-300 flex items-center justify-center gap-2 font-body
+                        active:scale-95
+                        ${course.featured
+                          ? 'bg-[#F4A7A7] text-white hover:bg-[#E89696] shadow-md'
+                          : 'bg-white text-black hover:bg-gray-200'
+                        }
+                      `}
+                    >
                       {t('courses.signUp')}
                       <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -173,10 +180,13 @@ export default function Courses() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 md:flex-shrink-0">
-                <button className="px-6 md:px-7 py-3 md:py-3.5 bg-white text-black rounded-full text-sm md:text-base font-semibold hover:bg-gray-200 active:scale-95 transition-all flex items-center justify-center gap-2 font-body whitespace-nowrap">
+                <Link
+                  href="/contact?inquiry=course"
+                  className="px-6 md:px-7 py-3 md:py-3.5 bg-white text-black rounded-full text-sm md:text-base font-semibold hover:bg-gray-200 active:scale-95 transition-all flex items-center justify-center gap-2 font-body whitespace-nowrap"
+                >
                   {t('courses.contactButton')}
                   <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
-                </button>
+                </Link>
               </div>
             </div>
           </div>
