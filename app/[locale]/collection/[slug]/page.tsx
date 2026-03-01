@@ -57,6 +57,7 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
   const getTranslationKey = (slug: string) => {
     if (slug === 'collection-1') return 'collection1';
     if (slug === 'classic-cream') return 'classicCream';
+    if (slug === 'collection-5') return 'collection5';
     return slug;
   };
 
@@ -94,6 +95,8 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
         return '/products/Colletion 3.jpeg';
       case 'rose':
         return '/products/collection 4.jpeg';
+      case 'collection-5':
+        return '/products/collection 5.jpeg';
       default:
         return collection.heroImages[0] || '';
     }

@@ -13,7 +13,7 @@ export default function HowItWorks() {
       number: 1,
       title: t('howItWorks.step1.title'),
       subtitle: t('howItWorks.step1.subtitle'),
-      image: "/branding/Radilina branding_AP-224.avif",
+      image: "/branding/Radilina branding_AP-229.avif",
     },
     {
       number: 2,
@@ -37,7 +37,7 @@ export default function HowItWorks() {
       number: 5,
       title: t('howItWorks.step5.title'),
       subtitle: t('howItWorks.step5.subtitle'),
-      image: "/branding/Radilina branding_AP-187.avif",
+      image: "/branding/Radilina branding_AP-40.avif",
     },
     {
       number: 6,
@@ -49,7 +49,7 @@ export default function HowItWorks() {
       number: 7,
       title: t('howItWorks.step7.title'),
       subtitle: t('howItWorks.step7.subtitle'),
-      image: "/branding/Radilina branding_AP-40.avif",
+      image: "/branding/Radilina branding_AP-187.avif",
     },
     {
       number: 8,

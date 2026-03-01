@@ -47,30 +47,53 @@ function findProductsByImages(patterns: string[]): CollectionProduct[] {
   return products;
 }
 
+// Helper function to find products by code
+function findProductsByCodes(codes: string[]): CollectionProduct[] {
+  const products: CollectionProduct[] = [];
+  const foundCodes = new Set<string>();
+  
+  categories.forEach(category => {
+    category.subcategories.forEach(sub => {
+      if (codes.includes(sub.code) && !foundCodes.has(sub.code)) {
+        products.push({
+          name: sub.name,
+          subtitle: sub.subtitle,
+          image: sub.image,
+          code: sub.code,
+          price: sub.price,
+        });
+        foundCodes.add(sub.code);
+      }
+    });
+  });
+  
+  return products;
+}
+
 export const collections: Collection[] = [
   {
     slug: "collection-1",
-    name: "Classic Cream Collection",
+    name: "Едра бяла роза",
     heroImages: [
       "/products/01_2026 (2).avif",
       "/products/01_2026 (4) copy.avif",
       "/products/01_2026 (13).avif",
     ],
     galleryImages: [
-      { src: "/products/01_2026 (14).avif", alt: "Classic Cream Collection" },
-      { src: "/products/01_2026(15).avif", alt: "Classic Cream Collection" },
-      { src: "/products/01_2026(17).avif", alt: "Classic Cream Collection" },
-      { src: "/products/01_2026 (26).avif", alt: "Classic Cream Collection" },
-      { src: "/products/01_2026 (32).avif", alt: "Classic Cream Collection" },
-      { src: "/products/01_2026 (33).avif", alt: "Classic Cream Collection" },
-      { src: "/products/01_2026 (36).avif", alt: "Classic Cream Collection" },
-      { src: "/products/12_2025_-6.avif", alt: "Classic Cream Collection" },
-      { src: "/products/12_2025_-8.avif", alt: "Classic Cream Collection" },
-      { src: "/products/12_2025_-13.avif", alt: "Classic Cream Collection" },
-      { src: "/products/1001.jpeg", alt: "Classic Cream Collection" },
-      { src: "/products/9005(3).jpeg", alt: "Classic Cream Collection" },
-      { src: "/products/9017-кана 1.500мл.jpeg", alt: "Classic Cream Collection" },
-      { src: "/products/6 литра гювеч.jpeg", alt: "Classic Cream Collection" }
+      { src: "/products/01_2026 (14).avif", alt: "Едра бяла роза" },
+      { src: "/products/01_2026(15).avif", alt: "Едра бяла роза" },
+      { src: "/products/01_2026(17).avif", alt: "Едра бяла роза" },
+      { src: "/products/01_2026 (26).avif", alt: "Едра бяла роза" },
+      { src: "/products/01_2026 (32).avif", alt: "Едра бяла роза" },
+      { src: "/products/01_2026 (33).avif", alt: "Едра бяла роза" },
+      { src: "/products/01_2026 (36).avif", alt: "Едра бяла роза" },
+      { src: "/products/12_2025_-6.avif", alt: "Едра бяла роза" },
+      { src: "/products/12_2025_-8.avif", alt: "Едра бяла роза" },
+      { src: "/products/12_2025_-13.avif", alt: "Едра бяла роза" },
+      { src: "/products/1001.jpeg", alt: "Едра бяла роза" },
+      { src: "/products/9005(3).jpeg", alt: "Едра бяла роза" },
+      { src: "/products/9017-кана 1.500мл.jpeg", alt: "Едра бяла роза" },
+      { src: "/products/6 литра гювеч.jpeg", alt: "Едра бяла роза" }
     ],
     products: findProductsByImages([
       "01_2026 (2)",
@@ -94,18 +117,18 @@ export const collections: Collection[] = [
   },
   {
     slug: "classic-cream",
-    name: "Oriental Collection",
+    name: "Бяла Роза",
     heroImages: [
       "/products/Colletion 2.jpeg",
     ],
     galleryImages: [
-      { src: "/products/01_2026(23).avif", alt: "Oriental Collection" },
-      { src: "/products/12_2025_-3.avif", alt: "Oriental Collection" },
-      { src: "/products/1001.jpeg", alt: "Oriental Collection" },
-      { src: "/products/4007(3).jpeg", alt: "Oriental Collection" },
-      { src: "/products/7003.jpeg", alt: "Oriental Collection" },
-      { src: "/products/Guvetch-6.jpeg", alt: "Oriental Collection" },
-      { src: "/products/Гювеч 6 литра.jpeg", alt: "Oriental Collection" },
+      { src: "/products/01_2026(23).avif", alt: "Бяла Роза" },
+      { src: "/products/12_2025_-3.avif", alt: "Бяла Роза" },
+      { src: "/products/1001.jpeg", alt: "Бяла Роза" },
+      { src: "/products/4007(3).jpeg", alt: "Бяла Роза" },
+      { src: "/products/7003.jpeg", alt: "Бяла Роза" },
+      { src: "/products/Guvetch-6.jpeg", alt: "Бяла Роза" },
+      { src: "/products/Гювеч 6 литра.jpeg", alt: "Бяла Роза" },
     ],
     products: findProductsByImages([
       "01_2026(5)",
@@ -122,56 +145,57 @@ export const collections: Collection[] = [
   },
   {
     slug: "ornamental",
-    name: "Pink Collection",
+    name: "Розова роза",
     heroImages: [
       "/products/Colletion 3.jpeg",
     ],
     galleryImages: [
-      { src: "/products/02_2026 (1).avif", alt: "Pink Collection" },
-      { src: "/products/2003(3).jpeg", alt: "Pink Collection" },
-      { src: "/products/6001.jpeg", alt: "Pink Collection" },
+      { src: "/products/02_2026 (1).avif", alt: "Розова роза" },
+      { src: "/products/2003(3).jpeg", alt: "Розова роза" },
+      { src: "/products/6001.jpeg", alt: "Розова роза" },
     ],
     products: findProductsByImages([
       "02_2026 (1)",
       "2003(3)",
       "6001",
+      "4005"
     ]),
     description: "Delicate pink tones with hand-painted floral motifs and feminine elegance",
   },
   {
     slug: "rose",
-    name: "Green Collection",
+    name: "Тюркоазена колекция",
     heroImages: [
       "/products/collection 4.jpeg",
     ],
     galleryImages: [
-      { src: "/products/01_2026 (1).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (7).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (9).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (20).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (28).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (37).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (38).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (39).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (40).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (44).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (47).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (48).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (49).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (51).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (52).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (53).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (55).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (56).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (57).avif", alt: "Green Collection" },
-      { src: "/products/01_2026 (58).avif", alt: "Green Collection" },
-      { src: "/products/12_2025_1.avif", alt: "Green Collection" },
-      { src: "/products/12_2025_-12.avif", alt: "Green Collection" },
-      { src: "/products/12_2025_-17.avif", alt: "Green Collection" },
-      { src: "/products/12_2025_-24.avif", alt: "Green Collection" },
-      { src: "/products/9005(2).jpeg", alt: "Green Collection" },
-      { src: "/products/Ваза.jpeg", alt: "Green Collection" },
-      { src: "/products/Халба.jpeg", alt: "Green Collection" },
+      { src: "/products/01_2026 (1).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (7).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (9).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (20).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (28).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (37).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (38).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (39).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (40).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (44).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (47).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (48).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (49).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (51).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (52).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (53).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (55).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (56).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (57).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/01_2026 (58).avif", alt: "Тюркоазена колекция" },
+      { src: "/products/12_2025_1.avif", alt: "Тюркоазена колекция" },
+      { src: "/products/12_2025_-12.avif", alt: "Тюркоазена колекция" },
+      { src: "/products/12_2025_-17.avif", alt: "Тюркоазена колекция" },
+      { src: "/products/12_2025_-24.avif", alt: "Тюркоазена колекция" },
+      { src: "/products/9005(2).jpeg", alt: "Тюркоазена колекция" },
+      { src: "/products/Ваза.jpeg", alt: "Тюркоазена колекция" },
+      { src: "/products/Халба.jpeg", alt: "Тюркоазена колекция" },
     ],
     products: findProductsByImages([
       "01_2026 (1)",
@@ -203,5 +227,26 @@ export const collections: Collection[] = [
       "Халба",
     ]),
     description: "Fresh green glazes with natural motifs, bringing nature's tranquility to your home",
+  },
+  {
+    slug: "collection-5",
+    name: "Светлосиня роза",
+    heroImages: [
+      "/products/collection 5.jpeg",
+    ],
+    galleryImages: [
+      { src: "/products/collection 5.jpeg", alt: "Светлосиня роза" },
+    ],
+    products: findProductsByImages([
+      "01_2026 (8)",
+      "01_2026 (46)",
+      "2003(2)",
+      "2005(2)",
+      "6005",
+      "Гювеч 6 литра 2",
+    ]).concat(findProductsByCodes([
+      "4007"
+    ])),
+    description: "A curated selection of essential ceramic pieces for everyday use",
   },
 ];

@@ -34,20 +34,24 @@
     "title": "Colecțiile Noastre",
     "subtitle": "Estetică tradițională bulgară cu un aspect modern.",
     "collection1": {
-      "title": "Colecția Clasică Creme",
+      "title": "Trandafir Alb Mare",
       "description": "Piese elegante în glazură crem moale, întruchipând tradiția atemporală a ceramicii bulgare"
     },
     "classicCream": {
-      "title": "Colecția Orientală",
+      "title": "Trandafir Alb",
       "description": "Inspirată din estetica orientală cu modele intricate și moștenire culturală bogată"
     },
     "ornamental": {
-      "title": "Colecția Roz",
+      "title": "Trandafir Roz",
       "description": "Tonuri roz delicate cu motive florale pictate manual și eleganță feminină"
     },
     "rose": {
-      "title": "Colecția Verde",
+      "title": "Colecția Turcoaz",
       "description": "Glazuri verzi proaspete cu motive naturale, aducând liniștea naturii în casa ta"
+    },
+    "collection5": {
+      "title": "Trandafir Albastru Deschis",
+      "description": "O selecție curată de piese ceramice esențiale pentru uz zilnic"
     }
   },
   "collection": {

@@ -34,20 +34,24 @@
     "title": "Our Collections",
     "subtitle": "Traditional Bulgarian aesthetics with a modern touch.",
     "collection1": {
-      "title": "Classic Cream Collection",
+      "title": "Large White Rose",
       "description": "Elegant pieces in soft cream glaze, embodying timeless Bulgarian ceramic tradition"
     },
     "classicCream": {
-      "title": "Oriental Collection",
+      "title": "White Rose",
       "description": "Inspired by oriental aesthetics with intricate patterns and rich cultural heritage"
     },
     "ornamental": {
-      "title": "Pink Collection",
+      "title": "Pink Rose",
       "description": "Delicate pink tones with hand-painted floral motifs and feminine elegance"
     },
     "rose": {
-      "title": "Green Collection",
+      "title": "Turquoise Collection",
       "description": "Fresh green glazes with natural motifs, bringing nature's tranquility to your home"
+    },
+    "collection5": {
+      "title": "Light Blue Rose",
+      "description": "A curated selection of essential ceramic pieces for everyday use"
     }
   },
   "collection": {

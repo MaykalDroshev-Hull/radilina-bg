@@ -9,7 +9,7 @@ import { AnimatedSection, AnimatedContainer, AnimatedItem } from '../lib/animati
 
 // Color palette for category backgrounds
 const categoryColors = [
-  { bg: '#FFF7F7', text: '#1a1614' }, // Blush White
+  { bg: '#E8D5D5', text: '#1a1614' }, // Darker Blush White
   { bg: '#CFE6D7', text: '#1a1614' }, // Sage Mist
   { bg: '#F4A7A7', text: '#1a1614' }, // Soft Rose
   { bg: '#E8F6EF', text: '#1a1614' }, // Soft Mint
