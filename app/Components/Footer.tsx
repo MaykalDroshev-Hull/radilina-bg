@@ -47,7 +47,7 @@ export default function Footer() {
                   </a>
                 </div>
                 <div className="font-body text-white/70 space-y-2 md:space-y-2.5 text-sm md:text-base lg:text-base">
-                  <p><a href="mailto:hello@radilina.bg" className="hover:text-white transition-colors">hello@radilina.bg</a></p>
+                  <p><a href="mailto:info.radilina@gmail.com" className="hover:text-white transition-colors">info.radilina@gmail.com</a></p>
                   <p><a href="tel:+359889964773" className="hover:text-white transition-colors">+359 889 964 773</a></p>
                   <p><a href="tel:+359887181368" className="hover:text-white transition-colors">+359 887 181 368</a></p>
                   <p>{t('footer.location')}</p>
@@ -64,6 +64,7 @@ export default function Footer() {
                 <li><Link href="/courses" className="hover:text-white transition-colors inline-block">{t('common.courses')}</Link></li>
                 <li><Link href="/#products" className="hover:text-white transition-colors inline-block">{t('common.products')}</Link></li>
                 <li><Link href="/about" className="hover:text-white transition-colors inline-block">{t('common.about')}</Link></li>
+                <li><Link href="/visits" className="hover:text-white transition-colors inline-block">{t('common.visits')}</Link></li>
                 <li><Link href="/gallery" className="hover:text-white transition-colors inline-block">{t('common.gallery')}</Link></li>
                 <li><Link href="/contact" className="hover:text-white transition-colors inline-block">{t('common.contact')}</Link></li>
               </ul>

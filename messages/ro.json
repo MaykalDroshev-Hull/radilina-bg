@@ -7,6 +7,7 @@
     "about": "Despre noi",
     "gallery": "Galerie",
     "contact": "Contact",
+    "visits": "Vizite și Premii",
     "menu": "MENIU",
     "code": "Cod",
     "price": "Preț",
@@ -31,7 +32,7 @@
     "subtitle": "Explorați categoriile noastre de ceramică făcută manual, fiecare cu un stil și funcționalitate unice."
   },
   "collections": {
-    "title": "Colecțiile Noastre",
+    "title": "Colecții",
     "subtitle": "Estetică tradițională bulgară cu un aspect modern.",
     "collection1": {
       "title": "Trandafir Alb Mare",
@@ -460,5 +461,60 @@
     "rakiaCup": { "title": "Ceașcă pentru Rakia", "category": "Căni și Halbe" },
     "sredenBurkan": { "title": "Borcan Mediu", "category": "Borcanuri" },
     "tiganSKapak": { "title": "Tigaie cu Capac", "category": "Tigăi" }
+  },
+  "visits": {
+    "pageTitle": "Vizite și Premii",
+    "pageSubtitle": "Descoperiți momentele importante din istoria Radilina - de la vizite ale personalităților celebre până la recunoașterea internațională.",
+    "pageDescription": "Vizite și Premii ale Ceramicii Radilina - ceramică tradițională troiană",
+    "visitsTitle": "Vizite și Evenimente",
+    "interviewTitle": "Interviu",
+    "visit1": {
+      "title": "Ivka Beibe la Festivalul Prunelor",
+      "text": "În timpul Festivalului Prunelor în Troyan, la standul Ceramicii \"Radilina\", a fost oaspete și Ivka Beibe. Ea a participat la o demonstrație live și a încercat olăritul pe roata de olar sub îndrumarea meșterilor. În fața ochilor vizitatorilor, Ivka a făcut primii pași în ceramica tradițională troiană și a simțit magia lutului. Participarea ei a atras atenție suplimentară asupra meșteșugului și a arătat că ceramica bulgară poate inspira și publicul tânăr.",
+      "alt": "Ivka Beibe la Festivalul Prunelor"
+    },
+    "visit2": {
+      "title": "Christian Louboutin vizitează Radilina",
+      "text": "Designerul de renume mondial Christian Louboutin a vizitat atelierul Ceramicii \"Radilina\" din Troyan, unde s-a familiarizat cu tehnicile tradiționale ale ceramicii troiene. El a observat procesul de producție, a fotografiat munca meșterilor și chiar a participat la decorarea unui vas ceramic.",
+      "alt": "Christian Louboutin la atelierul Radilina"
+    },
+    "visit3": {
+      "title": "Proiect cu Japonia - Schimb Cultural",
+      "text": "🇯🇵 Japonia lucrează cu Radilina! 🇧🇬\n\nCeramica tradițională troiană de la Ceramica \"Radilina\" ajunge în Japonia - într-un proiect legat de iaurtul bulgar.\n\nVasele noastre făcute manual devin parte dintr-un schimb cultural care unește tradiția bulgară și respectul japonez pentru calitate și meșteșug.\n\nIaurt bulgar. Ceramică bulgară. Recunoaștere mondială. 🌍",
+      "alt": "Proiect cu Japonia"
+    },
+    "visit4": {
+      "title": "Eveniment Cultural în Serbia",
+      "text": "🇷🇸 Participare la un eveniment în Serbia\n\nRadina a participat și într-un tur în Serbia, ca parte dintr-un grup cu alți ceramiști și artiști. Ei au prezentat ceramica troiană și folclorul în Mitrovica/Sremska Mitrovica, inclusiv o expoziție și program cultural pentru publicul local.",
+      "alt": "Eveniment în Serbia"
+    },
+    "visit5": {
+      "title": "Parteneriat cu Malincho USA",
+      "text": "🇧🇬🇺🇸 Tradiția călătorește dincolo de ocean\n\nÎn atelierul Ceramicii \"Radilina\", fiecare ghiveci se naște din lut, răbdare și dragoste pentru meșteșug.\n\nAstăzi, aceste vase ghiveci făcute manual se îndreaptă spre America - parte dintr-un parteneriat cu Malincho USA.\n\nDe la Balcanul Troian la masa americană -\nceramică bulgară, creată cu suflet și purtând gustul casei.\n\n🏺 Meșteșug adevărat.\n🌍 Lume mare.\n❤️ Inimă bulgară.",
+      "alt": "Parteneriat cu Malincho USA"
+    },
+    "visit6": {
+      "title": "Premiul Meșter Troian 2025",
+      "text": "Concurs-Expoziție Meșter Troian 2025 \"Lut fără calcar\"\nIlina Ilieva, distinsă cu locul 2, categoria \"ceramică tradițională\"",
+      "alt": "Premiul Meșter Troian 2025"
+    },
+    "visit7": {
+      "title": "Institutul Francez din Bulgaria",
+      "text": "Am fost invitați ca oaspeți la Institutul Francez din Bulgaria, unde am prezentat ceramica troiană și modelul tradițional troian. Pentru noi a fost o onoare să promovăm această parte semnificativă a patrimoniului cultural bulgar în fața unei audiențe internaționale.",
+      "alt": "Institutul Francez din Bulgaria"
+    },
+    "interview": {
+      "title": "De Succes în Troyan - Interviu",
+      "text": "Radina și Ilina, parte din compania de familie \"Radilina\" cu 45 de ani de experiență, continuă tradiția ceramicii troiene făcute manual. Ele combină precizie, timp și dragoste în munca lor, creând ceramică de uz casnic și suvenir care aduce confort în fiecare casă. Meșteșugul lor este apreciat în întreaga lume, inclusiv de celebrul designer francez Christian Louboutin. Prin participarea la festivaluri și evenimente, ele împărtășesc magia ceramicii cu oameni de toate vârstele, crezând că meșteșugurile devin din ce în ce mai atractive pentru tineri. Pentru ele, producția de ceramică nu este doar muncă—este o chemare și o misiune de a păstra moștenirea culturală bulgară pentru generațiile viitoare.",
+      "alt": "Interviu De Succes în Troyan"
+    },
+    "videosTitle": "Videouri și Media",
+    "tasteOfBulgariaTitle": "Gustul Bulgariei",
+    "tasteOfBulgariaDescription": "Urmăriți participarea noastră în emisiunea BTV",
+    "watchOnBTV": "Urmăriți pe BTV",
+    "ctaTitle": "Doriți să Experimentați Meșteșugul Nostru?",
+    "ctaDescription": "Vizitați atelierul nostru din Troyan pentru a vedea tehnicile tradiționale de olărit în acțiune sau explorați colecțiile noastre de ceramică făcută manual. Alăturați-vă nouă pentru un atelier sau plasați o comandă pentru ceramică troiană autentică.",
+    "ctaButton": "Contactați-ne",
+    "ctaButtonSecondary": "Vizualizați Produsele"
   }
 }

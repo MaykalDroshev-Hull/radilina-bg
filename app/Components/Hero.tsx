@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '../../i18n/routing';
 import { motion, AnimatePresence, useMotionValue, useTransform, PanInfo } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Hero() {
   const t = useTranslations();
@@ -175,25 +174,6 @@ export default function Hero() {
 
           {/* Bottom Section */}
           <div className="relative">
-            {/* Navigation Controls - Hidden on mobile */}
-            <div className="hidden md:flex items-center justify-center gap-4 md:gap-6 mb-6 md:mb-8">
-              <button
-                onClick={prevSlide}
-                className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center hover:bg-white/30 transition-all duration-300 group"
-                aria-label="Previous collection"
-              >
-                <ChevronLeft className="w-6 h-6 md:w-7 md:h-7 text-white group-hover:scale-110 transition-transform" />
-              </button>
-              
-              <button
-                onClick={nextSlide}
-                className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center hover:bg-white/30 transition-all duration-300 group"
-                aria-label="Next collection"
-              >
-                <ChevronRight className="w-6 h-6 md:w-7 md:h-7 text-white group-hover:scale-110 transition-transform" />
-              </button>
-            </div>
-
             {/* Mobile Progress Bar */}
             <div className="lg:hidden flex items-center justify-center gap-2 mb-4">
               {collections.map((_, index) => (
@@ -207,35 +187,6 @@ export default function Hero() {
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
-              ))}
-            </div>
-
-            {/* Desktop Thumbnails */}
-            <div className="hidden lg:flex items-center justify-end gap-4 mb-4">
-              {thumbnails.map((thumbnail, idx) => (
-                <motion.button
-                  key={thumbnail.index}
-                  onClick={() => goToSlide(thumbnail.index)}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="relative w-24 h-24 rounded-lg overflow-hidden border-2 border-white/30 hover:border-white/60 transition-all duration-300 group"
-                  aria-label={`Go to ${thumbnail.title}`}
-                >
-                  <Image
-                    src={thumbnail.image}
-                    alt={thumbnail.title}
-                    fill
-                    sizes="96px"
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
-                  <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/60 to-transparent">
-                    <p className="text-xs text-white font-body font-semibold truncate">
-                      {thumbnail.title}
-                    </p>
-                  </div>
-                </motion.button>
               ))}
             </div>
           </div>

@@ -229,6 +229,7 @@ export default function Header() {
                           const getTranslationKey = (slug: string) => {
                             if (slug === 'collection-1') return 'collection1';
                             if (slug === 'classic-cream') return 'classicCream';
+                            if (slug === 'collection-5') return 'collection5';
                             return slug;
                           };
                           const translationKey = getTranslationKey(collection.slug);
@@ -257,6 +258,9 @@ export default function Header() {
               <Link href="/about" onClick={handlePageNavigation} className={`font-body text-sm xl:text-base transition-colors duration-300 ${
                 isScrolled ? 'text-gray-300 hover:text-[var(--soft-rose)]' : 'text-gray-800 hover:text-[var(--soft-rose)]'
               }`}>{t('common.about')}</Link>
+              <Link href="/visits" onClick={handlePageNavigation} className={`font-body text-sm xl:text-base transition-colors duration-300 ${
+                isScrolled ? 'text-gray-300 hover:text-[var(--soft-rose)]' : 'text-gray-800 hover:text-[var(--soft-rose)]'
+              }`}>{t('common.visits')}</Link>
               <Link href="/gallery" onClick={handlePageNavigation} className={`font-body text-sm xl:text-base transition-colors duration-300 ${
                 isScrolled ? 'text-gray-300 hover:text-[var(--soft-rose)]' : 'text-gray-800 hover:text-[var(--soft-rose)]'
               }`}>{t('common.gallery')}</Link>
@@ -468,6 +472,7 @@ export default function Header() {
                           const getTranslationKey = (slug: string) => {
                             if (slug === 'collection-1') return 'collection1';
                             if (slug === 'classic-cream') return 'classicCream';
+                            if (slug === 'collection-5') return 'collection5';
                             return slug;
                           };
                           const translationKey = getTranslationKey(collection.slug);
@@ -488,6 +493,7 @@ export default function Header() {
                 </div>
 
                 <Link href="/about" onClick={(e) => { setMobileMenuOpen(false); handlePageNavigation(e); }} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.about')}</Link>
+                <Link href="/visits" onClick={(e) => { setMobileMenuOpen(false); handlePageNavigation(e); }} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.visits')}</Link>
                 <Link href="/gallery" onClick={(e) => { setMobileMenuOpen(false); handlePageNavigation(e); }} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.gallery')}</Link>
                 <Link href="/contact" onClick={(e) => { setMobileMenuOpen(false); handlePageNavigation(e); }} className="py-4 md:py-5 px-6 md:px-8 font-body text-base md:text-lg text-gray-300 text-left border-b border-gray-800 hover:bg-white/5 active:bg-white/10 transition-colors w-full block">{t('common.contact')}</Link>
               </div>

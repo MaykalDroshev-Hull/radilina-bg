@@ -190,10 +190,10 @@ function ContactForm() {
                     {t('contact.email')}
                   </h3>
                   <a 
-                    href="mailto:hello@radilina.bg" 
+                    href="mailto:info.radilina@gmail.com" 
                     className="text-sm md:text-base lg:text-lg text-gray-400 hover:text-red-500 transition-colors font-body"
                   >
-                    hello@radilina.bg
+                    info.radilina@gmail.com
                   </a>
                 </div>
               </div>

@@ -7,6 +7,7 @@
     "about": "About",
     "gallery": "Gallery",
     "contact": "Contact",
+    "visits": "Visits & Awards",
     "menu": "MENU",
     "code": "Code",
     "price": "Price",
@@ -31,7 +32,7 @@
     "subtitle": "Explore our categories of handmade ceramics, each with unique style and functionality."
   },
   "collections": {
-    "title": "Our Collections",
+    "title": "Collections",
     "subtitle": "Traditional Bulgarian aesthetics with a modern touch.",
     "collection1": {
       "title": "Large White Rose",
@@ -460,5 +461,60 @@
     "rakiaCup": { "title": "Rakia Cup", "category": "Cups and Mugs" },
     "sredenBurkan": { "title": "Medium Jar", "category": "Jars" },
     "tiganSKapak": { "title": "Frying Pan with Lid", "category": "Pans" }
+  },
+  "visits": {
+    "pageTitle": "Visits & Awards",
+    "pageSubtitle": "Discover the important moments in Radilina's history - from visits by famous personalities to international recognition.",
+    "pageDescription": "Visits and Awards of Radilina Ceramics - traditional Troyan ceramics",
+    "visitsTitle": "Visits & Events",
+    "interviewTitle": "Interview",
+    "visit1": {
+      "title": "Ivka Beibe at the Plum Festival",
+      "text": "During the Plum Festival in Troyan, at the Radilina Ceramics stand, Ivka Beibe was a guest. She participated in a live demonstration and tried pottery on a potter's wheel under the guidance of the masters. Before the eyes of visitors, Ivka took her first steps in traditional Troyan ceramics and felt the magic of clay. Her participation attracted additional attention to the craft and showed that Bulgarian ceramics can inspire young audiences as well.",
+      "alt": "Ivka Beibe at the Plum Festival"
+    },
+    "visit2": {
+      "title": "Christian Louboutin Visits Radilina",
+      "text": "World-renowned designer Christian Louboutin visited the Radilina Ceramics studio in Troyan, where he got acquainted with the traditional techniques of Troyan ceramics. He observed the production process, photographed the work of the masters, and even participated in decorating a ceramic vessel.",
+      "alt": "Christian Louboutin at Radilina studio"
+    },
+    "visit3": {
+      "title": "Japan Project - Cultural Exchange",
+      "text": "🇯🇵 Japan works with Radilina! 🇧🇬\n\nTraditional Troyan ceramics from Radilina Ceramics reaches Japan - in a project related to Bulgarian yogurt.\n\nOur handcrafted vessels become part of a cultural exchange that unites Bulgarian tradition and Japanese respect for quality and craftsmanship.\n\nBulgarian yogurt. Bulgarian ceramics. Worldwide recognition. 🌍",
+      "alt": "Japan project"
+    },
+    "visit4": {
+      "title": "Cultural Event in Serbia",
+      "text": "🇷🇸 Participation in an event in Serbia\n\nRadina participated in a tour to Serbia as part of a group with other ceramists and artists. They presented Troyan ceramics and folklore in Mitrovica/Sremska Mitrovica, including an exhibition and cultural program for the local audience.",
+      "alt": "Event in Serbia"
+    },
+    "visit5": {
+      "title": "Partnership with Malincho USA",
+      "text": "🇧🇬🇺🇸 Tradition travels across the ocean\n\nIn the Radilina Ceramics studio, every guvech is born from clay, patience, and love for the craft.\n\nToday, these handcrafted guvech vessels are heading to America - part of a partnership with Malincho USA.\n\nFrom the Troyan Balkan to the American table -\nBulgarian ceramics, created with soul and carrying the taste of home.\n\n🏺 True craftsmanship.\n🌍 Big world.\n❤️ Bulgarian heart.",
+      "alt": "Partnership with Malincho USA"
+    },
+    "visit6": {
+      "title": "Troyan Master Award 2025",
+      "text": "Troyan Master Competition-Exhibition 2025 \"Clay without limestone\"\nIlina Ilieva, awarded 2nd place, category \"traditional ceramics\"",
+      "alt": "Troyan Master Award 2025"
+    },
+    "visit7": {
+      "title": "French Institute in Bulgaria",
+      "text": "We were invited as guests to the French Institute in Bulgaria, where we presented Troyan ceramics and traditional Troyan patterns. It was an honor for us to promote this significant part of Bulgarian cultural heritage to an international audience.",
+      "alt": "French Institute in Bulgaria"
+    },
+    "interview": {
+      "title": "Successful in Troyan - Interview",
+      "text": "Radina and Ilina, part of the family company \"Radilina\" with 45 years of experience, continue the tradition of handmade Troyan ceramics. They combine precision, time, and love in their work, creating household and souvenir ceramics that bring coziness to every home. Their craftsmanship is appreciated worldwide, including by renowned French designer Christian Louboutin. Through participation in festivals and events, they share the magic of ceramics with people of all ages, believing that crafts are becoming increasingly attractive to young people. For them, ceramic production is not just work—it's a calling and a mission to preserve Bulgarian cultural heritage for future generations.",
+      "alt": "Successful in Troyan Interview"
+    },
+    "videosTitle": "Videos & Media",
+    "tasteOfBulgariaTitle": "Taste of Bulgaria",
+    "tasteOfBulgariaDescription": "Watch our participation in the BTV show",
+    "watchOnBTV": "Watch on BTV",
+    "ctaTitle": "Want to Experience Our Craftsmanship?",
+    "ctaDescription": "Visit our studio in Troyan to see our traditional pottery techniques in action, or explore our handmade ceramic collections. Join us for a workshop or place an order for authentic Troyan ceramics.",
+    "ctaButton": "Contact Us",
+    "ctaButtonSecondary": "View Products"
   }
 }

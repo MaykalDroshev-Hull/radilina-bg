@@ -33,13 +33,13 @@ export default function AboutUs() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 mb-8 md:mb-10 lg:mb-12">
           {/* Image */}
           <AnimatedItem>
-            <div className="relative aspect-[3/2] sm:aspect-[4/5] lg:aspect-auto lg:h-[600px] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden shadow-lg group">
+            <div className="relative aspect-[3/2] lg:aspect-auto lg:h-[600px] rounded-2xl md:rounded-[1.75rem] lg:rounded-3xl overflow-hidden shadow-lg group">
               <Image
                 src="/branding/Radilina branding_AP-71.avif"
                 alt={t('about.imageAlt')}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
             </div>

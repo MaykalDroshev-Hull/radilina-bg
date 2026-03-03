@@ -70,10 +70,10 @@ export default function HowItWorks() {
         </div>
         {/* Right side */}
         <p className="md:max-w-[55%] lg:max-w-[50%] text-left md:text-right text-xl md:text-2xl lg:text-4xl">
-          <span className="font-semibold text-white font-headline leading-tight">
+          <span className="text-white font-headline leading-tight">
             {t('howItWorks.header')}
           </span>
-          <span className="text-gray-500 font-headline leading-tight">
+          <span className="text-white font-headline leading-tight">
             {" "}{t('howItWorks.headerSub')}
           </span>
         </p>
