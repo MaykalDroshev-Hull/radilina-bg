@@ -1,13 +1,22 @@
 import { getTranslations } from 'next-intl/server';
+import { getLocale } from 'next-intl/server';
 import PageHero from '../../Components/PageHero';
 import Contact from '../../Components/Contact';
+import { createMetadata } from '../../lib/metadata';
 
 export async function generateMetadata() {
   const t = await getTranslations();
-  return {
-    title: `${t('common.contact')} - Radilina | Свържете се с нас`,
-    description: t('pageHero.contactSubtitle'),
-  };
+  const locale = await getLocale();
+  const title = `${t('common.contact')} - Radilina | Свържете се с нас`;
+  const description = t('pageHero.contactSubtitle');
+  
+  return createMetadata({
+    title,
+    description,
+    path: '/contact',
+    locale,
+    image: 'https://www.radilina-bg.com/branding/Radilina branding_AP-37.avif',
+  });
 }
 
 export default async function ContactPage() {

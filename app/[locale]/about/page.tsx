@@ -1,15 +1,24 @@
 import { getTranslations } from 'next-intl/server';
+import { getLocale } from 'next-intl/server';
 import PageHero from '../../Components/PageHero';
 import AboutUs from '../../Components/AboutUs';
 import HowItWorks from '../../Components/HowItWorks';
 import FAQ from '../../Components/FAQ';
+import { createMetadata } from '../../lib/metadata';
 
 export async function generateMetadata() {
   const t = await getTranslations();
-  return {
-    title: `${t('common.about')} - Radilina | Ръчно изработена керамика`,
-    description: t('pageHero.aboutSubtitle'),
-  };
+  const locale = await getLocale();
+  const title = `${t('common.about')} - Radilina | Ръчно изработена керамика`;
+  const description = t('pageHero.aboutSubtitle');
+  
+  return createMetadata({
+    title,
+    description,
+    path: '/about',
+    locale,
+    image: 'https://www.radilina-bg.com/branding/Radilina branding_AP-238.avif',
+  });
 }
 
 export default async function AboutPage() {

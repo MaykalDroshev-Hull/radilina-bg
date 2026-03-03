@@ -21,9 +21,52 @@ const sourceSans3 = Source_Sans_3({
   display: "swap",
 });
 
+const baseUrl = 'https://www.radilina-bg.com';
+
 export const metadata: Metadata = {
-  title: "Radilina - Handmade Ceramic Pottery & Homeware",
-  description: "Beautiful handmade ceramic pottery and homeware from Bulgaria. Each piece is lovingly crafted by hand, bringing warmth and natural beauty to your home.",
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: "Radilina - Ръчно изработена керамика и домакински артикули",
+    template: "%s | Radilina",
+  },
+  description: "Красива ръчно изработена керамика и домакински артикули от България. Всяко парче е създадено с любов на ръка, носейки топлина и естествена красота във вашия дом.",
+  keywords: "керамика, ръчна керамика, българска керамика, гювечи, чинии, чаши, домакински артикули, Троян, България",
+  authors: [{ name: "Radilina" }],
+  creator: "Radilina",
+  publisher: "Radilina",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'bg_BG',
+    url: baseUrl,
+    siteName: 'Radilina',
+    title: "Radilina - Ръчно изработена керамика и домакински артикули",
+    description: "Красива ръчно изработена керамика и домакински артикули от България. Всяко парче е създадено с любов на ръка, носейки топлина и естествена красота във вашия дом.",
+    images: [
+      {
+        url: `${baseUrl}/images/Radilina - Logo.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Radilina - Handmade Ceramic Pottery',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Radilina - Ръчно изработена керамика и домакински артикули",
+    description: "Красива ръчно изработена керамика и домакински артикули от България. Всяко парче е създадено с любов на ръка, носейки топлина и естествена красота във вашия дом.",
+    images: [`${baseUrl}/images/Radilina - Logo.png`],
+  },
 };
 
 export default function RootLayout({
