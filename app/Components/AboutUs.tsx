@@ -1,67 +1,12 @@
 "use client";
 
-import { useState, useCallback, useEffect } from 'react';
 import Image from 'next/image';
-import { Heart, Award, Users, Sparkles, X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
+import { Heart, Award, Users, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { AnimatedSection, AnimatedContainer, AnimatedItem } from '../lib/animations';
 
 export default function AboutUs() {
   const t = useTranslations();
-  const [modalOpen, setModalOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState('');
-  const [currentAlt, setCurrentAlt] = useState('');
-  
-  const allImages = [
-    { src: '/WhatsApp Image 2026-03-03 at 08.33.27.jpeg', alt: t('about.foundersImageAlt') },
-    { src: '/WhatsApp Image 2026-03-03 at 08.36.42.jpeg', alt: t('about.ilinaImageAlt1') },
-    { src: '/WhatsApp Image 2026-03-03 at 08.36.42 (1).jpeg', alt: t('about.ilinaImageAlt2') },
-  ];
-
-  const openModal = (imageSrc: string, imageAlt: string) => {
-    setCurrentImage(imageSrc);
-    setCurrentAlt(imageAlt);
-    setModalOpen(true);
-    document.body.style.overflow = 'hidden';
-  };
-
-  const handleCloseModal = useCallback(() => {
-    setModalOpen(false);
-    document.body.style.overflow = 'unset';
-  }, []);
-
-  const nextImage = useCallback(() => {
-    const currentIdx = allImages.findIndex(img => img.src === currentImage);
-    const nextIndex = (currentIdx + 1) % allImages.length;
-    setCurrentImage(allImages[nextIndex].src);
-    setCurrentAlt(allImages[nextIndex].alt);
-  }, [currentImage, allImages]);
-
-  const prevImage = useCallback(() => {
-    const currentIdx = allImages.findIndex(img => img.src === currentImage);
-    const prevIndex = (currentIdx - 1 + allImages.length) % allImages.length;
-    setCurrentImage(allImages[prevIndex].src);
-    setCurrentAlt(allImages[prevIndex].alt);
-  }, [currentImage, allImages]);
-
-  useEffect(() => {
-    if (!modalOpen) return;
-    
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') handleCloseModal();
-      if (e.key === 'ArrowLeft') prevImage();
-      if (e.key === 'ArrowRight') nextImage();
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [modalOpen, prevImage, nextImage, handleCloseModal]);
-
-  useEffect(() => {
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, []);
   return (
     <AnimatedSection id="about" className="py-12 md:py-16 lg:py-20">
       <AnimatedContainer className="px-6 md:px-10 lg:px-12">
@@ -140,71 +85,6 @@ export default function AboutUs() {
             </div>
           </AnimatedItem>
         </div>
-
-        {/* Ilina and Radina Section */}
-        <AnimatedItem>
-          <div className="mb-8 md:mb-10 lg:mb-12">
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-6 md:mb-8 font-headline text-center">
-              {t('about.foundersTitle')}
-            </h3>
-            
-            {/* Ilina and Radina Info Image - Smaller and clickable */}
-            <div className="mb-6 md:mb-8 max-w-2xl mx-auto">
-              <div 
-                className="relative aspect-[4/3] rounded-xl md:rounded-2xl overflow-hidden shadow-lg group cursor-pointer hover:shadow-xl transition-all"
-                onClick={() => openModal('/WhatsApp Image 2026-03-03 at 08.33.27.jpeg', t('about.foundersImageAlt'))}
-              >
-                <Image
-                  src="/WhatsApp Image 2026-03-03 at 08.33.27.jpeg"
-                  alt={t('about.foundersImageAlt')}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 672px"
-                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-                <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition-colors">
-                  <Maximize2 className="w-8 h-8 md:w-10 md:h-10 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-              </div>
-            </div>
-
-            {/* Ilina Images Grid - Smaller and clickable */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-3xl mx-auto">
-              <div 
-                className="relative aspect-[4/3] md:aspect-[3/4] rounded-xl md:rounded-2xl overflow-hidden shadow-lg group cursor-pointer hover:shadow-xl transition-all"
-                onClick={() => openModal('/WhatsApp Image 2026-03-03 at 08.36.42.jpeg', t('about.ilinaImageAlt1'))}
-              >
-                <Image
-                  src="/WhatsApp Image 2026-03-03 at 08.36.42.jpeg"
-                  alt={t('about.ilinaImageAlt1')}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 384px"
-                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-                <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition-colors">
-                  <Maximize2 className="w-8 h-8 md:w-10 md:h-10 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-              </div>
-              <div 
-                className="relative aspect-[4/3] md:aspect-[3/4] rounded-xl md:rounded-2xl overflow-hidden shadow-lg group cursor-pointer hover:shadow-xl transition-all"
-                onClick={() => openModal('/WhatsApp Image 2026-03-03 at 08.36.42 (1).jpeg', t('about.ilinaImageAlt2'))}
-              >
-                <Image
-                  src="/WhatsApp Image 2026-03-03 at 08.36.42 (1).jpeg"
-                  alt={t('about.ilinaImageAlt2')}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 384px"
-                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-                <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition-colors">
-                  <Maximize2 className="w-8 h-8 md:w-10 md:h-10 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </AnimatedItem>
 
         {/* Production Section */}
         <AnimatedItem>
@@ -319,74 +199,6 @@ export default function AboutUs() {
             </div>
           </div>
         </AnimatedItem>
-
-        {/* Image Modal */}
-        {modalOpen && (
-          <div 
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-sm"
-            onClick={handleCloseModal}
-          >
-            {/* Close Button */}
-            <button
-              onClick={handleCloseModal}
-              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 hover:bg-black/70 transition-colors text-white"
-              aria-label="Close"
-            >
-              <X className="w-6 h-6" />
-            </button>
-
-            {/* Navigation Buttons */}
-            {allImages.length > 1 && (
-              <>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    prevImage();
-                  }}
-                  className="absolute left-4 z-10 p-3 rounded-full bg-black/50 hover:bg-black/70 transition-colors text-white"
-                  aria-label="Previous image"
-                >
-                  <ChevronLeft className="w-6 h-6" />
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    nextImage();
-                  }}
-                  className="absolute right-4 z-10 p-3 rounded-full bg-black/50 hover:bg-black/70 transition-colors text-white"
-                  aria-label="Next image"
-                >
-                  <ChevronRight className="w-6 h-6" />
-                </button>
-              </>
-            )}
-
-            {/* Image Counter */}
-            {allImages.length > 1 && (
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 px-4 py-2 rounded-full bg-black/50 text-white text-sm font-body">
-                {allImages.findIndex(img => img.src === currentImage) + 1} / {allImages.length}
-              </div>
-            )}
-
-            {/* Image Container */}
-            <div 
-              className="relative w-full h-full flex items-center justify-center p-4 md:p-8"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="relative w-full h-full max-w-7xl max-h-[90vh]">
-                <Image
-                  src={currentImage}
-                  alt={currentAlt}
-                  fill
-                  className="object-contain"
-                  sizes="100vw"
-                  unoptimized
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        )}
       </AnimatedContainer>
     </AnimatedSection>
   );

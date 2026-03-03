@@ -27,6 +27,18 @@
     "productsButton": "Products",
     "aboutButton": "About"
   },
+  "home": {
+    "companyIntro": {
+      "line1": "Beautiful handmade ceramic pottery and homeware from Bulgaria. Each piece is lovingly crafted by hand, bringing warmth and natural beauty to your home.",
+      "line2": "With over 46 years of experience in ceramic production, we create handmade Troyan ceramics with attention to every detail. All products are created entirely by hand on a potter's wheel, preserving the traditions of Troyan craftsmanship through generations."
+    },
+    "aboutCTA": {
+      "title": "Want to Know More About Us?",
+      "description": "Discover the story behind Radilina - a family business with over 46 years of experience in handmade ceramic production from Troyan, Bulgaria.",
+      "button": "Learn More",
+      "imageAlt": "Radilina ceramics"
+    }
+  },
   "productCategories": {
     "title": "Our Products",
     "subtitle": "Explore our categories of handmade ceramics, each with unique style and functionality."
@@ -34,6 +46,7 @@
   "collections": {
     "title": "Collections",
     "subtitle": "Traditional Bulgarian aesthetics with a modern touch.",
+    "intro": "Beautiful handmade ceramic pottery and homeware from Bulgaria. Each piece is lovingly crafted by hand, bringing warmth and natural beauty to your home. Our ceramics are entirely handmade on a potter's wheel, preserving the traditions of Troyan craftsmanship through generations.",
     "collection1": {
       "title": "Large White Rose",
       "description": "Elegant pieces in soft cream glaze, embodying timeless Bulgarian ceramic tradition"
@@ -63,14 +76,6 @@
     "viewAllCollections": "View All Collections",
     "ctaTitle": "Interested in This Collection?",
     "ctaDescription": "Contact us to place an order or learn more about our handmade ceramics. We're here to help you find the perfect pieces for your home."
-  },
-  "home": {
-    "aboutCTA": {
-      "title": "Want to Know More About Us?",
-      "description": "Discover the story behind Radilina - a family business with over 46 years of experience in handmade ceramic production from Troyan, Bulgaria.",
-      "button": "Learn More",
-      "imageAlt": "Radilina ceramics"
-    }
   },
   "courses": {
     "sectionTitle": "Pottery Courses",
@@ -506,6 +511,11 @@
       "title": "French Institute in Bulgaria",
       "text": "We were invited as guests to the French Institute in Bulgaria, where we presented Troyan ceramics and traditional Troyan patterns. It was an honor for us to promote this significant part of Bulgarian cultural heritage to an international audience.",
       "alt": "French Institute in Bulgaria"
+    },
+    "visit8": {
+      "title": "Troyan Museum Magazine",
+      "text": "We are proud to have been selected to participate in the Troyan Museum magazine as representatives of contemporary Troyan ceramic tradition.",
+      "alt": "Radilina in Troyan Museum Magazine"
     },
     "interview": {
       "title": "Successful in Troyan - Interview",

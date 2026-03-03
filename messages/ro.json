@@ -27,6 +27,18 @@
     "productsButton": "Produse",
     "aboutButton": "Despre noi"
   },
+  "home": {
+    "companyIntro": {
+      "line1": "Frumoasă ceramică și articole de uz casnic făcute manual din Bulgaria. Fiecare piesă este creată cu dragoste manual, aducând căldură și frumusețe naturală în casa dumneavoastră.",
+      "line2": "Cu peste 46 de ani de experiență în producția de ceramică, creăm ceramică troiană făcută manual cu atenție la fiecare detaliu. Toate produsele sunt create în întregime manual pe roata olarului, păstrând tradițiile meșteșugului troian prin generații."
+    },
+    "aboutCTA": {
+      "title": "Vreți să Aflați Mai Multe Despre Noi?",
+      "description": "Descoperiți povestea din spatele Radilina - o afacere de familie cu peste 46 de ani de experiență în producția de ceramică făcută manual din Troyan, Bulgaria.",
+      "button": "Aflați Mai Multe",
+      "imageAlt": "Ceramică Radilina"
+    }
+  },
   "productCategories": {
     "title": "Produsele Noastre",
     "subtitle": "Explorați categoriile noastre de ceramică făcută manual, fiecare cu un stil și funcționalitate unice."
@@ -34,6 +46,7 @@
   "collections": {
     "title": "Colecții",
     "subtitle": "Estetică tradițională bulgară cu un aspect modern.",
+    "intro": "Frumoasă ceramică și articole de uz casnic făcute manual din Bulgaria. Fiecare piesă este creată cu dragoste manual, aducând căldură și frumusețe naturală în casa dumneavoastră. Ceramica noastră este făcută în întregime manual pe roata olarului, păstrând tradițiile meșteșugului troian prin generații.",
     "collection1": {
       "title": "Trandafir Alb Mare",
       "description": "Piese elegante în glazură crem moale, întruchipând tradiția atemporală a ceramicii bulgare"
@@ -63,14 +76,6 @@
     "viewAllCollections": "Vezi toate colecțiile",
     "ctaTitle": "Interesat de această colecție?",
     "ctaDescription": "Contactați-ne pentru a plasa o comandă sau pentru a afla mai multe despre ceramica noastră făcută manual. Suntem aici pentru a vă ajuta să găsiți piesele perfecte pentru casa dvs."
-  },
-  "home": {
-    "aboutCTA": {
-      "title": "Vreți să Aflați Mai Multe Despre Noi?",
-      "description": "Descoperiți povestea din spatele Radilina - o afacere de familie cu peste 46 de ani de experiență în producția de ceramică făcută manual din Troyan, Bulgaria.",
-      "button": "Aflați Mai Multe",
-      "imageAlt": "Ceramică Radilina"
-    }
   },
   "courses": {
     "sectionTitle": "Cursuri de ceramică",
@@ -506,6 +511,11 @@
       "title": "Institutul Francez din Bulgaria",
       "text": "Am fost invitați ca oaspeți la Institutul Francez din Bulgaria, unde am prezentat ceramica troiană și modelul tradițional troian. Pentru noi a fost o onoare să promovăm această parte semnificativă a patrimoniului cultural bulgar în fața unei audiențe internaționale.",
       "alt": "Institutul Francez din Bulgaria"
+    },
+    "visit8": {
+      "title": "Revista Muzeului din Troyan",
+      "text": "Suntem mândri că am fost selectați să participăm în revista Muzeului din Troyan ca reprezentanți ai tradiției contemporane de ceramică troiană.",
+      "alt": "Radilina în revista Muzeului din Troyan"
     },
     "interview": {
       "title": "De Succes în Troyan - Interviu",

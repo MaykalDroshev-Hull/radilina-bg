@@ -25,6 +25,7 @@ const column1: GalleryImage[] = [
   { src: '/branding/Radilina branding_AP-104.avif', aspect: 'portrait' },
   { src: '/branding/Radilina branding_AP-64.avif', aspect: 'landscape' },
   { src: '/branding/Radilina branding_AP-32.avif', aspect: 'landscape' },
+  { src: '/WhatsApp Image 2026-03-03 at 08.36.42.jpeg', aspect: 'portrait' },
 ];
 
 const column2: GalleryImage[] = [
@@ -51,6 +52,7 @@ const column3: GalleryImage[] = [
   { src: '/branding/Radilina branding_AP-239.avif', aspect: 'landscape' },
   { src: '/branding/Radilina branding_AP-12.avif', aspect: 'landscape' },
   { src: '/branding/Radilina branding_AP-7.avif', aspect: 'landscape' },
+  { src: '/WhatsApp Image 2026-03-03 at 08.36.42 (1).jpeg', aspect: 'portrait' },
 ];
 
 const allColumns = [column1, column2, column3];

@@ -103,10 +103,14 @@ export default function VisitsAndAwards() {
     },
     {
       id: 'visit4',
-      images: [],
+      images: [
+        '/serbia-1.jpg',
+        '/serbia-2.jpg.jpg',
+        '/serbia-3.jpg'
+      ],
       text: t('visit4.text'),
       title: t('visit4.title'),
-      portrait: true
+      portrait: [false, false, false]
     },
     {
       id: 'visit5',
@@ -139,6 +143,15 @@ export default function VisitsAndAwards() {
       text: t('visit7.text'),
       title: t('visit7.title'),
       portrait: true
+    },
+    {
+      id: 'visit8',
+      images: [
+        '/WhatsApp Image 2026-03-03 at 08.33.27.jpeg'
+      ],
+      text: t('visit8.text'),
+      title: t('visit8.title'),
+      portrait: false
     }
   ];
 
